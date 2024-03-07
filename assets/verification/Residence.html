@@ -1,0 +1,2527 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdminLTE 3 | Residence</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+    <!-- daterange picker -->
+    <link
+      rel="stylesheet"
+      href="../plugins/daterangepicker/daterangepicker.css"
+    />
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link
+      rel="stylesheet"
+      href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- Bootstrap Color Picker -->
+    <link
+      rel="stylesheet"
+      href="../plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"
+    />
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"
+    />
+    <!-- Select2 -->
+    <link rel="stylesheet" href="../plugins/select2/css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      href="../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"
+    />
+    <!-- Bootstrap4 Duallistbox -->
+    <link
+      rel="stylesheet"
+      href="../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"
+    />
+    <!-- BS Stepper -->
+    <link
+      rel="stylesheet"
+      href="../plugins/bs-stepper/css/bs-stepper.min.css"
+    />
+    <!-- dropzonejs -->
+    <link rel="stylesheet" href="../plugins/dropzone/min/dropzone.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="../index3.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Navbar Search -->
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-widget="navbar-search"
+              href="#"
+              role="button"
+            >
+              <i class="fas fa-search"></i>
+            </a>
+            <div class="navbar-search-block">
+              <form class="form-inline">
+                <div class="input-group input-group-sm">
+                  <input
+                    class="form-control form-control-navbar"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <button
+                      class="btn btn-navbar"
+                      type="button"
+                      data-widget="navbar-search"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+
+          <!-- Messages Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-comments"></i>
+              <span class="badge badge-danger navbar-badge">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user1-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 mr-3 img-circle"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      Brad Diesel
+                      <span class="float-right text-sm text-danger"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">Call me whenever you can...</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user8-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 img-circle mr-3"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      John Pierce
+                      <span class="float-right text-sm text-muted"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">I got your message bro</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user3-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 img-circle mr-3"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      Nora Silvester
+                      <span class="float-right text-sm text-warning"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">The subject goes here</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"
+                >See All Messages</a
+              >
+            </div>
+          </li>
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-item dropdown-header"
+                >15 Notifications</span
+              >
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <span class="float-right text-muted text-sm">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> 8 friend requests
+                <span class="float-right text-muted text-sm">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-file mr-2"></i> 3 new reports
+                <span class="float-right text-muted text-sm">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"
+                >See All Notifications</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-widget="control-sidebar"
+              data-slide="true"
+              href="#"
+              role="button"
+            >
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="../index3.html" class="brand-link">
+          <img
+            src="../dist/img/AdminLTELogo.png"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">AdminLTE 3</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="../dist/img/user2-160x160.jpg"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Alexander Pierce</a>
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Dashboard v1</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-users"></i>
+                  <p>
+                    Manage Employees
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a
+                      href="../Manage Employees/Add Employees.html"
+                      class="nav-link"
+                    >
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Employees</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../Manage Employees/ViewEmployee.html"
+                      class="nav-link"
+                    >
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>View Employees</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-chart-pie"></i>
+                  <p>
+                    Pay Roll
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../Pay Roll/Attendance.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Attendance</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../Pay Roll/Pay Slips.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pay Slips</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    User Management
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../user Management/Roles.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Roles</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../user Management/Manageusertype.html"
+                      class="nav-link"
+                    >
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Manage User Type</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Verification
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../verification/Income.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Income Tax Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../verification/Office.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Office Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      href="../verification/Residence.html"
+                      class="nav-link active"
+                    >
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Residence Verification</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Residence Verification</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item">
+                    <a href="#">Home / Employee </a>
+                  </li>
+                  <li class="breadcrumb-item">New</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <!-- SELECT2 EXAMPLE -->
+            <div class="card card-default">
+              <div class="card-header">
+                <h3 class="card-title">Add Residence Verification</h3>
+
+                <div class="card-tools">
+                  <button
+                    type="button"
+                    class="btn btn-tool"
+                    data-card-widget="collapse"
+                  >
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-tool"
+                    data-card-widget="remove"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!---------------------------------- small-device -------------------------------------->
+
+              <div class="card-body">
+                <div class="d-md-none section" id="section1">
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Branch Name">Branch Name:</label>
+                    <select
+                      name="Branch Name"
+                      class="form-control"
+                      id="Branch Name"
+                      required=""
+                    >
+                      <option>Main Branch</option>
+                      <option>Town Branch</option>
+                      <option>SKU Branch</option>
+                      <option>BKS Branch</option>
+                      <option>Kadiri ADB Branch</option>
+                      <option>Kadiri Bypass Branch</option>
+                      <option>Tadipatri Main Branch</option>
+                      <option>Tadipatri Bazar Branch</option>
+                      <option>Gooty Main Branch</option>
+                      <option>KIA Branch</option>
+                      <option>Narpala Branch</option>
+                      <option>Uravakonda Main Branch</option>
+                      <option>Vajrakarur Branch</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section2"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Los no">Los no:</label>
+                    <input
+                      type="text"
+                      name="Los no"
+                      class="form-control"
+                      id="Los no"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section3"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Reference no">Reference no:</label>
+                    <input
+                      type="text"
+                      name="Reference no"
+                      class="form-control"
+                      id="Reference no"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section4"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Type of Loan">Type of Loan:</label>
+                    <select
+                      name="Type of Loan"
+                      class="form-control"
+                      id="Type of Loan"
+                      required=""
+                    >
+                      <option>Home Loan</option>
+                      <option>Home Top Up Loan</option>
+                      <option>Car Loan</option>
+                      <option>Education Loan</option>
+                      <option>X-Press Credit Loan</option>
+                      <option>SC Corporation Loan</option>
+                      <option>Commercial Loan</option>
+                      <option>Reality Loan</option>
+                      <option>Business Loan</option>
+                      <option>Tidco Home Loan</option>
+                      <option>Mudra Loan</option>
+                      <option>Personal Loan</option>
+                      <option>Minority Loan</option>
+                      <option>SME Loan</option>
+                      <option>Mortgage Loan</option>
+                      <option>C.C Loan</option>
+                      <option>Loan Against Property</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section5"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Date of the Report">Date of the Report:</label>
+                    <input
+                      type="text"
+                      name="Date of the Report"
+                      class="form-control"
+                      id="Date of the Report"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section6"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Application"
+                      >Name of the Application(Mr/Mrs/Ms)</label
+                    >
+                    <input
+                      type="text"
+                      name="Application"
+                      class="form-control"
+                      id="Application"
+                      placeholder="0"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section7"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Address">Address:</label>
+                    <input
+                      type="text"
+                      name="Address"
+                      class="form-control"
+                      id="Address"
+                      placeholder="kurnool"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section8"
+                  style="display: none"
+                >
+                  <div><h5>EVALUATION SHEET</h5></div>
+                  <div class="form-group">
+                    <label for="Receipt"
+                      >Date Of The Receipt of the File:</label
+                    >
+                    <input
+                      type="text"
+                      name="Receipt"
+                      class="form-control"
+                      id="Receipt"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section9"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Locality">Locality :</label>
+                    <select
+                      name="Locality"
+                      class="form-control"
+                      id="Locality"
+                      required=""
+                    >
+                      <option value="CHAWL AREA">CHAWL AREA</option>
+                      <option value="RESIDENTIAL BUILDING">
+                        RESIDENTIAL BUILDING
+                      </option>
+                      <option value="BIG HOUSING COMPLEX">
+                        BIG HOUSING COMPLEX
+                      </option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section10"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Accessibility">Accessibility:</label>
+                    <select
+                      name="Accessibility"
+                      class="form-control"
+                      id="Accessibility"
+                      required=""
+                    >
+                      <option></option>
+                      <option>EASY TO LOCATE AND ACCESS</option>
+                      <option>UNTRACEABLE</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section11"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="entrance motorable"
+                      >Is the entrance motorable:</label
+                    >
+                    <select
+                      name="entrance motorable"
+                      class="form-control"
+                      id="entrance motorable"
+                      required=""
+                    >
+                      <option>YES</option>
+                      <option>NO</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section12"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Area Sq-Ft">Area Sq-Ft:</label>
+                    <input
+                      type="text"
+                      name="Area Sq-Ft:"
+                      class="form-control"
+                      id="Area Sq-Ft:"
+                      placeholder="1200 sq.ft."
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section13"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Adhar Card No">Adhar Card No</label>
+                    <input
+                      type="text"
+                      name="Adhar Card No"
+                      class="form-control"
+                      id="Adhar Card No"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section14"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Pan Card No">Pan Card No:</label>
+                    <input
+                      type="text"
+                      name="Pan Card No"
+                      class="form-control"
+                      id="Pan Card No:"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section15"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Visible Items">Visible Items:</label>
+                    <input
+                      type="text"
+                      name="Visible Items"
+                      class="form-control"
+                      id="Visible Items"
+                      placeholder="T.V, Fridge,Sofa."
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section16"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Land Mark">Land Mark:</label>
+                    <input
+                      type="text"
+                      name="Land Mark"
+                      class="form-control"
+                      id="Land Mark"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section17"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Land Line No">Land Line No:</label>
+                    <input
+                      type="text"
+                      name="Land Line No"
+                      class="form-control"
+                      id="Land Line No"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section18"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Mobile No 1">Mobile No 1:</label>
+                    <input
+                      type="text"
+                      name="Mobile No 1"
+                      class="form-control"
+                      id="Mobile No 1"
+                      placeholder="7702826006"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section19"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Mobile No 2">Mobile No 2:</label>
+                    <input
+                      name="Mobile No 2"
+                      class="form-control"
+                      id="Mobile No 2"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section20"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Within Municipal Limit"
+                      >Within Municipal Limit</label
+                    >
+                    <select
+                      name="Within Municipal Limit"
+                      class="form-control"
+                      id="Within Municipal Limit"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section21"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Address Confirmed ">Address Confirmed:</label>
+                    <select
+                      name="Address Confirmed"
+                      class="form-control"
+                      id="Address Confirmed"
+                      required=""
+                    >
+                      <option value="Yes">YES</option>
+                      <option value="No">NO</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section22"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Relationship"
+                      >Relationship of the Person:</label
+                    >
+                    <select
+                      name="Relationship"
+                      class="form-control"
+                      id="Relationship"
+                      required=""
+                    >
+                      <option value="Applicant">Applicant</option>
+                      <option value="Co-Applicant">Co-Applicant</option>
+                      <option value="Guarantor">Guarantor</option>
+                      <option value="Husband">Husband</option>
+                      <option value="Wife">Wife</option>
+                      <option value="Son">Son</option>
+                      <option value="Daughter">Daughter</option>
+                      <option value="Parents">Parents</option>
+                      <option value="father in law">father in law</option>
+                      <option value="Mother in law">Mother in law</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section23"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Interior Furniture">Interior Furniture</label>
+                    <select
+                      name="Interior Furniture"
+                      class="form-control"
+                      id="Interior Furniture"
+                      required=""
+                    >
+                      <option value="Semi-Furnished">Semi-Furnished</option>
+                      <option value="Fully Furnished">Fully Furnished</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section24"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Type of Roof">Type of Roof</label>
+                    <select
+                      name="Type of Roof"
+                      class="form-control"
+                      id="Type of Roof"
+                      required=""
+                    >
+                      <option value="R.C.C Roof">R.C.C Roof</option>
+                      <option value="Aspestos">Aspestos</option>
+                      <option value="Tiles">Tiles</option>
+                      <option value="Thatched">Thatched</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section25"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Number of floors">Number of floors</label>
+                    <select
+                      name="Number of floors"
+                      class="form-control"
+                      id="Number of floors"
+                      required=""
+                    >
+                      <option value="SINGLE FLOOR">SINGLE FLOOR</option>
+                      <option value="Ground + One Floor">
+                        Ground + One Floor
+                      </option>
+                      <option value="Ground + Two Floors">
+                        Ground + Two Floors
+                      </option>
+                      <option value="Ground + Three Floors">
+                        Ground + Three Floors
+                      </option>
+                      <option value="Ground + Four Floors">
+                        Ground + Four Floors
+                      </option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section26"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Vechiels found at Residence"
+                      >Vechiels found at Residence:</label
+                    >
+                    <select
+                      name="Vechiels found at Residence"
+                      class="form-control"
+                      id="Vechiels found at Residence"
+                      required=""
+                    >
+                      <option value="Two Wheeler">Two Wheeler</option>
+                      <option value="Four Wheeler">Four Wheeler</option>
+                      <option value="Three wheeler">Three wheeler</option>
+                      <option value="NA">NA</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section27"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Name plate sighted">Name plate sighted</label>
+                    <select
+                      name="Name plate sighted"
+                      class="form-control"
+                      id="Name plate sighted"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section28"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Neighbours Verification"
+                      >Neighbours Verification</label
+                    >
+                    <select
+                      name="Neighbours Verification"
+                      class="form-control"
+                      id="Neighbours Verification"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section29"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Political Link">Political Link</label>
+                    <input
+                      name="Political Link"
+                      class="form-control"
+                      id="Political Link"
+                      placeholder="NO"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section30"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Type of Residence">Type of Residence</label>
+                    <select
+                      name="Type of Residence"
+                      class="form-control"
+                      id="Type of Residence"
+                      required=""
+                    >
+                      <option value="Independent">Independent</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="Row House">Row House</option>
+                      <option value="Quarters">Quarters</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section31"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Neighbours Verification"
+                      >Neighbours Verification</label
+                    >
+                    <select
+                      name="Neighbours Verification"
+                      class="form-control"
+                      id="Neighbours Verification"
+                      required=""
+                    >
+                      <option value="POSITIVE">POSITIVE</option>
+                      <option value="NEGATIVE">NEGATIVE</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section32"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Field Executive Comments"
+                      >Field Executive Comments:</label
+                    >
+                    <input
+                      type="text"
+                      name="Field Executive Comments"
+                      class="form-control"
+                      id="Field Executive Comments"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section33"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Verifier's Name">Verifier's Name:</label>
+                    <select
+                      name="Verifier's Name"
+                      class="form-control"
+                      id="Verifier's Name:"
+                      required=""
+                    >
+                      <option value="A.Md.Imran- 7780661680">
+                        A.Md.Imran- 7780661680
+                      </option>
+                      <option value="venkat-7702826006">
+                        venkat-7702826006
+                      </option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section34"
+                  style="display: none"
+                >
+                  <div><h5>OBSERVATIONS</h5></div>
+                  <div class="form-group">
+                    <label for="Authoried Signatury"
+                      >Authoried Signatury:</label
+                    >
+                    <input
+                      type="text"
+                      name="Authoried Signatury"
+                      class="form-control"
+                      id="Authoried Signatury"
+                      placeholder="L Raghuveer Reddy"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section35"
+                  style="display: none"
+                >
+                  <div><h5>PERSONAL DETAILS</h5></div>
+                  <div class="form-group">
+                    <label for="Residence Details">Residence Details:</label>
+                    <input
+                      type="text"
+                      name="Residence Details"
+                      class="form-control"
+                      id="Residence Details"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section36"
+                  style="display: none"
+                >
+                  <div><h5>PERSONAL DETAILS</h5></div>
+                  <div class="form-group">
+                    <label for="Ownership Residence"
+                      >Ownership Residence:</label
+                    >
+                    <select
+                      name="Ownership Residence"
+                      class="form-control"
+                      id="Ownership Residence:"
+                      required=""
+                    >
+                      <option value="Own">Own</option>
+                      <option value="Rented">Rented</option>
+                      <option value="Quaters">Quaters</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section37"
+                  style="display: none"
+                >
+                  <div><h5>PERSONAL DETAILS</h5></div>
+                  <div class="form-group">
+                    <label for="Number of years stay"
+                      >Number of years stay :</label
+                    >
+                    <select
+                      name="Number of years stay "
+                      class="form-control"
+                      id="Number of years stay "
+                      required=""
+                    >
+                      <option value="6 Months">6 Months</option>
+                      <option value="1 Year">1 Year</option>
+                      <option value="2 Years">2 Years</option>
+                      <option value="3 Years">3 Years</option>
+                      <option value="4 Years">4 Years</option>
+                      <option value="5 Years">5 Years</option>
+                      <option value="6 Years">6 Years</option>
+                      <option value="7 Years">7 Years</option>
+                      <option value="8 Years">8 Years</option>
+                      <option value="9 Years">9 Years</option>
+                      <option value="10 Years">10 Years</option>
+                      <option value="11 Years">11 Years</option>
+                      <option value="12 Years">12 Years</option>
+                      <option value="13 Years">13 Years</option>
+                      <option value="14 Years">14 Years</option>
+                      <option value="15 Years">15 Years</option>
+                      <option value="16 Years">16 Years</option>
+                      <option value="17 Years">17 Years</option>
+                      <option value="18 Years">18 Years</option>
+                      <option value="19 Years">19 Years</option>
+                      <option value="20 Years">20 Years</option>
+                      <option value="21 Years">21 Years</option>
+                      <option value="22 Years">22 Years</option>
+                      <option value="23 Years">23 Years</option>
+                      <option value="24 Years">24 Years</option>
+                      <option value="25 Years">25 Years</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section38"
+                  style="display: none"
+                >
+                  <div><h5>PERSONAL DETAILS</h5></div>
+                  <div class="form-group">
+                    <label for="Total Family Members"
+                      >Total Family Members:</label
+                    >
+                    <select
+                      name="Total Family Members"
+                      class="form-control"
+                      id="Total Family Members"
+                      required=""
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section39"
+                  style="display: none"
+                >
+                  <div><h5>PERSONAL DETAILS</h5></div>
+                  <div class="form-group">
+                    <label for="Entry into residence permitted"
+                      >Entry into residence permitted:</label
+                    >
+                    <input
+                      type="text"
+                      name="Entry into residence permitted"
+                      class="form-control"
+                      id="Entry into residence permitted"
+                      placeholder="YES"
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section40"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label for="Neighbors Verification"
+                      >Neighbors Verification:</label
+                    >
+                    <select
+                      name="Neighbors Verification"
+                      class="form-control"
+                      id="Neighbors Verification"
+                      required=""
+                    >
+                      <option value="POSITIVE">POSITIVE</option>
+                      <option value="NEGATIVE">NEGATIVE</option>
+                    </select>
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section41"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label for="COMMENTS">COMMENTS:</label>
+                    <input
+                      type="text"
+                      name="COMMENTS"
+                      class="form-control"
+                      id="COMMENTS"
+                      placeholder=""
+                      required=""
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section42"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>POSITIVE</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="positive"
+                      style="width: 100%"
+                    />
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="positive"
+                      style="width: 100%"
+                    />
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="positive"
+                      style="width: 100%"
+                    />
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="positive"
+                      style="width: 100%"
+                    />
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="positive"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section43"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>Signature</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="signature"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section44"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>stamp</label>
+                    <input
+                      type="file"
+                      class="form-control"
+                      name="stamp"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section45"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>System Case ID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="system-case-id"
+                      placeholder="279/29-09-2023"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section46"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>Applicant Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="applicant-name"
+                      placeholder="AIDNI ENGINEERS"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                </div>
+                <div
+                  class="d-md-none section"
+                  id="section47"
+                  style="display: none"
+                >
+                  <div><h5>NEIGHBOURHOOD CHECK</h5></div>
+                  <div class="form-group">
+                    <label>Ref.Number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="ref-number"
+                      placeholder="97/29-09-2023"
+                      style="width: 100%"
+                    />
+                  </div>
+                  <button class="btn btn-primary mt-3 backBtn">Back</button>
+                  <button class="btn btn-success mt-3">submit</button>
+                </div>
+
+                <!------------------------------------- large-device ---------------------------------->
+
+                <div class="d-md-block" style="display: none">
+                  <h5>EVALUATION SHEET</h5>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Branch Name">Branch Name:</label>
+                    <select
+                      name="Branch Name"
+                      class="form-control"
+                      id="Branch Name"
+                      required=""
+                    >
+                      <option>Main Branch</option>
+                      <option>Town Branch</option>
+                      <option>SKU Branch</option>
+                      <option>BKS Branch</option>
+                      <option>Kadiri ADB Branch</option>
+                      <option>Kadiri Bypass Branch</option>
+                      <option>Tadipatri Main Branch</option>
+                      <option>Tadipatri Bazar Branch</option>
+                      <option>Gooty Main Branch</option>
+                      <option>KIA Branch</option>
+                      <option>Narpala Branch</option>
+                      <option>Uravakonda Main Branch</option>
+                      <option>Vajrakarur Branch</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Los no">Los no:</label>
+                    <input
+                      type="text"
+                      name="Los no"
+                      class="form-control"
+                      id="Los no"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Reference no">Reference no:</label>
+                    <input
+                      type="text"
+                      name="Reference no"
+                      class="form-control"
+                      id="Reference no"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Type of Loan">Type of Loan:</label>
+                    <select
+                      name="Type of Loan"
+                      class="form-control"
+                      id="Type of Loan"
+                      required=""
+                    >
+                      <option>Home Loan</option>
+                      <option>Home Top Up Loan</option>
+                      <option>Car Loan</option>
+                      <option>Education Loan</option>
+                      <option>X-Press Credit Loan</option>
+                      <option>SC Corporation Loan</option>
+                      <option>Commercial Loan</option>
+                      <option>Reality Loan</option>
+                      <option>Business Loan</option>
+                      <option>Tidco Home Loan</option>
+                      <option>Mudra Loan</option>
+                      <option>Personal Loan</option>
+                      <option>Minority Loan</option>
+                      <option>SME Loan</option>
+                      <option>Mortgage Loan</option>
+                      <option>C.C Loan</option>
+                      <option>Loan Against Property</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Date of the Report">Date of the Report:</label>
+                    <input
+                      type="text"
+                      name="Date of the Report"
+                      class="form-control"
+                      id="Date of the Report"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Application"
+                      >Name of the Application(Mr/Mrs/Ms)</label
+                    >
+                    <input
+                      type="text"
+                      name="Application"
+                      class="form-control"
+                      id="Application"
+                      placeholder="0"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Address">Address:</label>
+                    <input
+                      type="text"
+                      name="Address"
+                      class="form-control"
+                      id="Address"
+                      placeholder="kurnool"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Receipt"
+                      >Date Of The Receipt of the File:</label
+                    >
+                    <input
+                      type="text"
+                      name="Receipt"
+                      class="form-control"
+                      id="Receipt"
+                      placeholder="00-01-1900"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="d-md-block" style="display: none">
+                  <h5>OBSERVATIONS</h5>
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Locality">Locality :</label>
+                    <select
+                      name="Locality"
+                      class="form-control"
+                      id="Locality"
+                      required=""
+                    >
+                      <option value="CHAWL AREA">CHAWL AREA</option>
+                      <option value="RESIDENTIAL BUILDING">
+                        RESIDENTIAL BUILDING
+                      </option>
+                      <option value="BIG HOUSING COMPLEX">
+                        BIG HOUSING COMPLEX
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Accessibility">Accessibility:</label>
+                    <select
+                      name="Accessibility"
+                      class="form-control"
+                      id="Accessibility"
+                      required=""
+                    >
+                      <option></option>
+                      <option>EASY TO LOCATE AND ACCESS</option>
+                      <option>UNTRACEABLE</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="entrance motorable"
+                      >Is the entrance motorable:</label
+                    >
+                    <select
+                      name="entrance motorable"
+                      class="form-control"
+                      id="entrance motorable"
+                      required=""
+                    >
+                      <option>YES</option>
+                      <option>NO</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Area Sq-Ft">Area Sq-Ft:</label>
+                    <input
+                      type="text"
+                      name="Area Sq-Ft:"
+                      class="form-control"
+                      id="Area Sq-Ft:"
+                      placeholder="1200 sq.ft."
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Adhar Card No">Adhar Card No</label>
+                    <input
+                      type="text"
+                      name="Adhar Card No"
+                      class="form-control"
+                      id="Adhar Card No"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Pan Card No">Pan Card No:</label>
+                    <input
+                      type="text"
+                      name="Pan Card No"
+                      class="form-control"
+                      id="Pan Card No:"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Visible Items">Visible Items:</label>
+                    <input
+                      type="text"
+                      name="Visible Items"
+                      class="form-control"
+                      id="Visible Items"
+                      placeholder="T.V, Fridge,Sofa."
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Land Mark">Land Mark:</label>
+                    <input
+                      type="text"
+                      name="Land Mark"
+                      class="form-control"
+                      id="Land Mark"
+                      placeholder=" "
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Land Line No">Land Line No:</label>
+                    <input
+                      type="text"
+                      name="Land Line No"
+                      class="form-control"
+                      id="Land Line No"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Mobile No">Mobile No 1:</label>
+                    <input
+                      type="text"
+                      name="Mobile No"
+                      class="form-control"
+                      id="Mobile No"
+                      placeholder="7702826006"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Mobile No 2">Mobile No 2:</label>
+                    <input
+                      name="Mobile No 2"
+                      class="form-control"
+                      id="Mobile No 2"
+                      placeholder="NA"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Within Municipal Limit"
+                      >Within Municipal Limit</label
+                    >
+                    <select
+                      name="Within Municipal Limit"
+                      class="form-control"
+                      id="Within Municipal Limit"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Address Confirmed ">Address Confirmed:</label>
+                    <select
+                      name="Address Confirmed"
+                      class="form-control"
+                      id="Address Confirmed"
+                      required=""
+                    >
+                      <option value="Yes">YES</option>
+                      <option value="No">NO</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Relationship"
+                      >Relationship of the Person:</label
+                    >
+                    <select
+                      name="Relationship"
+                      class="form-control"
+                      id="Relationship"
+                      required=""
+                    >
+                      <option value="Applicant">Applicant</option>
+                      <option value="Co-Applicant">Co-Applicant</option>
+                      <option value="Guarantor">Guarantor</option>
+                      <option value="Husband">Husband</option>
+                      <option value="Wife">Wife</option>
+                      <option value="Son">Son</option>
+                      <option value="Daughter">Daughter</option>
+                      <option value="Parents">Parents</option>
+                      <option value="father in law">father in law</option>
+                      <option value="Mother in law">Mother in law</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Interior Furniture">Interior Furniture</label>
+                    <select
+                      name="Interior Furniture"
+                      class="form-control"
+                      id="Interior Furniture"
+                      required=""
+                    >
+                      <option value="Semi-Furnished">Semi-Furnished</option>
+                      <option value="Fully Furnished">Fully Furnished</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Type of Roof">Type of Roof</label>
+                    <select
+                      name="Type of Roof"
+                      class="form-control"
+                      id="Type of Roof"
+                      required=""
+                    >
+                      <option value="R.C.C Roof">R.C.C Roof</option>
+                      <option value="Aspestos">Aspestos</option>
+                      <option value="Tiles">Tiles</option>
+                      <option value="Thatched">Thatched</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Number of floors">Number of floors</label>
+                    <select
+                      name="Number of floors"
+                      class="form-control"
+                      id="Number of floors"
+                      required=""
+                    >
+                      <option value="SINGLE FLOOR">SINGLE FLOOR</option>
+                      <option value="Ground + One Floor">
+                        Ground + One Floor
+                      </option>
+                      <option value="Ground + Two Floors">
+                        Ground + Two Floors
+                      </option>
+                      <option value="Ground + Three Floors">
+                        Ground + Three Floors
+                      </option>
+                      <option value="Ground + Four Floors">
+                        Ground + Four Floors
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Vechiels found at Residence"
+                      >Vechiels found at Residence:</label
+                    >
+                    <select
+                      name="Vechiels found at Residence"
+                      class="form-control"
+                      id="Vechiels found at Residence"
+                      required=""
+                    >
+                      <option value="Two Wheeler">Two Wheeler</option>
+                      <option value="Four Wheeler">Four Wheeler</option>
+                      <option value="Three wheeler">Three wheeler</option>
+                      <option value="NA">NA</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Name plate sighted">Name plate sighted</label>
+                    <select
+                      name="Name plate sighted"
+                      class="form-control"
+                      id="Name plate sighted"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Neighbours Verification"
+                      >Neighbours Verification</label
+                    >
+                    <select
+                      name="Neighbours Verification"
+                      class="form-control"
+                      id="Neighbours Verification"
+                      required=""
+                    >
+                      <option value="YES">YES</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Political Link">Political Link</label>
+                    <input
+                      name="Political Link"
+                      class="form-control"
+                      id="Political Link"
+                      placeholder="NO"
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group col-md-4 d-md-block d-none">
+                    <label for="Type of Residence">Type of Residence</label>
+                    <select
+                      name="Type of Residence"
+                      class="form-control"
+                      id="Type of Residence"
+                      required=""
+                    >
+                      <option value="Independent">Independent</option>
+                      <option value="Apartment">Apartment</option>
+                      <option value="Row House">Row House</option>
+                      <option value="Quarters">Quarters</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Neighbours Verification"
+                        >Neighbours Verification</label
+                      >
+                      <select
+                        name="Neighbours Verification"
+                        class="form-control"
+                        id="Neighbours Verification"
+                        required=""
+                      >
+                        <option value="POSITIVE">POSITIVE</option>
+                        <option value="NEGATIVE">NEGATIVE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Field Executive Comments"
+                        >Field Executive Comments:</label
+                      >
+                      <input
+                        type="text"
+                        name="Field Executive Comments"
+                        class="form-control"
+                        id="Field Executive Comments"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Verifier's Name">Verifier's Name:</label>
+                      <select
+                        name="Verifier's Name"
+                        class="form-control"
+                        id="Verifier's Name:"
+                        required=""
+                      >
+                        <option value="A.Md.Imran- 7780661680">
+                          A.Md.Imran- 7780661680
+                        </option>
+                        <option value="venkat-7702826006">
+                          venkat-7702826006
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Authoried Signatury"
+                        >Authoried Signatury:</label
+                      >
+                      <input
+                        type="text"
+                        name="Authoried Signatury"
+                        class="form-control"
+                        id="Authoried Signatury"
+                        placeholder="L Raghuveer Reddy"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="d-md-block" style="display: none">
+                  <h5>PERSONAL DETAILS</h5>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Residence Details">Residence Details:</label>
+                      <input
+                        type="text"
+                        name="Residence Details"
+                        class="form-control"
+                        id="Residence Details"
+                        placeholder=" "
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Ownership Residence"
+                        >Ownership Residence:</label
+                      >
+                      <select
+                        name="Ownership Residence"
+                        class="form-control"
+                        id="Ownership Residence:"
+                        required=""
+                      >
+                        <option value="Own">Own</option>
+                        <option value="Rented">Rented</option>
+                        <option value="Quaters">Quaters</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Number of years stay"
+                        >Number of years stay :</label
+                      >
+                      <select
+                        name="Number of years stay "
+                        class="form-control"
+                        id="Number of years stay "
+                        required=""
+                      >
+                        <option value="6 Months">6 Months</option>
+                        <option value="1 Year">1 Year</option>
+                        <option value="2 Years">2 Years</option>
+                        <option value="3 Years">3 Years</option>
+                        <option value="4 Years">4 Years</option>
+                        <option value="5 Years">5 Years</option>
+                        <option value="6 Years">6 Years</option>
+                        <option value="7 Years">7 Years</option>
+                        <option value="8 Years">8 Years</option>
+                        <option value="9 Years">9 Years</option>
+                        <option value="10 Years">10 Years</option>
+                        <option value="11 Years">11 Years</option>
+                        <option value="12 Years">12 Years</option>
+                        <option value="13 Years">13 Years</option>
+                        <option value="14 Years">14 Years</option>
+                        <option value="15 Years">15 Years</option>
+                        <option value="16 Years">16 Years</option>
+                        <option value="17 Years">17 Years</option>
+                        <option value="18 Years">18 Years</option>
+                        <option value="19 Years">19 Years</option>
+                        <option value="20 Years">20 Years</option>
+                        <option value="21 Years">21 Years</option>
+                        <option value="22 Years">22 Years</option>
+                        <option value="23 Years">23 Years</option>
+                        <option value="24 Years">24 Years</option>
+                        <option value="25 Years">25 Years</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Total Family Members"
+                        >Total Family Members:</label
+                      >
+                      <select
+                        name="Total Family Members"
+                        class="form-control"
+                        id="Total Family Members"
+                        required=""
+                      >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Entry into residence permitted"
+                        >Entry into residence permitted:</label
+                      >
+                      <input
+                        type="text"
+                        name="Entry into residence permitted"
+                        class="form-control"
+                        id="Entry into residence permitted"
+                        placeholder="YES"
+                        required=""
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="d-md-block" style="display: none">
+                  <h5>NEIGHBOURHOOD CHECK</h5>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="Neighbors Verification"
+                        >Neighbors Verification:</label
+                      >
+                      <select
+                        name="Neighbors Verification"
+                        class="form-control"
+                        id="Neighbors Verification"
+                        required=""
+                      >
+                        <option value="POSITIVE">POSITIVE</option>
+                        <option value="NEGATIVE">NEGATIVE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label for="COMMENTS">COMMENTS:</label>
+                      <input
+                        type="text"
+                        name="COMMENTS"
+                        class="form-control"
+                        id="COMMENTS"
+                        placeholder=""
+                        required=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>POSITIVE</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="positive"
+                        style="width: 100%"
+                      />
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="positive"
+                        style="width: 100%"
+                      />
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="positive"
+                        style="width: 100%"
+                      />
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="positive"
+                        style="width: 100%"
+                      />
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="positive"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>Signature</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="signature"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>stamp</label>
+                      <input
+                        type="file"
+                        class="form-control"
+                        name="stamp"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>System Case ID</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="system-case-id"
+                        placeholder="279/29-09-2023"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>Applicant Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="applicant-name"
+                        placeholder="AIDNI ENGINEERS"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-md-block d-none">
+                    <div class="form-group">
+                      <label>Ref.Number</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="ref-number"
+                        placeholder="97/29-09-2023"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-success">
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Select2 -->
+    <script src="../plugins/select2/js/select2.full.min.js"></script>
+    <!-- Bootstrap4 Duallistbox -->
+    <script src="../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+    <!-- InputMask -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/inputmask/jquery.inputmask.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="../plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="../plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Bootstrap Switch -->
+    <script src="../plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <!-- BS-Stepper -->
+    <script src="../plugins/bs-stepper/js/bs-stepper.min.js"></script>
+    <!-- dropzonejs -->
+    <script src="../plugins/dropzone/min/dropzone.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+      $(function () {
+        //Initialize Select2 Elements
+        $(".select2").select2();
+
+        //Initialize Select2 Elements
+        $(".select2bs4").select2({
+          theme: "bootstrap4",
+        });
+
+        //Datemask dd/mm/yyyy
+        $("#datemask").inputmask("dd/mm/yyyy", { placeholder: "dd/mm/yyyy" });
+        //Datemask2 mm/dd/yyyy
+        $("#datemask2").inputmask("mm/dd/yyyy", { placeholder: "mm/dd/yyyy" });
+        //Money Euro
+        $("[data-mask]").inputmask();
+
+        //Date picker
+        $("#reservationdate").datetimepicker({
+          format: "L",
+        });
+
+        //Date and time picker
+        $("#reservationdatetime").datetimepicker({
+          icons: { time: "far fa-clock" },
+        });
+
+        //Date range picker
+        $("#reservation").daterangepicker();
+        //Date range picker with time picker
+        $("#reservationtime").daterangepicker({
+          timePicker: true,
+          timePickerIncrement: 30,
+          locale: {
+            format: "MM/DD/YYYY hh:mm A",
+          },
+        });
+        //Date range as a button
+        $("#daterange-btn").daterangepicker(
+          {
+            ranges: {
+              Today: [moment(), moment()],
+              Yesterday: [
+                moment().subtract(1, "days"),
+                moment().subtract(1, "days"),
+              ],
+              "Last 7 Days": [moment().subtract(6, "days"), moment()],
+              "Last 30 Days": [moment().subtract(29, "days"), moment()],
+              "This Month": [
+                moment().startOf("month"),
+                moment().endOf("month"),
+              ],
+              "Last Month": [
+                moment().subtract(1, "month").startOf("month"),
+                moment().subtract(1, "month").endOf("month"),
+              ],
+            },
+            startDate: moment().subtract(29, "days"),
+            endDate: moment(),
+          },
+          function (start, end) {
+            $("#reportrange span").html(
+              start.format("MMMM D, YYYY") + " - " + end.format("MMMM D, YYYY")
+            );
+          }
+        );
+
+        //Timepicker
+        $("#timepicker").datetimepicker({
+          format: "LT",
+        });
+
+        //Bootstrap Duallistbox
+        $(".duallistbox").bootstrapDualListbox();
+
+        //Colorpicker
+        $(".my-colorpicker1").colorpicker();
+        //color picker with addon
+        $(".my-colorpicker2").colorpicker();
+
+        $(".my-colorpicker2").on("colorpickerChange", function (event) {
+          $(".my-colorpicker2 .fa-square").css("color", event.color.toString());
+        });
+
+        $("input[data-bootstrap-switch]").each(function () {
+          $(this).bootstrapSwitch("state", $(this).prop("checked"));
+        });
+      });
+      // BS-Stepper Init
+      document.addEventListener("DOMContentLoaded", function () {
+        window.stepper = new Stepper(document.querySelector(".bs-stepper"));
+      });
+
+      // DropzoneJS Demo Code Start
+      Dropzone.autoDiscover = false;
+
+      // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+      var previewNode = document.querySelector("#template");
+      previewNode.id = "";
+      var previewTemplate = previewNode.parentNode.innerHTML;
+      previewNode.parentNode.removeChild(previewNode);
+
+      var myDropzone = new Dropzone(document.body, {
+        // Make the whole body a dropzone
+        url: "/target-url", // Set the url
+        thumbnailWidth: 80,
+        thumbnailHeight: 80,
+        parallelUploads: 20,
+        previewTemplate: previewTemplate,
+        autoQueue: false, // Make sure the files aren't queued until manually added
+        previewsContainer: "#previews", // Define the container to display the previews
+        clickable: ".fileinput-button", // Define the element that should be used as click trigger to select files.
+      });
+
+      myDropzone.on("addedfile", function (file) {
+        // Hookup the start button
+        file.previewElement.querySelector(".start").onclick = function () {
+          myDropzone.enqueueFile(file);
+        };
+      });
+
+      // Update the total progress bar
+      myDropzone.on("totaluploadprogress", function (progress) {
+        document.querySelector("#total-progress .progress-bar").style.width =
+          progress + "%";
+      });
+
+      myDropzone.on("sending", function (file) {
+        // Show the total progress bar when upload starts
+        document.querySelector("#total-progress").style.opacity = "1";
+        // And disable the start button
+        file.previewElement
+          .querySelector(".start")
+          .setAttribute("disabled", "disabled");
+      });
+
+      // Hide the total progress bar when nothing's uploading anymore
+      myDropzone.on("queuecomplete", function (progress) {
+        document.querySelector("#total-progress").style.opacity = "0";
+      });
+
+      // Setup the buttons for all transfers
+      // The "add files" button doesn't need to be setup because the config
+      // `clickable` has already been specified.
+      document.querySelector("#actions .start").onclick = function () {
+        myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+      };
+      document.querySelector("#actions .cancel").onclick = function () {
+        myDropzone.removeAllFiles(true);
+      };
+      // DropzoneJS Demo Code End
+    </script>
+    <script>
+      $(document).ready(function () {
+        let currentSection = 1;
+        const totalSections = $(".section").length;
+
+        $(".nextBtn").click(function () {
+          $("#section" + currentSection).hide();
+          currentSection++;
+
+          if (currentSection > totalSections) {
+            currentSection = 1;
+          }
+
+          $("#section" + currentSection).show();
+        });
+
+        $(".backBtn").click(function () {
+          $("#section" + currentSection).hide();
+          currentSection--;
+
+          if (currentSection < 1) {
+            currentSection = totalSections;
+          }
+
+          $("#section" + currentSection).show();
+        });
+      });
+    </script>
+  </body>
+</html>

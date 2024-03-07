@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AdminLTE 3 | Mailbox</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css" />
+    <!-- icheck bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    /> 
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="../index3.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Navbar Search -->
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-widget="navbar-search"
+              href="#"
+              role="button"
+            >
+              <i class="fas fa-search"></i>
+            </a>
+            <div class="navbar-search-block">
+              <form class="form-inline">
+                <div class="input-group input-group-sm">
+                  <input
+                    class="form-control form-control-navbar"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <button
+                      class="btn btn-navbar"
+                      type="button"
+                      data-widget="navbar-search"
+                    >
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </li>
+
+          <!-- Messages Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-comments"></i>
+              <span class="badge badge-danger navbar-badge">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user1-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 mr-3 img-circle"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      Brad Diesel
+                      <span class="float-right text-sm text-danger"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">Call me whenever you can...</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user8-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 img-circle mr-3"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      John Pierce
+                      <span class="float-right text-sm text-muted"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">I got your message bro</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <!-- Message Start -->
+                <div class="media">
+                  <img
+                    src="../dist/img/user3-128x128.jpg"
+                    alt="User Avatar"
+                    class="img-size-50 img-circle mr-3"
+                  />
+                  <div class="media-body">
+                    <h3 class="dropdown-item-title">
+                      Nora Silvester
+                      <span class="float-right text-sm text-warning"
+                        ><i class="fas fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="text-sm">The subject goes here</p>
+                    <p class="text-sm text-muted">
+                      <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                    </p>
+                  </div>
+                </div>
+                <!-- Message End -->
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"
+                >See All Messages</a
+              >
+            </div>
+          </li>
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-item dropdown-header"
+                >15 Notifications</span
+              >
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <span class="float-right text-muted text-sm">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> 8 friend requests
+                <span class="float-right text-muted text-sm">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-file mr-2"></i> 3 new reports
+                <span class="float-right text-muted text-sm">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer"
+                >See All Notifications</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-widget="control-sidebar"
+              data-slide="true"
+              href="#"
+              role="button"
+            >
+              <i class="fas fa-th-large"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="../index3.html" class="brand-link">
+          <img
+            src="../dist/img/AdminLTELogo.png"
+            alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">AdminLTE 3</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar user (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img
+                src="../dist/img/user2-160x160.jpg"
+                class="img-circle elevation-2"
+                alt="User Image"
+              />
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">Alexander Pierce</a>
+            </div>
+          </div>
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Dashboard v1</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fa-solid fa-users"></i>
+                  <p>
+                    Manage Employees
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../Manage Employees/Add Employees.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Add Employees</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../Manage Employees/ViewEmployee.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>View Employees</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item ">
+                <a href="#" class="nav-link ">
+                <i class="nav-icon fas fa-chart-pie"></i>
+                  <p>
+                    Pay Roll
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../Pay Roll/Attendance.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Attendance</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../Pay Roll/Pay Slips.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Pay Slips</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    User Management
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../user Management/Roles.html" class="nav-link ">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Roles</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../user Management/Manageusertype.html" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Manage User Type</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+                 <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Verification
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="../verification/Income.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Income Tax Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../verification/Office.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Office Verification</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../verification/Residence.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Residence Verification</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>Manage User Types</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item active">DQI</li>   
+                <i class="bi bi-chevron-right"></i>
+                <li class="breadcrumb-item active"> User Management</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+         <section>
+          <div class="row p-3">
+            <div class="col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <form>
+                    <div class="form-group col-md-12">
+                      <label for="Address"
+                        >User Type<span class="text-danger">*</span></label
+                      >
+                      <input
+                        type="text"
+                        required=""
+                        class="form-control"
+                        id="role"
+                        name="role"
+                        placeholder="Enter role name"
+                      />
+                    </div>
+                    <div class="form-group text-right m-b-0">
+                      <button class="btn badge-primary" type="submit">
+                        Submit
+                      </button>
+                      <button
+                        type="reset"
+                        class="btn btn-light"
+                        style="border: 1px solid"
+                      >
+                        Reset
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="card">
+                <div class="card-body">
+              <div class="card-box table-responsive">
+                <h4 class="m-t-0 header-title">
+                  <b>
+                   </b>
+                  </h4>
+                  <div id="datatable-buttons_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-6 p-2" >
+                        <div class="dt-buttons btn-group">
+                          <a class="btn btn-secondary buttons-copy buttons-html5"  aria-controls="datatable-buttons" href="#">
+                            <span>Copy</span>
+                          </a>
+                          <a class="btn btn-secondary buttons-excel buttons-html5"  aria-controls="datatable-buttons" href="#">
+                            <span>Excel</span>      
+                          </a>
+                          <a class="btn btn-secondary buttons-pdf buttons-html5" aria-controls="datatable-buttons" href="#">
+                            <span>PDF</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6" style="padding-left: 150px;">
+                        <div id="datatable-buttons_filter" class="dataTables_filter">
+                            Search:
+                          <label>
+                        <input 
+                         type="search"
+                         class="form-control form-control-sm" 
+                         placeholder="" 
+                         aria-controls="datatable-buttons">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                 <div class="col-sm-12">
+                  <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer" cellspacing="0" width="100%" role="grid" aria-describedby="datatable-buttons_info" style="width: 100%;">
+                    <thead>
+                      <tr role="row">
+                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-sort="ascending" aria-label="UserType: activate to sort column descending" style="width: 405.2px;">UserType</th>
+                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 254px;">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>          
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Auditor</td>
+                                    <td>
+                                      <a class="fa fa-edit"> 
+                                    </a>&nbsp;&nbsp;&nbsp;
+                                    <a class="fa fa-trash">
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">BMW NSC PMO</td>
+                                    <td>
+                                      <a class="fa fa-edit">
+                                    </a>&nbsp;&nbsp;&nbsp;
+                                    <a class="fa fa-trash">
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">Dealer Principle</td>
+                                    <td>
+                                      <a class="fa fa-edit">
+                                      </a>&nbsp;&nbsp;&nbsp;
+                                      <a class="fa fa-trash">
+                                      </a>
+                                    </td>
+                                </tr>
+                                <tr role="row" class="even">
+                                    <td class="sorting_1">Regional Manager</td>
+                                    <td>
+                                      <a class="fa fa-edit">
+
+                                      </a>&nbsp;&nbsp;&nbsp;
+                                      <a class="fa fa-trash">
+                                      </a>
+                                    </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-12 col-md-5">
+                          <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div>
+                        </div>
+                        <div class="col-sm-12 col-md-7" style="padding-left: 270px;">
+                          <div class="dataTables_paginate paging_simple_numbers" id="datatable-buttons_paginate">
+                            <ul class="pagination">
+                              <li class="paginate_button page-item previous disabled" id="datatable-buttons_previous">
+                                <a href="#" aria-controls="datatable-buttons" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                              </li>
+                              <li class="paginate_button page-item active">
+                                <a href="#" aria-controls="datatable-buttons" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                              </li>
+                              <li class="paginate_button page-item next disabled" id="datatable-buttons_next">
+                                <a href="#" aria-controls="datatable-buttons" data-dt-idx="2" tabindex="0" class="page-link">Next</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+      $(function () {
+        //Enable check and uncheck all functionality
+        $(".checkbox-toggle").click(function () {
+          var clicks = $(this).data("clicks");
+          if (clicks) {
+            //Uncheck all checkboxes
+            $(".mailbox-messages input[type='checkbox']").prop(
+              "checked",
+              false
+            );
+            $(".checkbox-toggle .far.fa-check-square")
+              .removeClass("fa-check-square")
+              .addClass("fa-square");
+          } else {
+            //Check all checkboxes
+            $(".mailbox-messages input[type='checkbox']").prop("checked", true);
+            $(".checkbox-toggle .far.fa-square")
+              .removeClass("fa-square")
+              .addClass("fa-check-square");
+          }
+          $(this).data("clicks", !clicks);
+        });
+
+        //Handle starring for font awesome
+        $(".mailbox-star").click(function (e) {
+          e.preventDefault();
+          //detect type
+          var $this = $(this).find("a > i");
+          var fa = $this.hasClass("fa");
+
+          //Switch states
+          if (fa) {
+            $this.toggleClass("fa-star");
+            $this.toggleClass("fa-star-o");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
