@@ -70,10 +70,10 @@
                    <thead>
                        <tr>
                            <th scope="col">SI.NO</th>
-                           <th scope="col">Audit Name</th>
-                           <th scope="col">Email</th>
-                           <th scope="col">Gender</th>
-                           <th scope="col">Mobile</th>
+                           <th scope="col">Audit To</th>
+                           <th scope="col">Type</th>
+                           <th scope="col">Address</th>
+                           <th scope="col">Status</th>
                            <th scope="col">Action</th>
                        </tr>
                    </thead>
@@ -81,10 +81,11 @@
                        <?php foreach ($audits as $audit): ?>
                        <tr>
                            <td><?php echo $audit['id']; ?></td>
-                           <td><?php echo $audit['fullname']; ?></td>
-                           <td><?php echo $audit['email']; ?></td>
-                           <td><?php echo $audit['gendar']; ?></td>
-                           <td><?php echo $audit['mobile_no']; ?></td>
+                           <td><?php echo $audit['employee_name']; ?></td>
+                           <td><?php echo $audit['type']; ?></td>
+                           <td><?php echo $audit['address']; ?></td>
+                           <td><?php echo $audit['status']; ?></td>
+
                            <td style="color: blue">
                                <a
                                    href="<?= base_url() ?>Audits/edit_audit/<?= isset($audit['id']) ? $audit['id'] : '' ?>"><i

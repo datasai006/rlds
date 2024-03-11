@@ -4,7 +4,21 @@ class Audits_model extends CI_Model {
 public function get_all_audits() {
      return $this->db->get('tbl_audits')->result_array();
 }
-
+public function approved(){
+     $this->db->where('status', 'approved'); 
+        $query = $this->db->get('tbl_audits'); 
+        return $query->result_array();
+}
+public function pending(){
+     $this->db->where('status', 'pending'); 
+        $query = $this->db->get('tbl_audits'); 
+        return $query->result_array();
+}
+public function rejected(){
+     $this->db->where('status', 'rejected'); 
+        $query = $this->db->get('tbl_audits'); 
+        return $query->result_array();
+}
 
     public function get_employee_by_id($id) {
  $query = $this->db->get_where('tbl_audits', array('id' => $id, 'status' => 'active'));

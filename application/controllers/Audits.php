@@ -9,13 +9,16 @@ class Audits extends CI_Controller {
         $this->load->model('Tbl_code_value_model'); 
         $this->load->model('MenuModel');
         $this->load->model('Audits_model');
+        $this->load->model('Employee_model');
     }
 
 	public function index()
 	{
+         $types = array("Office Verification", "Income Verification", "Residential Verification");
+        $data['types'] = $types;
           $data['countries'] = $this->Tbl_code_value_model->get_countries();
           $data['states'] = $this->Tbl_code_value_model->get_states();
-          
+           $data['employees'] = $this->Employee_model->get_employees();
         $data['menus'] = $this->MenuModel->get_menus();
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
@@ -27,13 +30,9 @@ class Audits extends CI_Controller {
     public function insert() {
         if ($this->input->post()) {
             $data = array(
-                'fullname' => $this->input->post('fullname'),
-                'email' => $this->input->post('email'),
-                'mobile_no' => $this->input->post('mobile_no'),
-                'gendar' => $this->input->post('gendar'),
-                'country' => $this->input->post('country'),
-                'state' => $this->input->post('state'),
-                'address' => $this->input->post('address')
+              'employee_name' => $this->input->post('employee_name'),
+            'type' => $this->input->post('type'),
+            'address' => $this->input->post('address')
             );
 
             $this->db->trans_begin();
@@ -65,7 +64,32 @@ class Audits extends CI_Controller {
         $data['menus'] = $this->MenuModel->get_menus();
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);  
-    $this->load->view('audits/view_audits', $data);
+    $this->load->view('audits/viewaudits', $data);
+}
+
+    public function approved() { 
+    $data['audits'] = $this->Audits_model->approved();  
+    
+        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menu_items'] = $this->MenuModel->get_menu_items();
+        $this->load->view('includes/sidebar', $data);  
+    $this->load->view('audits/viewaudits', $data);
+}
+    public function pending() { 
+    $data['audits'] = $this->Audits_model->pending();  
+    
+        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menu_items'] = $this->MenuModel->get_menu_items();
+        $this->load->view('includes/sidebar', $data);  
+    $this->load->view('audits/viewaudits', $data);
+}
+    public function rejected() { 
+    $data['audits'] = $this->Audits_model->rejected();  
+    
+        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menu_items'] = $this->MenuModel->get_menu_items();
+        $this->load->view('includes/sidebar', $data);  
+    $this->load->view('audits/viewaudits', $data);
 }
  public function edit_audit($audit_id) {
        

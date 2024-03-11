@@ -217,6 +217,7 @@ class Employe extends CI_Controller {
            $user_inserted =  $this->User_model->insert_user($employee_data);
            if ($user_inserted) {
                 $this->db->trans_commit();
+                
                 redirect('Dashboard');
             } else {
                 $this->db->trans_rollback();
@@ -229,6 +230,10 @@ class Employe extends CI_Controller {
        }       else {
          $data['roles'] = $this->Role_model->get_user_types();
             $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
+                $data['menus'] = $this->MenuModel->get_menus();
+        $data['menu_items'] = $this->MenuModel->get_menu_items();
+       
+        $this->load->view('includes/sidebar', $data);
             $this->load->view('addemployee', $data);
         }
     }

@@ -35,20 +35,28 @@
                                 action="<?php echo base_url( )?>Audits/insert" method="post">
                                 <div class="card-body row">
                                     <div class="form-group col-md-4">
-                                        <label for="fullname">Assign to</label>
-                                        <input type="text" name="fullname" class="form-control" id="fullname"
-                                            placeholder="Shiva Kumar" required>
+                                        <label for="employee_name">Assign to</label>
+                                        <select name="employee_name" class="form-control" id="employee_name" required>
+                                            <option value="">Select Employee</option>
+                                            <?php foreach ($employees as $employee): ?>
+                                            <option value="<?php echo $employee['last_name']; ?>">
+                                                <?php echo $employee['last_name']; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="email">type</label>
-                                        <input type="text" name="email" class="form-control" id="email"
-                                            placeholder="demo@gmail.com" required>
+                                        <label for="type">type</label>
+                                        <select name="type" class="form-control" id="type" required>
+                                            <option value="">Select Type</option>
+                                            <?php foreach ($types as $type): ?>
+                                            <option value="<?php echo $type; ?>"><?php echo $type; ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
                                     </div>
 
                                     <div class="form-group col-md-4">
-                                        <label for="mobile_no">Contact Infomation</label>
-                                        <input type="text" name="mobile_no" class="form-control" id="mobile_no"
-                                            placeholder="91XXXXXXXX" required>
+                                        <label for="address">Contact Infomation</label>
+                                        <textarea class="form-control" id="address" name="address" rows="2"></textarea>
                                     </div>
 
                                 </div>
