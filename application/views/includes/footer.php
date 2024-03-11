@@ -95,6 +95,52 @@ $(document).ready(function() {
 });
 </script>
 
+<!----income mobile view for data inserting ------->
+<script>
+var baseUrl = "<?php echo base_url(); ?>";
+
+$(document).ready(function() {
+
+    $('.nextBtn').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
+        currentSection.hide();
+        nextSection.show();
+        return false;
+    });
+
+
+    $('.backBtn').click(function() {
+        var currentSection = $(this).closest('.section');
+        var prevSection = currentSection.prev('.section');
+        currentSection.hide();
+        prevSection.show();
+        return false;
+    });
+
+
+    $('.submitBtn').click(function() {
+
+        var formData = $('#final-form').serialize();
+
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl +
+                'Income/add_income ',
+            data: formData,
+            success: function(response) {
+                alert('Data saved successfully!');
+
+            },
+            error: function() {
+                alert('Error occurred while saving data.');
+            }
+        });
+        return false;
+    });
+});
+</script>
 </body>
 
 </html>
