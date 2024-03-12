@@ -212,7 +212,10 @@ $(document).ready(function() {
     });
 });
 </script>
+
+
 <script>
+$('.section').not(':first').hide();
 var baseUrl = "<?php echo base_url(); ?>";
 
 $(document).ready(function() {
@@ -225,7 +228,7 @@ $(document).ready(function() {
         // AJAX request to insert data before moving to the next section
         $.ajax({
             type: 'POST',
-            url: baseUrl + 'verification/Residence/add_residence',
+            url: baseUrl + 'verification/Office/add_office',
             data: formData,
             success: function(response) {
                 // alert('Data saved successfully!');
@@ -257,7 +260,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: baseUrl + 'verification/Residence/add_residence',
+            url: baseUrl + 'verification/Office/add_office',
             data: formData,
             success: function(response) {
                 alert('Data saved successfully!');
