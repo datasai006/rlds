@@ -133,7 +133,7 @@ class Income extends CI_Controller
                 echo $error['error'];
             }
         } else {
-            $data['residence_states'] = $this->Employee_model->get_residence_states();
+            // $data['residence_states'] = $this->Employee_model->get_residence_states();
             
         $data['menus'] = $this->MenuModel->get_menus();
          $data['menu_items'] = $this->MenuModel->get_menu_items();

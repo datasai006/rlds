@@ -42,7 +42,7 @@
                     <div class="card-body">
                         <!-----------------------------------small devices code start here---------------------------------------------------->
                         <form class="ajax-form" id="final-form">
-                            <input type="hidden" name="id" value="your_id_value_here" />
+                            <input type="hidden" name="id" value="1" />
 
                             <div class="d-md-none section quickForm" id="section1">
                                 <div class="form-group">

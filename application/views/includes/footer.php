@@ -141,7 +141,65 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: baseUrl + 'Income/add_income',
+            url: baseUrl + 'verification/Income/add_income',
+            data: formData,
+            success: function(response) {
+                alert('Data saved successfully!');
+            },
+            error: function() {
+                alert('Error occurred while saving data.');
+            }
+        });
+        return false;
+    });
+});
+</script>
+<script>
+var baseUrl = "<?php echo base_url(); ?>";
+
+$(document).ready(function() {
+
+    $('.nextBtn').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
+        var formData = $('#final-form1').serialize();
+
+        // AJAX request to insert data before moving to the next section
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Residence/add_residence', // New controller method URL
+            data: formData,
+            success: function(response) {
+                // alert('Data saved successfully!');
+                currentSection.hide();
+                nextSection.show();
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error: ', status, error);
+                alert(
+                    'Error occurred while saving data. Please check console for details.'
+                );
+            }
+        });
+
+        return false;
+    });
+
+
+    $('.backBtn').click(function() {
+        var currentSection = $(this).closest('.section');
+        var prevSection = currentSection.prev('.section');
+        currentSection.hide();
+        prevSection.show();
+        return false;
+    });
+
+    $('.submitBtn').click(function() {
+        var formData = $('#final-form1').serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Residence/add_residence',
             data: formData,
             success: function(response) {
                 alert('Data saved successfully!');
