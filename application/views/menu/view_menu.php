@@ -65,7 +65,7 @@
                </div>
            </div>
            <div class="overflow"></div>
-           <div class="p-3">
+           <div class="p-2">
                <table class="table table-bordered">
                    <thead>
                        <tr>
@@ -75,7 +75,7 @@
                            <th scope="col">Name</th>
                            <th scope="col">Menu Icon</th>
                            <th scope="col">Menu Link</th>
-                           <th scope="col">parent id</th>
+
                            <th scope="col">Action</th>
                        </tr>
                    </thead>
@@ -88,7 +88,7 @@
                            <td><?php echo $menu['name']; ?></td>
                            <td><?php echo $menu['menu_icon']?></td>
                            <td><?php echo $menu['menu_link']?></td>
-                           <td><?php echo $menu['parent_id']?></td>
+
                            <td style="color: blue">
                                <!-- <a href="#"><i class="bi bi-printer"></i></a> | -->
                                <a href="<?= base_url() ?>Menu/update/<?= $menu['id'] ?>"><i

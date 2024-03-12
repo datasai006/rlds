@@ -47,19 +47,18 @@ class Income extends CI_Controller
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/income');
     }
-    public function add_income()
-    {
+    public function add_income() {
          $loginSession = $this->session->userdata('LoginSession');
-    $role_id = $loginSession['role_id'];
-    $user_id = $loginSession['id'];
+         $role_id = $loginSession['role_id'];
+              $user_id = $loginSession['id'];
 
     
-    $entity_id = 9;
-      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+            $entity_id = 9;
+                  $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
                 echo '<script>';
                 echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: add, Can add: " . ($canView ? 'true' : 'false') . "');";
                 echo '</script>';
-     if (!$canView) {
+             if (!$canView) {
    
                      $this->load->view('denied');
   
@@ -75,8 +74,8 @@ class Income extends CI_Controller
             }
           </script>';
    
-    exit();
-}
+              exit();
+                }
         if ($this->input->post()) {
             $config['upload_path'] = './assets/uploads/';
             echo $config['upload_path'];
@@ -122,7 +121,7 @@ class Income extends CI_Controller
                 );
                 $this->db->set($data);
                 $insert_id = $this->Income_model->insert_data($data);
-
+                    
                 if ($insert_id) {
                     redirect('Dashboard');
                 } else {

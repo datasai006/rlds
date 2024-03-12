@@ -96,6 +96,7 @@ $(document).ready(function() {
 </script>
 
 <!----income mobile view for data inserting ------->
+
 <script>
 var baseUrl = "<?php echo base_url(); ?>";
 
@@ -104,11 +105,28 @@ $(document).ready(function() {
     $('.nextBtn').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
-        currentSection.hide();
-        nextSection.show();
+        var formData = $('#final-form').serialize();
+
+        // AJAX request to insert data before moving to the next section
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Income/add_income',
+            data: formData,
+            success: function(response) {
+                // alert('Data saved successfully!');
+                currentSection.hide();
+                nextSection.show();
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error: ', status, error);
+                alert(
+                    'Error occurred while saving data. Please check console for details.'
+                );
+            }
+        });
+
         return false;
     });
-
 
     $('.backBtn').click(function() {
         var currentSection = $(this).closest('.section');
@@ -118,20 +136,15 @@ $(document).ready(function() {
         return false;
     });
 
-
     $('.submitBtn').click(function() {
-
         var formData = $('#final-form').serialize();
-
 
         $.ajax({
             type: 'POST',
-            url: baseUrl +
-                'Income/add_income',
+            url: baseUrl + 'Income/add_income',
             data: formData,
             success: function(response) {
                 alert('Data saved successfully!');
-
             },
             error: function() {
                 alert('Error occurred while saving data.');
@@ -141,6 +154,7 @@ $(document).ready(function() {
     });
 });
 </script>
+
 </body>
 
 </html>

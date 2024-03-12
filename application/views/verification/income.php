@@ -295,27 +295,27 @@
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn">Next</button>
                             </div>
-                            <div class="row ml-1">
-                                <div class="d-md-none section" id="section15" style="display: none">
-                                    <div class="form-group">
-                                        <label>status type</label>
-                                        <input type="hidden" id="current-section" name="current-section" value="1">
-                                        <select class="form-control select2" name="status_type" style="width: 100%">
-                                            <option selected>--select--</option>
-                                            <option name="companies and firms">
-                                                companies and firms
-                                            </option>
-                                            <option name="Form-16">Form-16</option>
-                                        </select>
-                                    </div>
-                                    <button class="btn btn-primary mt-3 backBtn">
-                                        Back
-                                    </button>
-                                    <button class="btn btn-primary mt-3 nextBtn">
-                                        Next
-                                    </button>
+
+                            <div class="d-md-none section" id="section15" style="display: none">
+                                <div class="form-group">
+                                    <label>status type</label>
+                                    <input type="hidden" id="current-section" name="current-section" value="1">
+                                    <select class="form-control select2" name="status_type" style="width: 100%">
+                                        <option selected>--select--</option>
+                                        <option name="companies and firms">
+                                            companies and firms
+                                        </option>
+                                        <option name="Form-16">Form-16</option>
+                                    </select>
                                 </div>
+                                <button class="btn btn-primary mt-3 backBtn">
+                                    Back
+                                </button>
+                                <button class="btn btn-primary mt-3 nextBtn">
+                                    Next
+                                </button>
                             </div>
+
                             <div class="d-md-none section" id="section16" style="display: none">
                                 <div class="form-group">
                                     <label>ITR</label>
