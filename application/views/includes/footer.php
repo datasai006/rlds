@@ -159,7 +159,7 @@ var baseUrl = "<?php echo base_url(); ?>";
 
 $(document).ready(function() {
 
-    $('.nextBtn').click(function() {
+    $('.nextBtn1').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
         var formData = $('#final-form1').serialize();
@@ -167,7 +167,7 @@ $(document).ready(function() {
         // AJAX request to insert data before moving to the next section
         $.ajax({
             type: 'POST',
-            url: baseUrl + 'verification/Residence/add_residence', // New controller method URL
+            url: baseUrl + 'verification/Residence/add_residence',
             data: formData,
             success: function(response) {
                 // alert('Data saved successfully!');
@@ -186,7 +186,7 @@ $(document).ready(function() {
     });
 
 
-    $('.backBtn').click(function() {
+    $('.backBtn1').click(function() {
         var currentSection = $(this).closest('.section');
         var prevSection = currentSection.prev('.section');
         currentSection.hide();
@@ -194,8 +194,66 @@ $(document).ready(function() {
         return false;
     });
 
-    $('.submitBtn').click(function() {
+    $('.submitBtn1').click(function() {
         var formData = $('#final-form1').serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Residence/add_residence',
+            data: formData,
+            success: function(response) {
+                alert('Data saved successfully!');
+            },
+            error: function() {
+                alert('Error occurred while saving data.');
+            }
+        });
+        return false;
+    });
+});
+</script>
+<script>
+var baseUrl = "<?php echo base_url(); ?>";
+
+$(document).ready(function() {
+
+    $('.nextBtn2').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
+        var formData = $('#final-form2').serialize();
+
+        // AJAX request to insert data before moving to the next section
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Residence/add_residence',
+            data: formData,
+            success: function(response) {
+                // alert('Data saved successfully!');
+                currentSection.hide();
+                nextSection.show();
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error: ', status, error);
+                alert(
+                    'Error occurred while saving data. Please check console for details.'
+                );
+            }
+        });
+
+        return false;
+    });
+
+
+    $('.backBtn2').click(function() {
+        var currentSection = $(this).closest('.section');
+        var prevSection = currentSection.prev('.section');
+        currentSection.hide();
+        prevSection.show();
+        return false;
+    });
+
+    $('.submitBtn2').click(function() {
+        var formData = $('#final-form2').serialize();
 
         $.ajax({
             type: 'POST',

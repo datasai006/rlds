@@ -67,20 +67,20 @@
                                         <option>Vajrakarur Branch</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section2" style="display: none">
                                 <div>
                                     <h5>EVALUATION SHEET</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Los no">Los no:</label>
-                                    <input type="text" name="Los no" class="form-control" id="Los no"
+                                    <label for="los_no">Los no</label>
+                                    <input type="text" name="los_no" class="form-control" id="los_no"
                                         placeholder="NA" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section3" style="display: none">
                                 <div>
@@ -92,8 +92,8 @@
                                         placeholder="00-01-1900" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class=" btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class=" btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section4" style="display: none">
                                 <div>
@@ -122,8 +122,8 @@
                                         <option>Loan Against Property</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section5" style="display: none">
                                 <div>
@@ -135,8 +135,8 @@
                                         id="Date of the Report" placeholder="00-01-1900" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section6" style="display: none">
                                 <div>
@@ -148,8 +148,8 @@
                                         placeholder="0" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section7" style="display: none">
                                 <div>
@@ -161,8 +161,8 @@
                                         placeholder="kurnool" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section8" style="display: none">
                                 <div>
@@ -174,8 +174,8 @@
                                         placeholder="00-01-1900" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section9" style="display: none">
                                 <div>
@@ -194,8 +194,8 @@
                                         </option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section10" style="display: none">
                                 <div>
@@ -210,8 +210,8 @@
                                         <option>UNTRACEABLE</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section11" style="display: none">
                                 <div>
@@ -225,8 +225,8 @@
                                         <option>NO</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section12" style="display: none">
                                 <div>
@@ -238,8 +238,8 @@
                                         placeholder="1200 sq.ft." />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section13" style="display: none">
                                 <div>
@@ -251,8 +251,8 @@
                                         placeholder=" xxxx-xxxx-xxxx" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section14" style="display: none">
                                 <div>
@@ -264,8 +264,8 @@
                                         placeholder=" xxxxxxxxxxx" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section15" style="display: none">
                                 <div>
@@ -277,8 +277,8 @@
                                         placeholder="T.V, Fridge,Sofa." />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section16" style="display: none">
                                 <div>
@@ -290,8 +290,8 @@
                                         placeholder="near by place  " />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section17" style="display: none">
                                 <div>
@@ -303,8 +303,8 @@
                                         placeholder="NA" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section18" style="display: none">
                                 <div>
@@ -316,8 +316,8 @@
                                         placeholder="7702826006" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section19" style="display: none">
                                 <div>
@@ -328,8 +328,8 @@
                                     <input name="Mobile No 2" class="form-control" id="Mobile No 2" placeholder="NA" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section20" style="display: none">
                                 <div>
@@ -344,8 +344,8 @@
                                         <option value="NO">NO</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section21" style="display: none">
                                 <div>
@@ -359,8 +359,8 @@
                                         <option value="No">NO</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section22" style="display: none">
                                 <div>
@@ -382,8 +382,8 @@
                                         <option value="Mother in law">Mother in law</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section23" style="display: none">
                                 <div>
@@ -397,8 +397,8 @@
                                         <option value="Fully Furnished">Fully Furnished</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section24" style="display: none">
                                 <div>
@@ -414,8 +414,8 @@
                                         <option value="Thatched">Thatched</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section25" style="display: none">
                                 <div>
@@ -440,8 +440,8 @@
                                         </option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section26" style="display: none">
                                 <div>
@@ -458,8 +458,8 @@
                                         <option value="NA">NA</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section27" style="display: none">
                                 <div>
@@ -473,8 +473,8 @@
                                         <option value="NO">NO</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section28" style="display: none">
                                 <div>
@@ -489,8 +489,8 @@
                                         <option value="NO">NO</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section29" style="display: none">
                                 <div>
@@ -502,8 +502,8 @@
                                         placeholder="NO" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section30" style="display: none">
                                 <div>
@@ -519,8 +519,8 @@
                                         <option value="Quarters">Quarters</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section31" style="display: none">
                                 <div>
@@ -535,8 +535,8 @@
                                         <option value="NEGATIVE">NEGATIVE</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section32" style="display: none">
                                 <div>
@@ -548,8 +548,8 @@
                                         id="Field Executive Comments" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section33" style="display: none">
                                 <div>
@@ -567,8 +567,8 @@
                                         </option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section34" style="display: none">
                                 <div>
@@ -580,8 +580,8 @@
                                         id="Authoried Signatury" placeholder="L Raghuveer Reddy" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section35" style="display: none">
                                 <div>
@@ -593,8 +593,8 @@
                                         id="Residence Details" placeholder=" " />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section36" style="display: none">
                                 <div>
@@ -609,8 +609,8 @@
                                         <option value="Quaters">Quaters</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section37" style="display: none">
                                 <div>
@@ -649,8 +649,8 @@
                                         <option value="25 Years">25 Years</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section38" style="display: none">
                                 <div>
@@ -674,8 +674,8 @@
                                         <option value="12">12</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section39" style="display: none">
                                 <div>
@@ -687,8 +687,8 @@
                                         id="Entry into residence permitted" placeholder="YES" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section40" style="display: none">
                                 <div>
@@ -703,8 +703,8 @@
                                         <option value="NEGATIVE">NEGATIVE</option>
                                     </select>
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section41" style="display: none">
                                 <div>
@@ -716,8 +716,8 @@
                                         placeholder="" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section42" style="display: none">
                                 <div>
@@ -732,8 +732,8 @@
                                     <input type="file" class="form-control" name="positive" style="width: 100%" />
                                     <input type="file" class="form-control" name="positive" style="width: 100%" />
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section43" style="display: none">
                                 <div>
@@ -744,8 +744,8 @@
                                     <input type="file" class="form-control" name="signature" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section44" style="display: none">
                                 <div>
@@ -756,8 +756,8 @@
                                     <input type="file" class="form-control" name="stamp" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section45" style="display: none">
                                 <div>
@@ -769,8 +769,8 @@
                                         placeholder="279/29-09-2023" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section46" style="display: none">
                                 <div>
@@ -782,8 +782,8 @@
                                         placeholder="AIDNI ENGINEERS" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
                             <div class="d-md-none section" id="section47" style="display: none">
                                 <div>
@@ -795,8 +795,8 @@
                                         placeholder="97/29-09-2023" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-success mt-3">submit</button>
+                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+                                <button class="btn btn-success mt-3 submitBtn1">submit</button>
                             </div>
                         </form>
 

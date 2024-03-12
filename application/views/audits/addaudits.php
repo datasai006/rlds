@@ -35,8 +35,8 @@
                                 action="<?php echo base_url( )?>Audits/insert" method="post">
                                 <div class="card-body row">
                                     <div class="form-group col-md-4">
-                                        <label for="employee_name">Assign to</label>
-                                        <select name="employee_name" class="form-control" id="employee_name" required>
+                                        <label for="Assign_to">Assign to</label>
+                                        <select name="Assign_to" class="form-control" id="Assign_to" required>
                                             <option value="">Select Employee</option>
                                             <?php foreach ($employees as $employee): ?>
                                             <option value="<?php echo $employee['last_name']; ?>">
@@ -45,8 +45,9 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="type">type</label>
-                                        <select name="type" class="form-control" id="type" required>
+                                        <label for="Verification_Type">type</label>
+                                        <select name="Verification_Type" class="form-control" id="Verification_Type"
+                                            required>
                                             <option value="">Select Type</option>
                                             <?php foreach ($types as $type): ?>
                                             <option value="<?php echo $type; ?>"><?php echo $type; ?></option>
@@ -55,8 +56,14 @@
                                     </div>
 
                                     <div class="form-group col-md-4">
-                                        <label for="address">Contact Infomation</label>
-                                        <textarea class="form-control" id="address" name="address" rows="2"></textarea>
+                                        <label for="Contact_person">Contact Person</label>
+                                        <input type="text" class="form-control" id="Contact_person"
+                                            name="Contact_person" />
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="Contact_person">Contact Number</label>
+                                        <input type="text" class="form-control" id="Contact_person"
+                                            name="Contact_person" />
                                     </div>
 
                                 </div>
