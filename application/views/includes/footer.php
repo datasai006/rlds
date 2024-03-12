@@ -127,7 +127,7 @@ $(document).ready(function() {
         $.ajax({
             type: 'POST',
             url: baseUrl +
-                'Income/add_income ',
+                'Income/add_income',
             data: formData,
             success: function(response) {
                 alert('Data saved successfully!');

@@ -406,7 +406,7 @@
                                     <div class="form-group">
                                         <label for="application_name">Application Name</label>
                                         <input type="text" class="form-control" name="application_name"
-                                            placeholder="Application Name" style="width: 100% " required>
+                                            placeholder="Application Name" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>

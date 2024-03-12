@@ -469,8 +469,8 @@
         </div>
 
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" aria-labelledby="dropdownMenu" data-widget="treeview"
-                role="menu" data-accordion="false">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"
+                role=" menu" data-accordion="false">
                 <?php foreach ($menus as $item): ?>
                 <?php if (is_array($item) && isset($item['parent_id']) && $item['parent_id'] == 0): ?>
                 <li class="nav-item has-treeview">

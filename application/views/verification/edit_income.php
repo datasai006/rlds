@@ -153,8 +153,7 @@
                                         <label>Application Name</label>
                                         <input type="text" class="form-control"
                                             value="<?php echo $income_data->application_name; ?>"
-                                            name="application-name" placeholder="Application Name" style="width: 100% "
-                                            required>
+                                            name="application-name" placeholder="Application Name" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>
@@ -250,7 +249,7 @@
                                         <label>Date of Submission</label>
                                         <input type="date" class="form-control"
                                             value="<?php echo $income_data->Submission_date; ?>" name="Submission-date"
-                                            placeholder="214633751290823" style="width: 100% " required>
+                                            placeholder="214633751290823" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>
@@ -259,7 +258,7 @@
                                         <label>Gross income in Rupees</label>
                                         <input type="text" class="form-control"
                                             value="<?php echo $income_data->gross_income; ?>" name="gross-income"
-                                            placeholder="6,63,100" style="width: 100% " required>
+                                            placeholder="6,63,100" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>
@@ -268,7 +267,7 @@
                                         <label>Verified Auditor Name</label>
                                         <input type="text" class="form-control"
                                             value="<?php echo $income_data->auditor_name; ?>" name="auditor-name"
-                                            placeholder="RLDS PVT LTD" style="width: 100% " required>
+                                            placeholder="RLDS PVT LTD" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>
@@ -277,7 +276,7 @@
                                         <label>Verified in Income Tax Office</label>
                                         <input type="text" class="form-control"
                                             value="<?php echo $income_data->office_address; ?>" name="office_address"
-                                            placeholder="KURNOOL" style="width: 100% " required>
+                                            placeholder="KURNOOL" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>

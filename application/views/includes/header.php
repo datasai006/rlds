@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="<?= base_url('assets/') ?>plugins/summernote/summernote-bs4.min.css" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" rel="stylesheet">
+
     <!-- CodeMirror -->
     <link rel="stylesheet" href="<?= base_url('assets/') ?>plugins/codemirror/codemirror.css" />
     <link rel="stylesheet" href="<?= base_url('assets/') ?>plugins/codemirror/theme/monokai.css" />

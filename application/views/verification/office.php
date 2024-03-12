@@ -44,72 +44,72 @@
                             <div class="form-group col-md-4">
                                 <label for="branch-name">Branch Name</label>
                                 <input type="text" name="branch-name" class="form-control" id="branch-name"
-                                    placeholder="kurnool Branch" required="" />
+                                    placeholder="kurnool Branch" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="los-no">Los no</label>
-                                <input type="text" name="los-no" class="form-control" id="los-no" placeholder="2489376"
-                                    required="" />
+                                <input type="text" name="los-no" class="form-control" id="los-no"
+                                    placeholder="2489376" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Reference_no">Reference no</label>
                                 <input type="text" name="Reference_no" class="form-control" id="Reference_no"
-                                    placeholder="00-01-1900" required="" />
+                                    placeholder="00-01-1900" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="Typeofloan">Type of Loan</label>
                                 <input type="text" name="Typeofloan" class="form-control" id="Typeofloan"
-                                    placeholder="0" required="" />
+                                    placeholder="0" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="Mobile_no">Mobile no</label>
                                 <input type="text" name="Mobile_no" class="form-control" id="Mobile_no"
-                                    placeholder="787896739" required="" />
+                                    placeholder="787896739" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="Applicantname">Name of the Application(Mr/Mrs/Ms)</label>
                                 <input type="text" name="Applicantname" class="form-control" id="Applicantname"
-                                    placeholder="0" required="" />
+                                    placeholder="0" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Office-Address">Office Address</label>
                                 <input type="text" name="Office-Address" class="form-control" id="Office-Address"
-                                    placeholder="kurnool" required="" />
+                                    placeholder="kurnool" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Receipt_date">Date Of The Receipt of the File</label>
                                 <input type="date" name="Receipt_date" class="form-control" id="Receipt_date"
-                                    placeholder="00-01-1900" required />
+                                    placeholder="00-01-1900" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="DateoftheReport">Date of the Report</label>
                                 <input type="date" name="DateoftheReport" class="form-control" id="DateoftheReport"
-                                    placeholder="00-01-1900" required="" />
+                                    placeholder="00-01-1900" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="ExactCompany">Exact Company Name</label>
                                 <input type="text" name="ExactCompany" class="form-control" id="ExactCompany"
-                                    placeholder="KraftBees" required="" />
+                                    placeholder="KraftBees" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="Designation">Designation</label>
                                 <input type="text" name="Designation" class="form-control" id="Designation"
-                                    placeholder="" required />
+                                    placeholder="" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="EmployeeId">Employee ID</label>
                                 <input type="text" name="EmployeeId" class="form-control" id="EmployeeId"
-                                    placeholder="NA" required />
+                                    placeholder="NA" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Personcontacted">Person contacted</label>
-                                <select name="Personcontacted" class="form-control" id="Personcontacted" required="">
+                                <select name="Personcontacted" class="form-control" id="Personcontacted">
                                     <option value="Yes">YES</option>
                                     <option value="No">NO</option>
                                 </select>
@@ -117,7 +117,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="WorkingSince">Working Since</label>
-                                <select name="WorkingSince" class="form-control" id="WorkingSince" required>
+                                <select name="WorkingSince" class="form-control" id="WorkingSince">
                                     <option>------select no of years------</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -128,35 +128,34 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="NetSalary">Net Salary</label>
-                                <input type="text" name="NetSalary" class="form-control" id="NetSalary" placeholder="NA"
-                                    required />
+                                <input type="text" name="NetSalary" class="form-control" id="NetSalary"
+                                    placeholder="NA" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="PersonMet">Person Met</label>
-                                <input type="text" name="PersonMet" class="form-control" id="PersonMet" placeholder="0"
-                                    required />
+                                <input type="text" name="PersonMet" class="form-control" id="PersonMet"
+                                    placeholder="0" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Designationoftheperson">Designation of the person</label>
                                 <input type="text" name="Designationoftheperson" class="form-control"
-                                    id="Designationoftheperson" placeholder="0" required="" />
+                                    id="Designationoftheperson" placeholder="0" />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="NatureofBusiness">Nature of Business</label>
                                 <input type="text" name="NatureofBusiness" class="form-control" id="NatureofBusiness"
-                                    placeholder="Business Type " required />
+                                    placeholder="Business Type " />
                             </div>
 
                             <div class="form-group col-md-4">
                                 <label for="LandMark">Land Mark</label>
                                 <input type="text" name="LandMark" class="form-control" id="LandMark"
-                                    placeholder="Near My location " required="" />
+                                    placeholder="Near My location " />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Numberofemployeesseen">Number of employees seen</label>
-                                <select name="Numberofemployeesseen" class="form-control" id="Numberofemployeesseen"
-                                    required>
+                                <select name="Numberofemployeesseen" class="form-control" id="Numberofemployeesseen">
                                     <option value="Many">Many</option>
                                     <option value="Few">Few</option>
                                 </select>
@@ -165,8 +164,7 @@
                             <div class="form-group col-md-4">
                                 <label for="PersonmetatOffice">Person met at Office confirm that applicant
                                     worked at given address</label>
-                                <select name="PersonmetatOffice" class="form-control" id="PersonmetatOffice"
-                                    required="">
+                                <select name="PersonmetatOffice" class="form-control" id="PersonmetatOffice">
                                     <option>--select--</option>
                                     <option value="Yes">YES</option>
                                     <option value="No">NO</option>
@@ -174,7 +172,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Indicate">Indicate if residence cum office</label>
-                                <select name="Indicate" class="form-control" id="Indicate" required="">
+                                <select name="Indicate" class="form-control" id="Indicate">
                                     <option>--select--</option>
                                     <option value="No">NO</option>
                                     <option value="Yes">YES</option>
@@ -182,7 +180,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="LocatingOffice">Locating Office</label>
-                                <select name="LocatingOffice" class="form-control" id="LocatingOffice" required="">
+                                <select name="LocatingOffice" class="form-control" id="LocatingOffice">
                                     <option>--select--</option>
                                     <option value="Yes">YES</option>
                                     <option value="No">NO</option>
@@ -191,7 +189,7 @@
 
                             <div class="form-group col-md-4">
                                 <label for="Boardsighted">Name Board sighted</label>
-                                <select name="Boardsighted" class="form-control" id="Boardsighted" required="">
+                                <select name="Boardsighted" class="form-control" id="Boardsighted">
                                     <option>--select--</option>
                                     <option value="Yes">YES</option>
                                     <option value="No">NO</option>
@@ -199,7 +197,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="BusinessActivity">Business Activity seen</label>
-                                <select name="BusinessActivity" class="form-control" id="BusinessActivity" required="">
+                                <select name="BusinessActivity" class="form-control" id="BusinessActivity">
                                     <option>--select--</option>
                                     <option value="Yes">YES</option>
                                     <option value="No">NO</option>
@@ -207,7 +205,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Equipmentsighted">Equipment sighted</label>
-                                <select name="Equipmentsighted" class="form-control" id="Equipmentsighted" required="">
+                                <select name="Equipmentsighted" class="form-control" id="Equipmentsighted">
                                     <option>--select--</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
@@ -216,11 +214,11 @@
                             <div class="form-group col-md-4">
                                 <label for="Visitingcard">Visiting card obtained as proff of visit</label>
                                 <input type="text" name="Visitingcard" class="form-control" id="Visitingcard"
-                                    placeholder="No" required />
+                                    placeholder="No" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="Office-is-in">Office is in</label>
-                                <select name="Office-is-in" class="form-control" id="Office-is-in" required="">
+                                <select name="Office-is-in" class="form-control" id="Office-is-in">
                                     <option value="">-------select-------</option>
                                     <option value="Ground floor">Ground Floor</option>
                                     <option value="1st floor">1st Floor</option>
@@ -233,11 +231,11 @@
                             <div class="form-group col-md-4">
                                 <label for="FieldExecutiveComments">Field Executive Comments</label>
                                 <input type="textarea" name="FieldExecutiveComments" class="form-control"
-                                    id="FieldExecutiveComments" placeholder="" required="" />
+                                    id="FieldExecutiveComments" placeholder="" />
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="fieldexecutive">FIELD EXECUTIVE NAME</label>
-                                <select name="fieldexecutive" class="form-control" id="fieldexecutive" required="">
+                                <select name="fieldexecutive" class="form-control" id="fieldexecutive">
                                     <option>--select--</option>
                                     <option value="USHA KALYANI YADLAPALLI-9640826097">USHA KALYANI
                                         YADLAPALLI-9640826097</option>
