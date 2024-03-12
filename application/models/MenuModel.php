@@ -167,7 +167,15 @@ public function update_menu_id($menu_id, $new_menu_id) {
         $query = $this->db->get();
         return $query->result();
     }
-    
+    // public function get_parent(){
+           
+    //     $query = $this->db->where('menu_level', 1)
+    //                   ->get('tbl_menu');
+    // return $query->result_array();
+    // }
+
+
+
 
 }
 ?>
