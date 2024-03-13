@@ -223,25 +223,9 @@ $(document).ready(function() {
     $('.nextBtn2').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
-        var formData = $('#final-form2').serialize();
 
-
-        $.ajax({
-            type: 'POST',
-            url: baseUrl + 'verification/Office/add_office',
-            data: formData,
-            success: function(response) {
-
-                currentSection.hide();
-                nextSection.show();
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error: ', status, error);
-                alert(
-                    'Error occurred while saving data. Please check console for details.'
-                );
-            }
-        });
+        currentSection.hide();
+        nextSection.show();
 
         return false;
     });
@@ -256,7 +240,7 @@ $(document).ready(function() {
     });
 
     $('.submitBtn2').click(function() {
-        var formData = $('#final-form2').serialize();
+        var formData = $('#final_form2').serialize();
         var_dump('formData', formData);
 
         $.ajax({

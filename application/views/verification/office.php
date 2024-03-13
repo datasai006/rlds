@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <!-- small device code start here -->
-                    <form class="ajax-form" id="final-form2">
+                    <form class="ajax-form" id="final_form2">
                         <input type="hidden" name="id" value="1" />
                         <div class="card-body ">
                             <div class="d-md-none section" id="section1">
