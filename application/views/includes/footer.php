@@ -105,25 +105,9 @@ $(document).ready(function() {
     $('.nextBtn').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
-        var formData = $('#final-form').serialize();
 
-        // AJAX request to insert data before moving to the next section
-        $.ajax({
-            type: 'POST',
-            url: baseUrl + 'verification/Income/add_income',
-            data: formData,
-            success: function(response) {
-                // alert('Data saved successfully!');
-                currentSection.hide();
-                nextSection.show();
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error: ', status, error);
-                alert(
-                    'Error occurred while saving data. Please check console for details.'
-                );
-            }
-        });
+        currentSection.hide();
+        nextSection.show();
 
         return false;
     });
@@ -145,6 +129,7 @@ $(document).ready(function() {
             data: formData,
             success: function(response) {
                 alert('Data saved successfully!');
+                window.location.href = baseUrl + 'dashboard';
             },
             error: function() {
                 alert('Error occurred while saving data.');
@@ -162,25 +147,9 @@ $(document).ready(function() {
     $('.nextBtn1').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
-        var formData = $('#final-form1').serialize();
 
-        // AJAX request to insert data before moving to the next section
-        $.ajax({
-            type: 'POST',
-            url: baseUrl + 'verification/Residence/add_residence',
-            data: formData,
-            success: function(response) {
-
-                currentSection.hide();
-                nextSection.show();
-            },
-            error: function(xhr, status, error) {
-                console.error('AJAX Error: ', status, error);
-                alert(
-                    'Error occurred while saving data. Please check console for details.'
-                );
-            }
-        });
+        currentSection.hide();
+        nextSection.show();
 
         return false;
     });
@@ -202,7 +171,7 @@ $(document).ready(function() {
             url: baseUrl + 'verification/Residence/add_residence',
             data: formData,
             success: function(response) {
-
+                window.location.href = baseUrl + 'dashboard';
             },
             error: function() {
                 alert('Error occurred while saving data.');
@@ -214,7 +183,7 @@ $(document).ready(function() {
 </script>
 
 
-<script>
+<!-- <script>
 $('.section').not(':first').hide();
 var baseUrl = "<?php echo base_url(); ?>";
 
@@ -257,8 +226,57 @@ $(document).ready(function() {
         return false;
     });
 });
-</script>
+</script> -->
+<script>
+$(document).ready(function() {
+    $('.section').not(':first').hide();
+    var baseUrl = "<?php echo base_url(); ?>";
 
+    $('.nextBtn2').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
+
+        currentSection.hide();
+        nextSection.show();
+
+        return false;
+    });
+
+
+    $('.backBtn2').click(function() {
+        var currentSection = $(this).closest('.section');
+        var prevSection = currentSection.prev('.section');
+        currentSection.hide();
+        prevSection.show();
+        return false;
+    });
+
+    $('.submitBtn2').click(function() {
+        var formData = $('#final_form2').serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Office/add_office',
+            data: formData,
+            success: function(response) {
+
+                alert('Data saved successfully!');
+
+
+                window.location.href = baseUrl + 'dashboard';
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error: ', status, error);
+                alert(
+                    'Error occurred while saving data. Please check console for details.'
+                );
+            }
+        });
+        return false;
+    });
+
+});
+</script>
 </body>
 
 </html>

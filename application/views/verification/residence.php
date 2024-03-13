@@ -50,8 +50,8 @@
                                 </div>
                                 <div class="form-group">
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <label for="Branch Name">Branch Name:</label>
-                                    <select name="Branch Name" class="form-control" id="Branch Name">
+                                    <label for="branch_name">Branch Name:</label>
+                                    <select name="branch_name" class="form-control" id="branch_name">
                                         <option>Main Branch</option>
                                         <option>Town Branch</option>
                                         <option>SKU Branch</option>
@@ -795,7 +795,7 @@
                                         placeholder="97/29-09-2023" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn1">Back</button>
+
                                 <button class="btn btn-success mt-3 submitBtn1">submit</button>
                             </div>
                         </form>

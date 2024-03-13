@@ -18,45 +18,139 @@ class Residence extends CI_Controller {
         $this->load->view('verification/residence');
     }
 
-    public function add_residence() {
+    // public function add_residence() {
+    //     $positive_images = array();
+
+    //     if ($this->input->server('REQUEST_METHOD') === 'POST') {
+    //         $config['upload_path']   = './uploads/';
+    //         $config['allowed_types'] = 'gif|jpg|jpeg|png';
+    //         $config['max_size'] = 0;
+    //         $this->upload->initialize($config);
+
+    //         foreach ($_FILES['positive_images']['name'] as $key => $value) {
+    //             $_FILES['positive_image']['name']     = $_FILES['positive_images']['name'][$key];
+    //             $_FILES['positive_image']['type']     = $_FILES['positive_images']['type'][$key];
+    //             $_FILES['positive_image']['tmp_name'] = $_FILES['positive_images']['tmp_name'][$key];
+    //             $_FILES['positive_image']['error']    = $_FILES['positive_images']['error'][$key];
+    //             $_FILES['positive_image']['size']     = $_FILES['positive_images']['size'][$key];
+
+    //             if ($this->upload->do_upload('positive_image')) {
+    //                 $positive_images[] = $this->upload->data('file_name');
+    //             } else {
+    //                 echo 'Error uploading positive image: ' . $this->upload->display_errors();
+    //                 return;
+    //             }
+    //         }
+    //         if ($this->upload->do_upload('signature')) {
+    //             $signature_data = $this->upload->data();
+    //         } else {
+    //             echo 'Error uploading signature: ' . $this->upload->display_errors();
+    //             return;
+    //         }
+    //         if ($this->upload->do_upload('stamp')) {
+    //             $stamp_data = $this->upload->data();
+    //         } else {
+    //             echo 'Error uploading stamp: ' . $this->upload->display_errors();
+    //             return;
+    //         }
+    //         if (isset($signature_data) && isset($stamp_data) && !empty($positive_images)) {
+    //             $positive_images_str = implode(',', $positive_images);
+    //             $data = array(
+    //     "branch_name"=>$this->input->post("branch_name"),
+	// 	"los_no"=>$this->input->post("los_no"),
+	// 	"reference_no"=>$this->input->post("reference_no"),
+	// 	"typeofloan"=>$this->input->post("typeofloan"),
+	// 	"Receipt_date"=>$this->input->post("Receipt_date"),	
+	// 	"applicant_name"=>$this->input->post("applicant_name"),
+	// 	"Address"=>$this->input->post("Address"),	
+	// 	"Receipt"=>$this->input->post("Receipt"),	
+	// 	"Locality"=>$this->input->post("Locality"),	
+	// 	"Accessibility"=>$this->input->post("Accessibility"),	
+	// 	"entrance_motorable"=>$this->input->post("entrance_motorable"),	
+	// 	"Area_Sq_Ft"=>$this->input->post("Area_Sq_Ft"),
+	// 	"aadhar_card"=>$this->input->post("aadhar_card"),		
+	// 	"pan_card"=>$this->input->post("pan_card"),	
+	// 	"Visible_Items"=>$this->input->post("Visible_Items"),	
+	// 	"Land_Mark"=>$this->input->post("Land_Mark"),	
+	// 	"Land_Line_No"=>$this->input->post("Land_Line_No"),	
+	// 	"mobile_no"=>$this->input->post("mobile_no"),	
+	// 	"mobile_no2"=>$this->input->post("mobile_no2"),	
+	// 	"Within_Municipal_Limit"=>$this->input->post("Within_Municipal_Limit"),	
+	// 	"Address_Confirmed"=>$this->input->post("Address_Confirmed"),	
+	// 	"Relationship"=>$this->input->post("Relationship"),	
+	// 	"Interior_Furniture"=>$this->input->post("Interior_Furniture"),	
+	// 	"typeofroof"=>$this->input->post("typeofroof"),	
+	// 	"Numberoffloors"=>$this->input->post("Numberoffloors"),	
+	// 	"VechielsfoundatResidence"=>$this->input->post("VechielsfoundatResidence"),	
+	// 	"Nameplatesighted"=>$this->input->post("Nameplatesighted"),	
+	// 	"NeighboursVerification"=>$this->input->post("NeighboursVerification"),	
+	// 	"PoliticalLink"=>$this->input->post("PoliticalLink"),	
+	// 	"TypeofResidence"=>$this->input->post("TypeofResidence"),	
+	// 	"NeighboursVerification1"=>$this->input->post("NeighboursVerification1"),	
+	// 	"FieldExecutiveComments"=>$this->input->post("FieldExecutiveComments"),	
+	// 	"Verifier_Name"=>$this->input->post("Verifier_Name"),	
+	// 	"AuthoriedSignatury"=>$this->input->post("AuthoriedSignatury"),	
+	// 	"ResidenceDetails"=>$this->input->post("ResidenceDetails"),	
+	// 	"OwnershipResidence"=>$this->input->post("OwnershipResidence"),	
+	// 	"Numberofyearsstay"=>$this->input->post("Numberofyearsstay"),
+	// 	"TotalFamilyMembers"=>$this->input->post("TotalFamilyMembers"),	
+	// 	"residence_permitted"=>$this->input->post("residence_permitted"),	
+	// 	"NeighborsVerification2"=>$this->input->post("NeighborsVerification2"),	
+	// 	"comments"=>$this->input->post("comments"),	
+    //      "positive_image" => $positive_images_str,
+    //      "signature" => $signature_data['file_name'],
+    //      "stamp" => $stamp_data['file_name'],
+    //      "system_case_id"=>$this->input->post("system_case_id"),	
+	// 	"applicant_name1"=>$this->input->post("applicant_name1"),	
+	// 	"ref_number"=>$this->input->post("ref_number"),		
+    //             );
+
+    //             $insert_id = $this->Residence_model->insert_data($data);
+
+    //             if ($insert_id) {
+    //                 redirect('Dashboard');
+    //             } else {
+    //                 echo 'Error inserting data into the database';
+    //             }
+    //         } else {
+    //             echo 'Error uploading signature, stamp, or positive image';
+    //         }
+    //     }
+    // }
+public function add_residence() {
+    if ($this->input->server('REQUEST_METHOD') === 'POST') {
+        $config['upload_path']   = './uploads/';
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
+        $config['max_size'] = 0;
+        $this->load->library('upload', $config);
+
+        // Handle positive images upload
         $positive_images = array();
+        foreach ($_FILES['positive_images']['name'] as $key => $value) {
+            $_FILES['positive_image']['name']     = $_FILES['positive_images']['name'][$key];
+            $_FILES['positive_image']['type']     = $_FILES['positive_images']['type'][$key];
+            $_FILES['positive_image']['tmp_name'] = $_FILES['positive_images']['tmp_name'][$key];
+            $_FILES['positive_image']['error']    = $_FILES['positive_images']['error'][$key];
+            $_FILES['positive_image']['size']     = $_FILES['positive_images']['size'][$key];
 
-        if ($this->input->server('REQUEST_METHOD') === 'POST') {
-            $config['upload_path']   = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|jpeg|png';
-            $config['max_size'] = 0;
-            $this->upload->initialize($config);
+            if ($this->upload->do_upload('positive_image')) {
+                $positive_images[] = $this->upload->data('file_name');
+            }
+        }
 
-            foreach ($_FILES['positive_images']['name'] as $key => $value) {
-                $_FILES['positive_image']['name']     = $_FILES['positive_images']['name'][$key];
-                $_FILES['positive_image']['type']     = $_FILES['positive_images']['type'][$key];
-                $_FILES['positive_image']['tmp_name'] = $_FILES['positive_images']['tmp_name'][$key];
-                $_FILES['positive_image']['error']    = $_FILES['positive_images']['error'][$key];
-                $_FILES['positive_image']['size']     = $_FILES['positive_images']['size'][$key];
+        // Handle signature upload
+        if ($this->upload->do_upload('signature')) {
+            $signature_data = $this->upload->data();
+        }
 
-                if ($this->upload->do_upload('positive_image')) {
-                    $positive_images[] = $this->upload->data('file_name');
-                } else {
-                    echo 'Error uploading positive image: ' . $this->upload->display_errors();
-                    return;
-                }
-            }
-            if ($this->upload->do_upload('signature')) {
-                $signature_data = $this->upload->data();
-            } else {
-                echo 'Error uploading signature: ' . $this->upload->display_errors();
-                return;
-            }
-            if ($this->upload->do_upload('stamp')) {
-                $stamp_data = $this->upload->data();
-            } else {
-                echo 'Error uploading stamp: ' . $this->upload->display_errors();
-                return;
-            }
-            if (isset($signature_data) && isset($stamp_data) && !empty($positive_images)) {
-                $positive_images_str = implode(',', $positive_images);
-                $data = array(
-                     	"branch_name"=>$this->input->post("branch_name"),
+        // Handle stamp upload
+        if ($this->upload->do_upload('stamp')) {
+            $stamp_data = $this->upload->data();
+        }
+
+        // Prepare data for database insertion
+        $data = array(
+        "branch_name"=>$this->input->post("branch_name"),
 		"los_no"=>$this->input->post("los_no"),
 		"reference_no"=>$this->input->post("reference_no"),
 		"typeofloan"=>$this->input->post("typeofloan"),
@@ -105,18 +199,19 @@ class Residence extends CI_Controller {
 		"ref_number"=>$this->input->post("ref_number"),		
                 );
 
-                $insert_id = $this->Residence_model->insert_data($data);
+        // Insert data into the database
+        $insert_id = $this->Residence_model->insert_data($data);
 
-                if ($insert_id) {
-                    redirect('Dashboard');
-                } else {
-                    echo 'Error inserting data into the database';
-                }
-            } else {
-                echo 'Error uploading signature, stamp, or positive image';
-            }
+        if ($insert_id) {
+            redirect('Dashboard');
+        } else {
+            echo 'Error inserting data into the database';
         }
+    } else {
+        // Load view for adding residence
+        $this->load->view('add_residence_view');
     }
+}
 
     
     public function view_residence_data() {

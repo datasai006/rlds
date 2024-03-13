@@ -44,10 +44,10 @@
                         <form class="ajax-form" id="final-form">
                             <input type="hidden" name="id" value="1" />
 
-                            <div class="d-md-none section quickForm" id="section1">
+                            <div class="d-md-none section " id="section1">
                                 <div class="form-group">
                                     <label for="application_name">Application Name</label>
-                                    <input type="text" class="form-control" id="application_namen"
+                                    <input type="text" class="form-control" id="application_name"
                                         name="application_name" placeholder="Application Name" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
@@ -294,8 +294,8 @@
                                 <div class="col-md-4 d-md-block d-none">
                                     <div class="form-group">
                                         <label for="application_name">Application Name</label>
-                                        <input type="text" class="form-control" name="application_name"
-                                            placeholder="Application Name" style="width: 100% ">
+                                        <input type="text" class="form-control" id="application_name"
+                                            name="application_name" placeholder="Application Name" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>
@@ -350,7 +350,7 @@
                                 <div class="col-md-4  d-md-block d-none">
                                     <div class="form-group">
                                         <label>PAN No</label>
-                                        <input type="text" class="form-control" name="pan-no" placeholder="ABWFA1145M"
+                                        <input type="text" class="form-control" name="pan_no" placeholder="ABWFA1145M"
                                             style="width: 100% ">
                                         </input>
                                     </div>

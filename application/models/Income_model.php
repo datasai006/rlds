@@ -2,7 +2,8 @@
 class Income_model extends CI_Model {
     
  public function insert_data($data) {
-  $this->db->insert('tbl_incometax', $data);
+  $query =  $this->db->insert('tbl_incometax', $data);
+  return $query;
 }
 
      public function get_all_income_data() {
