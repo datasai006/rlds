@@ -49,7 +49,7 @@
                                     <h5>EVALUATION SHEET</h5>
                                 </div>
                                 <div class="form-group">
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <label for="branch_name">Branch Name:</label>
                                     <select name="branch_name" class="form-control" id="branch_name">
                                         <option>Main Branch</option>
@@ -77,7 +77,7 @@
                                     <label for="los_no">Los no</label>
                                     <input type="text" name="los_no" class="form-control" id="los_no"
                                         placeholder="NA" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -90,7 +90,7 @@
                                     <label for="Reference no">Reference no:</label>
                                     <input type="text" name="Reference no" class="form-control" id="Reference no"
                                         placeholder="00-01-1900" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class=" btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Type of Loan">Type of Loan:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Type of Loan" class="form-control" id="Type of Loan">
                                         <option>Home Loan</option>
                                         <option>Home Top Up Loan</option>
@@ -133,7 +133,7 @@
                                     <label for="Date of the Report">Date of the Report:</label>
                                     <input type="text" name="Date of the Report" class="form-control"
                                         id="Date of the Report" placeholder="00-01-1900" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -146,7 +146,7 @@
                                     <label for="Application">Name of the Application(Mr/Mrs/Ms)</label>
                                     <input type="text" name="Application" class="form-control" id="Application"
                                         placeholder="0" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -159,7 +159,7 @@
                                     <label for="Address">Address:</label>
                                     <input type="text" name="Address" class="form-control" id="Address"
                                         placeholder="kurnool" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -172,7 +172,7 @@
                                     <label for="Receipt">Date Of The Receipt of the File:</label>
                                     <input type="text" name="Receipt" class="form-control" id="Receipt"
                                         placeholder="00-01-1900" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -183,7 +183,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Locality">Locality :</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Locality" class="form-control" id="Locality">
                                         <option value="CHAWL AREA">CHAWL AREA</option>
                                         <option value="RESIDENTIAL BUILDING">
@@ -203,7 +203,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Accessibility">Accessibility:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Accessibility" class="form-control" id="Accessibility">
                                         <option></option>
                                         <option>EASY TO LOCATE AND ACCESS</option>
@@ -219,7 +219,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="entrance motorable">Is the entrance motorable:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="entrance motorable" class="form-control" id="entrance motorable">
                                         <option>YES</option>
                                         <option>NO</option>
@@ -236,7 +236,7 @@
                                     <label for="Area Sq-Ft">Area Sq-Ft:</label>
                                     <input type="text" name="Area Sq-Ft:" class="form-control" id="Area Sq-Ft:"
                                         placeholder="1200 sq.ft." />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -249,7 +249,7 @@
                                     <label for="Adhar Card No">Adhar Card No</label>
                                     <input type="text" name="Adhar Card No" class="form-control" id="Adhar Card No"
                                         placeholder=" xxxx-xxxx-xxxx" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -262,7 +262,7 @@
                                     <label for="Pan Card No">Pan Card No:</label>
                                     <input type="text" name="Pan Card No" class="form-control" id="Pan Card No:"
                                         placeholder=" xxxxxxxxxxx" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -275,7 +275,7 @@
                                     <label for="Visible Items">Visible Items:</label>
                                     <input type="text" name="Visible Items" class="form-control" id="Visible Items"
                                         placeholder="T.V, Fridge,Sofa." />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -288,7 +288,7 @@
                                     <label for="Land Mark">Land Mark:</label>
                                     <input type="text" name="Land Mark" class="form-control" id="Land Mark"
                                         placeholder="near by place  " />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -301,7 +301,7 @@
                                     <label for="Land Line No">Land Line No:</label>
                                     <input type="text" name="Land Line No" class="form-control" id="Land Line No"
                                         placeholder="NA" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -314,7 +314,7 @@
                                     <label for="Mobile No 1">Mobile No 1:</label>
                                     <input type="text" name="Mobile No 1" class="form-control" id="Mobile No 1"
                                         placeholder="7702826006" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -326,7 +326,7 @@
                                 <div class="form-group">
                                     <label for="Mobile No 2">Mobile No 2:</label>
                                     <input name="Mobile No 2" class="form-control" id="Mobile No 2" placeholder="NA" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -337,7 +337,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Within Municipal Limit">Within Municipal Limit</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Within Municipal Limit" class="form-control"
                                         id="Within Municipal Limit">
                                         <option value="YES">YES</option>
@@ -353,7 +353,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Address Confirmed ">Address Confirmed:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Address Confirmed" class="form-control" id="Address Confirmed">
                                         <option value="Yes">YES</option>
                                         <option value="No">NO</option>
@@ -368,7 +368,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Relationship">Relationship of the Person:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Relationship" class="form-control" id="Relationship">
                                         <option value="Applicant">Applicant</option>
                                         <option value="Co-Applicant">Co-Applicant</option>
@@ -391,7 +391,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Interior Furniture">Interior Furniture</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Interior Furniture" class="form-control" id="Interior Furniture">
                                         <option value="Semi-Furnished">Semi-Furnished</option>
                                         <option value="Fully Furnished">Fully Furnished</option>
@@ -406,7 +406,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Type of Roof">Type of Roof</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Type of Roof" class="form-control" id="Type of Roof">
                                         <option value="R.C.C Roof">R.C.C Roof</option>
                                         <option value="Aspestos">Aspestos</option>
@@ -423,7 +423,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Number of floors">Number of floors</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Number of floors" class="form-control" id="Number of floors">
                                         <option value="SINGLE FLOOR">SINGLE FLOOR</option>
                                         <option value="Ground + One Floor">
@@ -449,7 +449,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Vechiels found at Residence">Vechiels found at Residence:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Vechiels found at Residence" class="form-control"
                                         id="Vechiels found at Residence">
                                         <option value="Two Wheeler">Two Wheeler</option>
@@ -467,7 +467,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Name plate sighted">Name plate sighted</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Name plate sighted" class="form-control" id="Name plate sighted">
                                         <option value="YES">YES</option>
                                         <option value="NO">NO</option>
@@ -482,7 +482,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Neighbours Verification">Neighbours Verification</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Neighbours Verification" class="form-control"
                                         id="Neighbours Verification">
                                         <option value="YES">YES</option>
@@ -500,7 +500,7 @@
                                     <label for="Political Link">Political Link</label>
                                     <input name="Political Link" class="form-control" id="Political Link"
                                         placeholder="NO" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -511,7 +511,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Type of Residence">Type of Residence</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Type of Residence" class="form-control" id="Type of Residence">
                                         <option value="Independent">Independent</option>
                                         <option value="Apartment">Apartment</option>
@@ -528,7 +528,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Neighbours Verification">Neighbours Verification</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Neighbours Verification" class="form-control"
                                         id="Neighbours Verification">
                                         <option value="POSITIVE">POSITIVE</option>
@@ -546,7 +546,7 @@
                                     <label for="Field Executive Comments">Field Executive Comments:</label>
                                     <input type="text" name="Field Executive Comments" class="form-control"
                                         id="Field Executive Comments" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -557,7 +557,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Verifier's Name">Verifier's Name:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Verifier's Name" class="form-control" id="Verifier's Name:">
                                         <option value="A.Md.Imran- 7780661680">
                                             A.Md.Imran- 7780661680
@@ -578,7 +578,7 @@
                                     <label for="Authoried Signatury">Authoried Signatury:</label>
                                     <input type="text" name="Authoried Signatury" class="form-control"
                                         id="Authoried Signatury" placeholder="L Raghuveer Reddy" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -591,7 +591,7 @@
                                     <label for="Residence Details">Residence Details:</label>
                                     <input type="text" name="Residence Details" class="form-control"
                                         id="Residence Details" placeholder=" " />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -602,7 +602,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Ownership Residence">Ownership Residence:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Ownership Residence" class="form-control" id="Ownership Residence:">
                                         <option value="Own">Own</option>
                                         <option value="Rented">Rented</option>
@@ -618,7 +618,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Number of years stay">Number of years stay :</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Number of years stay " class="form-control"
                                         id="Number of years stay ">
                                         <option value="6 Months">6 Months</option>
@@ -658,7 +658,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Total Family Members">Total Family Members:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Total Family Members" class="form-control" id="Total Family Members">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -685,7 +685,7 @@
                                     <label for="Entry into residence permitted">Entry into residence permitted:</label>
                                     <input type="text" name="Entry into residence permitted" class="form-control"
                                         id="Entry into residence permitted" placeholder="YES" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -696,7 +696,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Neighbors Verification">Neighbors Verification:</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <select name="Neighbors Verification" class="form-control"
                                         id="Neighbors Verification">
                                         <option value="POSITIVE">POSITIVE</option>
@@ -714,7 +714,7 @@
                                     <label for="COMMENTS">COMMENTS:</label>
                                     <input type="text" name="COMMENTS" class="form-control" id="COMMENTS"
                                         placeholder="" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -725,7 +725,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>POSITIVE</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                     <input type="file" class="form-control" name="positive" style="width: 100%" />
                                     <input type="file" class="form-control" name="positive" style="width: 100%" />
                                     <input type="file" class="form-control" name="positive" style="width: 100%" />
@@ -742,7 +742,7 @@
                                 <div class="form-group">
                                     <label>Signature</label>
                                     <input type="file" class="form-control" name="signature" style="width: 100%" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -754,7 +754,7 @@
                                 <div class="form-group">
                                     <label>stamp</label>
                                     <input type="file" class="form-control" name="stamp" style="width: 100%" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -767,7 +767,7 @@
                                     <label>System Case ID</label>
                                     <input type="text" class="form-control" name="system-case-id"
                                         placeholder="279/29-09-2023" style="width: 100%" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -780,7 +780,7 @@
                                     <label>Applicant Name</label>
                                     <input type="text" class="form-control" name="applicant-name"
                                         placeholder="AIDNI ENGINEERS" style="width: 100%" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
@@ -793,7 +793,7 @@
                                     <label>Ref.Number</label>
                                     <input type="text" class="form-control" name="ref-number"
                                         placeholder="97/29-09-2023" style="width: 100%" />
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
+
                                 </div>
 
                                 <button class="btn btn-success mt-3 submitBtn1">submit</button>
