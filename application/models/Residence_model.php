@@ -5,7 +5,7 @@ class Residence_model extends CI_Model {
         return $this->db->insert('tbl_residence', $data);
     }
       public function get_residence_data() {
-         $this->db->where('status', 'active');
+         $this->db->where('status', 'In-review');
         $query = $this->db->get('tbl_residence');
         return $query->result();
     }
@@ -23,7 +23,7 @@ class Residence_model extends CI_Model {
       public function delete_residence($id)
     {
         $data = array(
-            'status' => 'inactive',
+            'status' => 'In-review',
         );
 
         $this->db->where('id', $id);

@@ -199,7 +199,7 @@ public function add_residence() {
 		"ref_number"=>$this->input->post("ref_number"),		
                 );
 
-        // Insert data into the database
+       
         $insert_id = $this->Residence_model->insert_data($data);
 
         if ($insert_id) {
@@ -208,7 +208,7 @@ public function add_residence() {
             echo 'Error inserting data into the database';
         }
     } else {
-        // Load view for adding residence
+      
         $this->load->view('add_residence_view');
     }
 }
