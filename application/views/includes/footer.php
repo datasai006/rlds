@@ -170,7 +170,7 @@ $(document).ready(function() {
             url: baseUrl + 'verification/Residence/add_residence',
             data: formData,
             success: function(response) {
-                // alert('Data saved successfully!');
+
                 currentSection.hide();
                 nextSection.show();
             },
@@ -202,7 +202,7 @@ $(document).ready(function() {
             url: baseUrl + 'verification/Residence/add_residence',
             data: formData,
             success: function(response) {
-                alert('Data saved successfully!');
+
             },
             error: function() {
                 alert('Error occurred while saving data.');
@@ -225,13 +225,13 @@ $(document).ready(function() {
         var nextSection = currentSection.next('.section');
         var formData = $('#final-form2').serialize();
 
-        // AJAX request to insert data before moving to the next section
+
         $.ajax({
             type: 'POST',
             url: baseUrl + 'verification/Office/add_office',
             data: formData,
             success: function(response) {
-                // alert('Data saved successfully!');
+
                 currentSection.hide();
                 nextSection.show();
             },
@@ -257,13 +257,14 @@ $(document).ready(function() {
 
     $('.submitBtn2').click(function() {
         var formData = $('#final-form2').serialize();
+        var_dump('formData', formData);
 
         $.ajax({
             type: 'POST',
             url: baseUrl + 'verification/Office/add_office',
             data: formData,
             success: function(response) {
-                alert('Data saved successfully!');
+                // alert('Data saved successfully!');
             },
             error: function() {
                 alert('Error occurred while saving data.');

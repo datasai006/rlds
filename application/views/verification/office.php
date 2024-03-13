@@ -43,18 +43,18 @@
                         <div class="card-body ">
                             <div class="d-md-none section" id="section1">
                                 <div class="form-group">
-                                    <label for=" branch-name">Branch Name</label>
+                                    <label for="branch_name">Branch Name</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" name="branch-name" class="form-control" id="branch-name"
+                                    <input type="text" name="branch_name" class="form-control" id="branch_name"
                                         placeholder="kurnool Branch" />
                                 </div>
                                 <button class="btn btn-primary mt-3 nextBtn2">Next</button>
                             </div>
                             <div class="d-md-none section" id="section2">
                                 <div class="form-group ">
-                                    <label for="los-no">Los no</label>
+                                    <label for="los_no">Los no</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" name="los-no" class="form-control" id="los-no"
+                                    <input type="text" name="los_no" class="form-control" id="los_no"
                                         placeholder="2489376" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn2">Back</button>
@@ -72,16 +72,6 @@
                             </div>
 
                             <div class="d-md-none section" id="section4">
-                                <div class="form-group ">
-                                    <label for="Typeofloan">Type of Loan</label>
-                                    <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" name="Typeofloan" class="form-control" id="Typeofloan"
-                                        placeholder="0" />
-                                </div>
-                                <button class="btn btn-primary mt-3 backBtn2">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn2">Next</button>
-                            </div>
-                            <div class="d-md-none section" id="section5">
                                 <div class="form-group ">
                                     <label for="Typeofloan">Type of Loan</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
@@ -114,9 +104,9 @@
                             </div>
                             <div class="d-md-none section" id="section8">
                                 <div class="form-group ">
-                                    <label for="Office-Address">Office Address</label>
+                                    <label for="Office_Address">Office Address</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" name="Office-Address" class="form-control" id="Office-Address"
+                                    <input type="text" name="Office_Address" class="form-control" id="Office_Address"
                                         placeholder="kurnool" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn2">Back</button>
@@ -168,6 +158,17 @@
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                     <input type="text" name="EmployeeId" class="form-control" id="EmployeeId"
                                         placeholder="NA" />
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn2">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtn2">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section13">
+                                <div class="form-group ">
+                                    <label for="Personcontacted">Person contacted</label>
+                                    <select name="Personcontacted" class="form-control" id="Personcontacted">
+                                        <option value="Yes">YES</option>
+                                        <option value="No">NO</option>
+                                    </select>
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn2">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtn2">Next</button>
@@ -344,9 +345,9 @@
                             </div>
                             <div class="d-md-none section" id="section28">
                                 <div class="form-group ">
-                                    <label for="Office-is-in">Office is in</label>
+                                    <label for="Office_is_in">Office is in</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <select name="Office-is-in" class="form-control" id="Office-is-in">
+                                    <select name="Office_is_in" class="form-control" id="Office_is_in">
                                         <option value="">-------select-------</option>
                                         <option value="Ground floor">Ground Floor</option>
                                         <option value="1st floor">1st Floor</option>
@@ -380,13 +381,17 @@
                                         <option value="MANJULA VENKATESH- 7893342498">MANJULA VENKATESH- 7893342498
                                         </option>
                                         <option value="G DURGA RAO- 7893342498">G DURGA RAO- 7893342498</option>
-                                        <option value="BOTHUKU PAVAN KUMAR-9908633087">BOTHUKU PAVAN KUMAR-9908633087
+                                        <option value="BOTHUKU PAVAN KUMAR-9908633087">BOTHUKU PAVAN
+                                            KUMAR-9908633087
                                         </option>
-                                        <option value="JAKKULA SUNIL KUMAR- 9032000345/8712000345">JAKKULA SUNIL KUMAR-
+                                        <option value="JAKKULA SUNIL KUMAR- 9032000345/8712000345">JAKKULA SUNIL
+                                            KUMAR-
                                             9032000345/8712000345</option>
-                                        <option value="SYED MAHABOOB BASHA-6303810153">SYED MAHABOOB BASHA-6303810153
+                                        <option value="SYED MAHABOOB BASHA-6303810153">SYED MAHABOOB
+                                            BASHA-6303810153
                                         </option>
-                                        <option value="K CHANDRA MOHAN-9985902199">K CHANDRA MOHAN-9985902199</option>
+                                        <option value="K CHANDRA MOHAN-9985902199">K CHANDRA MOHAN-9985902199
+                                        </option>
                                     </select>
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn2">Back</button>
@@ -395,7 +400,7 @@
                             <div class="d-md-none section" id="section31">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Signature</label>
+                                        <label id="signature">Signature</label>
                                         <input type="hidden" id="current-section" name="current-section" value="1">
                                         <input type="file" class="form-control" name="signature" style="width: 100% ">
                                         </input>
@@ -406,7 +411,7 @@
                             </div>
                             <div class="d-md-none section" id="section32">
                                 <div class="form-group">
-                                    <label>stamp</label>
+                                    <label id="stamp">stamp</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                     <input type="file" class="form-control" name="stamp" style="width: 100% ">
                                     </input>
@@ -417,9 +422,9 @@
                             <div class="d-md-none section" id="section33">
 
                                 <div class="form-group">
-                                    <label>System Case ID</label>
+                                    <label id="system_case_id">System Case ID</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" class="form-control" name="system-case-id"
+                                    <input type="text" class="form-control" name="system_case_id"
                                         placeholder="279/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>
@@ -430,9 +435,9 @@
                             <div class="d-md-none section" id="section34">
 
                                 <div class="form-group">
-                                    <label>Applicant Name</label>
+                                    <label id="applicant_name">Applicant Name</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" class="form-control" name="applicant-name"
+                                    <input type="text" class="form-control" name="applicant_name"
                                         placeholder="AIDNI ENGINEERS" style="width: 100% ">
                                     </input>
                                 </div>
@@ -442,9 +447,9 @@
                             <div class="d-md-none section" id="section35">
 
                                 <div class="form-group">
-                                    <label>Ref.Number</label>
+                                    <label id="ref_number">Ref.Number</label>
                                     <input type="hidden" id="current-section" name="current-section" value="1">
-                                    <input type="text" class="form-control" name="ref-number"
+                                    <input type="text" class="form-control" name="ref_number"
                                         placeholder="97/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>
@@ -461,13 +466,13 @@
                         novalidate="novalidate">
                         <div class="card-body row">
                             <div class="form-group col-md-4 d-md-block d-none">
-                                <label for="branch-name">Branch Name</label>
-                                <input type="text" name="branch-name" class="form-control" id="branch-name"
+                                <label for="branch_name">Branch Name</label>
+                                <input type="text" name="branch_name" class="form-control" id="branch_name"
                                     placeholder="kurnool Branch" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
-                                <label for="los-no">Los no</label>
-                                <input type="text" name="los-no" class="form-control" id="los-no"
+                                <label for="los_no">Los no</label>
+                                <input type="text" name="los_no" class="form-control" id="los_no"
                                     placeholder="2489376" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
@@ -494,8 +499,8 @@
                                     placeholder="0" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
-                                <label for="Office-Address">Office Address</label>
-                                <input type="text" name="Office-Address" class="form-control" id="Office-Address"
+                                <label for="Office_Address">Office Address</label>
+                                <input type="text" name="Office_Address" class="form-control" id="Office_Address"
                                     placeholder="kurnool" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
@@ -636,8 +641,8 @@
                                     placeholder="No" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
-                                <label for="Office-is-in">Office is in</label>
-                                <select name="Office-is-in" class="form-control" id="Office-is-in">
+                                <label for="Office_is_in">Office is in</label>
+                                <select name="Office_is_in" class="form-control" id="Office_is_in">
                                     <option value="">-------select-------</option>
                                     <option value="Ground floor">Ground Floor</option>
                                     <option value="1st floor">1st Floor</option>
@@ -672,38 +677,38 @@
                             </div>
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
-                                    <label>Signature</label>
+                                    <label id="signature">Signature</label>
                                     <input type="file" class="form-control" name="signature" style="width: 100% ">
                                     </input>
                                 </div>
                             </div>
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
-                                    <label>stamp</label>
+                                    <label id="stamp">stamp</label>
                                     <input type="file" class="form-control" name="stamp" style="width: 100% ">
                                     </input>
                                 </div>
                             </div>
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
-                                    <label>System Case ID</label>
-                                    <input type="text" class="form-control" name="system-case-id"
+                                    <label id="system_case_id">System Case ID</label>
+                                    <input type="text" class="form-control" name="system_case_id"
                                         placeholder="279/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>
                             </div>
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
-                                    <label>Applicant Name</label>
-                                    <input type="text" class="form-control" name="applicant-name"
+                                    <label id="applicant_name">Applicant Name</label>
+                                    <input type="text" class="form-control" name="applicant_name"
                                         placeholder="AIDNI ENGINEERS" style="width: 100% ">
                                     </input>
                                 </div>
                             </div>
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
-                                    <label>Ref.Number</label>
-                                    <input type="text" class="form-control" name="ref-number"
+                                    <label id="ref_number">Ref.Number</label>
+                                    <input type="text" class="form-control" name="ref_number"
                                         placeholder="97/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>

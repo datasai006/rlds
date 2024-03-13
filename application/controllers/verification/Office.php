@@ -118,15 +118,16 @@ class Office extends CI_Controller {
 		"BusinessActivity"=>$this->input->post('BusinessActivity'),
 		"Equipmentsighted"=>$this->input->post('Equipmentsighted'),
 		"Visitingcard"=>$this->input->post('Visitingcard'),
-		"Office_is_in"=>$this->input->post('Office-is-in'),
+		"Office_is_in"=>$this->input->post('Office_is_in'),
 		"FieldExecutiveComments"=>$this->input->post('FieldExecutiveComments'),
 		"fieldexecutive"=>$this->input->post('fieldexecutive'),
 		"signature" => $signature_data['file_name'],
                 "stamp" => $stamp_data['file_name'],
-		"system_case_id"=>$this->input->post('system-case-id'),
-		"applicant_name"=>$this->input->post('applicant-name'),
-		"ref_number"=>$this->input->post('ref-number')
+		"system_case_id"=>$this->input->post('system_case_id'),
+		"applicant_name"=>$this->input->post('applicant_name'),
+		"ref_number"=>$this->input->post('ref_number')
             );  
+            var_dump( $data);
             $insert_id = $this->Office_model->insert_data($data);
 
             if ($insert_id) {	
