@@ -84,6 +84,11 @@ public function get_skill_types() {
         // Check if any row is returned
         return $query->num_rows() > 0;
     }
+     public function get_audit_by_id($audit_id) {
+        // Retrieve audit data from the database based on the provided audit ID
+        $query = $this->db->get_where('tbl_audits', array('id' => $audit_id));
+        return $query->row(); // Assuming only one record per audit ID
+    }
 
 
 }

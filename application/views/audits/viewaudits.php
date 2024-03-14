@@ -73,6 +73,7 @@
                            <th scope="col">Audit To</th>
                            <th scope="col">Type</th>
                            <th scope="col">Address</th>
+                           <th scope="col">Contact Number</th>
                            <th scope="col">Status</th>
                            <th scope="col">Action</th>
                        </tr>
@@ -81,11 +82,11 @@
                        <?php foreach ($audits as $audit): ?>
                        <tr>
                            <td><?php echo $audit['id']; ?></td>
-                           <td><?php echo $audit['employee_name']; ?></td>
-                           <td><?php echo $audit['type']; ?></td>
-                           <td><?php echo $audit['address']; ?></td>
+                           <td><?php echo $audit['Assign_to']; ?></td>
+                           <td><?php echo $audit['Verification_Type']; ?></td>
+                           <td><?php echo $audit['Contact_person']; ?></td>
+                           <td><?php echo $audit['Contact_number']; ?></td>
                            <td><?php echo $audit['status']; ?></td>
-
                            <td style="color: blue">
                                <a
                                    href="<?= base_url() ?>Audits/edit_audit/<?= isset($audit['id']) ? $audit['id'] : '' ?>"><i

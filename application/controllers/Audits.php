@@ -30,9 +30,15 @@ class Audits extends CI_Controller {
     public function insert() {
         if ($this->input->post()) {
             $data = array(
-              'employee_name' => $this->input->post('employee_name'),
-            'type' => $this->input->post('type'),
-            'address' => $this->input->post('address')
+              'Assign_to' => $this->input->post('Assign_to'),
+            'Verification_Type' => $this->input->post('Verification_Type'),
+            'Contact_person' => $this->input->post('Contact_person'),
+            'Contact_number' => $this->input->post('Contact_number'),
+            'address_line_1' => $this->input->post('address_line_1'),
+            'address_line_2' => $this->input->post('address_line_2'),
+            'city' => $this->input->post('city'),
+            'pincode' => $this->input->post('pincode'),
+            'state' => $this->input->post('state')
             );
 
             $this->db->trans_begin();

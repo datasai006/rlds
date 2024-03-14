@@ -30,9 +30,14 @@
                             <div class="card-header">
                                 <h3 class="card-title">Assign <small>Audits</small></h3>
                             </div>
+                            <?php if (isset($message) && !empty($message)): ?>
+                            <div class="alert alert-<?php echo $message_type; ?>" role="alert">
+                                <?php echo $message; ?>
+                            </div>
+                            <?php endif; ?>
 
                             <form role="form" enctype="multipart/form-data" id="quickForm" name="myForm"
-                                action="<?php echo base_url( )?>Audits/insert" method="post">
+                                action="<?php echo site_url('audits/update_audit/'.$audit->id); ?>" method="post">
                                 <div class="card-body row">
                                     <div class="form-group col-md-4">
                                         <label for="Assign_to">Assign to</label>
@@ -58,7 +63,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="Contact_person">Contact Person</label>
                                         <input type="text" class="form-control" id="Contact_person"
-                                            name="Contact_person" />
+                                            name="Contact_person" value="<?php echo $audit->Contact_person; ?>" />
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="Contact_number">Contact Number</label>
@@ -90,7 +95,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </form>
                         </div>
