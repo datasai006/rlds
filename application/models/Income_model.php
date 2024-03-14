@@ -1,9 +1,14 @@
 <?php
 class Income_model extends CI_Model {
     
- public function insert_data($data) {
-  $query =  $this->db->insert('tbl_incometax', $data);
-  return $query;
+//  public function insert_data($data) {
+//   $query =  $this->db->insert('tbl_incometax', $data);
+//   return $query;
+// }
+
+public function insert_data($data) {
+    $this->db->insert('tbl_incometax', $data);
+    return $this->db->insert_id();
 }
 
      public function get_all_income_data() {
@@ -12,7 +17,7 @@ class Income_model extends CI_Model {
     return $query->result();
     }
     public function get_income_data_by_id($IncomeTaxID) {
-        $query = $this->db->get_where('tbl_incometax', array('IncomeTaxID' => $IncomeTaxID)); 
+        $query = $this->db->get_where('tbl_incometax', array('id' => $IncomeTaxID)); 
         return $query->row();
     }
 

@@ -143,7 +143,7 @@
 
                         <!-----------------------------------small devices code end  here---------------------------------------------------->
                         <Form role="form" enctype="multipart/form-data" name="myForm"
-                            action="<?php echo base_url('verification/Income/update_income/'.$income_data->IncomeTaxID )?>"
+                            action="<?php echo base_url('verification/Income/update_income/'.$income_data->id )?>"
                             method="post">
                             <div class="row">
 
@@ -326,18 +326,19 @@
                                         <label>Signature</label>
                                         <input type="file" class="form-control" name="signature" id="signature"
                                             style="width: 100% ">
-                                        <input type="hidden" name="current_signature"
-                                            value="<?php echo $current_signature; ?>">
-                                        <span>Current Signature: <?php echo $current_signature; ?></span>
+                                        <input type="hidden" name="current_signature">
+                                        <!-- value="<?php echo $current_signature; ?>" -->
+                                        <!-- <span>Current Signature: <?php echo $current_signature; ?></span> -->
                                     </div>
                                 </div>
-                                <div class="col-md-4 d-md-block d-none">
+                                <div class=" col-md-4 d-md-block d-none">
                                     <div class="form-group">
                                         <label>Stamp</label>
                                         <input type="file" class="form-control" name="stamp" id="stamp"
                                             style="width: 100% ">
-                                        <input type="hidden" name="current_stamp" value="<?php echo $current_stamp; ?>">
-                                        <span>Current Stamp: <?php echo $current_stamp; ?></span>
+                                        <input type="hidden" name="current_stamp">
+                                        <!-- value="<?php echo $current_stamp; ?>" -->
+                                        <!-- <span>Current Stamp: <?php echo $current_stamp; ?></span> -->
                                     </div>
                                 </div>
 
