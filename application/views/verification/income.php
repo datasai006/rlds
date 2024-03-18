@@ -279,7 +279,7 @@
                                         placeholder="97/29-09-2023" style="width: 100%" />
                                     <input type="hidden" id="current-section" name="current-section" value="1">
                                 </div>
-                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <!-- <button class="btn btn-primary mt-3 backBtn">Back</button> -->
                                 <button class="btn btn-success mt-3 submitBtn">submit</button>
                             </div>
 

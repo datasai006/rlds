@@ -682,11 +682,11 @@ public function save_data_controller() {
                     'branch_name' => $this->input->post('branch-name'),
                     'income_type' => $this->input->post('income-type'),
                     'yearly_income' => $this->input->post('yearly-income'),
-                    'assessment_year' => $this->input->post('Assessment_Year'),
-                    'verifying_income_proof' => $this->input->post('verifing-income-proof'),
-                    'pan_no' => $this->input->post('pan-no'),
+                    'assessment_year' => $this->input->post('assessment_year'),
+                    'verifying_income_proof' => $this->input->post('verifying_income_proof'),
+                    'pan_no' => $this->input->post('pan_no'),
                     'proof_submitted' => $this->input->post('proof-submitted'),
-                    'acknowledgement_number' => $this->input->post('acknowledement-number'),
+                    'acknowledgement_number' => $this->input->post('acknowledgement_number'),
                     "Submission_date" => $this->input->post('Submission-date'),
                     "gross_income" => $this->input->post('gross-income'),
                     "auditor_name" => $this->input->post('auditor-name'),
@@ -775,3 +775,4 @@ private function check_permission($role_id, $id, $entity_id, $action) {
 }
 
 }
+?>
