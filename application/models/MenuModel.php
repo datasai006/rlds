@@ -6,7 +6,7 @@ class MenuModel extends CI_Model{
     }
 
     // Create
-public function add_menu($data) {
+public function add_menu($data) {   
    
     $this->db->insert('tbl_menu', $data);
 
@@ -23,6 +23,14 @@ public function add_menu($data) {
     }    
     public function get_menus() {
         return $this->db->get('tbl_menu')->result_array();
+    }
+     public function get_menus_by_role_id($role_id) {
+       
+        $this->db->select('m.*');
+        $this->db->from('tbl_menu as m');
+        $this->db->join('tbl_role_menu_permissions as rmp', 'm.menu_id = rmp.menu_id');
+        $this->db->where('rmp.role_id', $role_id);
+        return $this->db->get()->result_array();
     }
     public function get_menuslevel($menu_levels) {
     $this->db->where_in('menu_level', $menu_levels);
@@ -174,7 +182,17 @@ public function update_menu_id($menu_id, $new_menu_id) {
     // return $query->result_array();
     // }
 
+ public function get_menu_by_id($menu_id) {
+        // Fetch menu details based on the menu ID
+        $query = $this->db->get_where('tbl_menu', array('id' => $menu_id));
+        return $query->row_array(); // Assuming each menu is represented as an associative array
+    }
 
+    public function get_first_menu() {
+        // Fetch the first menu from the database
+        $query = $this->db->get('tbl_menu', 1); // Assuming your table name is 'menus'
+        return $query->row_array(); // Assuming each menu is represented as an associative array
+    }
 
 
 }

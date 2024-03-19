@@ -46,41 +46,88 @@ class Rolesmanage extends CI_Controller {
         $this->load->view('includes/sidebar', $data);
 		$this->load->view('roles/manage',$data);
 	}
-	public function add_role(){
-         $loginSession = $this->session->userdata('LoginSession');
+// 	public function add_role()
+// {
+//     // Get login session data
+//     $loginSession = $this->session->userdata('LoginSession');
+//     $role_id = $loginSession['role_id'];
+//     $user_id = $loginSession['id'];
+
+//     // Check if the user has permission to add roles
+//     $entity_id = 4; // Assuming entity_id for adding roles
+//     $canAdd = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+//     if (!$canAdd) {
+//         // Handle access denied
+//         $this->load->view('denied');
+//         return;
+//     }
+
+//     // Get role name from form input
+//     $role_name = $this->input->post("role");
+
+//     // Get permissions from form input
+//     $permissions = $this->input->post("permissions"); // Assuming checkbox values are sent as an array
+
+//     // Process the permissions array if needed
+//     // For example, convert it to a comma-separated string or store it in the database
+    
+//     // Prepare data to insert into the database
+//     $data = array(
+//         "role" => $role_name,
+//         // You may also add permissions here or process them as needed
+//     );
+
+//     // Insert data into the database using the model
+//     $inserted = $this->Role_model->insert_data($data);
+
+//     // Redirect to the role management page after insertion
+//     redirect(base_url('roles/Rolesmanage'));
+// }
+public function add_role()
+{
+    
+    $loginSession = $this->session->userdata('LoginSession');
     $role_id = $loginSession['role_id'];
     $user_id = $loginSession['id'];
 
-    
-    $entity_id = 4;
-      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
-                echo '<script>';
-                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: add, Can add: " . ($canView ? 'true' : 'false') . "');";
-                echo '</script>';
-     if (!$canView) {
-   
-                     $this->load->view('denied');
   
-                         echo '<script>
-            if (confirm("Access Denied: You do not have permission to add this data. Would you like to go to the dashboard?")) {
-                window.location.href = "' . base_url('dashboard') . '";
-            } else {
-                // Handle the case where the user chooses to stay on the current page
-                // Redirect to the dashboard after a delay
-                setTimeout(function() {
-                    window.location.href = "' . base_url('dashboard') . '";
-                }, 1000); 
-            }
-          </script>';
+    $entity_id = 4; 
+    $canAdd = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+    if (!$canAdd) {
+       
+        $this->load->view('denied');
+        return;
+    }
+
+    
+    $role = $this->input->post("role");
+
    
-    exit();
+
+    
+    $data = array(
+        "role" => $role
+    );
+
+   
+    $insert_id = $this->Role_model->insert_data($data);
+ $permissions = $this->input->post("menu_id");
+   
+    if (!empty($permissions)) {
+        foreach ($permissions as $permission) {
+            $permission_data = array(
+                'role_id' => $insert_id,
+              'menu_id' => $permission 
+            );
+          
+            $this->Role_model->insert_permission($permission_data);
+        }
+    }
+
+  
+    redirect(base_url('roles/Rolesmanage'));
 }
-		$data=array(
-			"role"=>$this->input->post("role")
-		);
-		$inserted=$this->Role_model->insert_data($data);
-		redirect(base_url('roles/Rolesmanage'));
-	}
+
 	public function edit_role($id){
          $loginSession = $this->session->userdata('LoginSession');
     $role_id = $loginSession['role_id'];

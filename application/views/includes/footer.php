@@ -1,17 +1,19 @@
-<footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021
-        <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-    </div>
-</footer>
-
+<div class="mt-1">
+    <footer class="main-footer mt-5">
+        <strong>Copyright &copy; 2014-2021
+            <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.2.0
+        </div>
+    </footer>
+</div>
 <!-- Control Sidebar -->
 <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
+</div>
 </div>
 <!-- ./wrapper -->
 <!-- Then include Bootstrap's JavaScript -->

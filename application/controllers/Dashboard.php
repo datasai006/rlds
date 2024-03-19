@@ -22,7 +22,7 @@ public function index() {
     if ($loginSession && isset($loginSession['role_id'])) {
         $role_id = $loginSession['role_id'];
         
-        $data['menus'] = $this->MenuModel->get_menus();
+        $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         
         $this->load->view('includes/sidebar', $data);

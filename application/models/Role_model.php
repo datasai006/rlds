@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Role_model extends CI_Model{
     
        public function insert_data($data) {
-        return $this->db->insert(' tbl_roles', $data);
+        $this->db->insert(' tbl_roles', $data);
+         return $this->db->insert_id();
     }
       public function get_user_types() {
          $this->db->where('status', 'active');
@@ -31,6 +32,10 @@ class Role_model extends CI_Model{
     }
     public function insert_role($data) {
         $this->db->insert('roles', $data);
+        return $this->db->insert_id();
+    }
+    public function insert_permission($permission_data){
+         $this->db->insert('tbl_role_menu_permissions', $permission_data);
         return $this->db->insert_id();
     }
     

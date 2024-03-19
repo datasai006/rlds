@@ -30,6 +30,15 @@
                                     <input type="text" required class="form-control" id="role" name="role"
                                         placeholder="Enter role name" />
                                 </div>
+                                <div class="form-group col-md-12">
+                                    <label for="permissions">Permissions<span class="text-danger">*</span></label><br>
+                                    <?php foreach ($menus as $menu): ?>
+                                    <input type="checkbox" id="menu_<?= $menu['id'] ?>" name="menu_id[]"
+                                        value="<?= $menu['id'] ?>">
+                                    <label for="menu_<?= $menu['id'] ?>"><?= $menu['name'] ?></label><br>
+                                    <?php endforeach; ?>
+                                </div>
+
                                 <div class="form-group text-right m-b-0">
                                     <button class="btn badge-primary" type="submit">
                                         Submit
