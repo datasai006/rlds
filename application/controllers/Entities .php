@@ -30,7 +30,7 @@ class Entities extends CI_Controller {
  public function edit($id) {
     $data['entity'] = $this->tbl_entities_model->get_entity_by_id($id);
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('edit_entity', $data);

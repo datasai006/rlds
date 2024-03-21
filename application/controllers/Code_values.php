@@ -41,7 +41,7 @@ class Code_values extends CI_Controller {
     $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
      $data['code_types'] = $this->Tbl_code_type_model->get_code_types();
      
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('settings/codevalue', $data);
@@ -114,7 +114,7 @@ class Code_values extends CI_Controller {
     $data['code_value'] = $this->Tbl_code_value_model->get_code_value_by_id($id);
     $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('settings/editcodevalue', $data);

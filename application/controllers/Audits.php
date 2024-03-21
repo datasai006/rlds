@@ -19,7 +19,7 @@ class Audits extends CI_Controller {
           $data['countries'] = $this->Tbl_code_value_model->get_countries();
           $data['states'] = $this->Tbl_code_value_model->get_states();
            $data['employees'] = $this->Employee_model->get_employees();
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
 		$this->load->view('audits/addaudits',$data);
@@ -56,7 +56,7 @@ class Audits extends CI_Controller {
             $data['countries'] = $this->Tbl_code_value_model->get_countries();
             $data['states'] = $this->Tbl_code_value_model->get_states();
             
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
             $this->load->view('audits/addaudits', $data);
@@ -67,7 +67,7 @@ class Audits extends CI_Controller {
     public function view_data() { 
     $data['audits'] = $this->Audits_model->get_all_audits();  
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);  
     $this->load->view('audits/viewaudits', $data);
@@ -76,7 +76,7 @@ class Audits extends CI_Controller {
     public function approved() { 
     $data['audits'] = $this->Audits_model->approved();  
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);  
     $this->load->view('audits/viewaudits', $data);
@@ -84,7 +84,7 @@ class Audits extends CI_Controller {
     public function pending() { 
     $data['audits'] = $this->Audits_model->pending();  
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);  
     $this->load->view('audits/viewaudits', $data);
@@ -92,7 +92,7 @@ class Audits extends CI_Controller {
     public function rejected() { 
     $data['audits'] = $this->Audits_model->rejected();  
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);  
     $this->load->view('audits/viewaudits', $data);
@@ -102,7 +102,7 @@ class Audits extends CI_Controller {
         $data['audit'] = $this->Audits_model->get_audit_by_id($audit_id);
         
        
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('audits/edit_audit', $data);

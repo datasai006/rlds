@@ -12,7 +12,7 @@ class Users_regions extends CI_Controller {
     public function index() {
         $data['users_regions'] = $this->Tbl_users_regions_model->get_all_users_regions();
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('users_regions/index', $data);
@@ -20,7 +20,7 @@ class Users_regions extends CI_Controller {
 
     public function create() {
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('users_regions/create');
@@ -40,7 +40,7 @@ class Users_regions extends CI_Controller {
     public function edit($id) {
         $data['user_region'] = $this->Tbl_users_regions_model->get_user_region_by_id($id);
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('users_regions/edit', $data);

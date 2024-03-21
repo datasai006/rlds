@@ -13,7 +13,8 @@ public function __construct() {
 	{
 		$data['roles'] = $this->Role_model->get_user_types();
     
-        $data['menus'] = $this->MenuModel->get_menus();
+        // $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
 		$this->load->view('roles/roles',$data);

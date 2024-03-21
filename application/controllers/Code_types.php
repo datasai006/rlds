@@ -38,7 +38,7 @@ class Code_types extends CI_Controller {
 }
         $data['code_types'] = $this->Tbl_code_type_model->get_code_types();
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
          $this->load->view('settings/codetype', $data);
@@ -110,7 +110,7 @@ public function create() {
     $data['code_type'] = $this->Tbl_code_type_model->get_code_type_by_id($id);
     $data['code_types'] = $this->Tbl_code_type_model->get_code_types();
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
      $this->load->view('settings/editcodetype', $data);

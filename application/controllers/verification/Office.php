@@ -39,7 +39,7 @@ class Office extends CI_Controller {
    
     exit();
 }
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
 		$this->load->view('verification/office');
@@ -146,7 +146,7 @@ class Office extends CI_Controller {
 //           else {
 // 		 $data['residence_states'] = $this->Employee_model->get_residence_states();
          
-//         $data['menus'] = $this->MenuModel->get_menus();
+//          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
 //          $data['menu_items'] = $this->MenuModel->get_menu_items();
 //         $this->load->view('includes/sidebar', $data);
 //         $this->load->view('addemployee',$data);
@@ -252,7 +252,7 @@ public function add_office() {
         }
     } else {
         $data['residence_states'] = $this->Employee_model->get_residence_states();
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('addemployee', $data);
@@ -293,7 +293,7 @@ public function view_office_data() {
         $data['no_data_message'] = 'No office data available.';
     }
 
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('verification/view_office', $data);

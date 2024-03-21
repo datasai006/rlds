@@ -12,7 +12,7 @@ class Residence extends CI_Controller {
 
     public function index() {
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/residence');
@@ -218,7 +218,7 @@ public function add_residence() {
     $this->load->model('Residence_model');
     $data['residence_data'] = $this->Residence_model->get_residence_data();
     
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('verification/view_residence', $data);
@@ -256,7 +256,7 @@ $data['neighbors_verification_options'] = array('POSITIVE', 'NEGATIVE');
  $data['VechielsfoundatResidence'] = ['Two Wheeler', 'Four Wheeler','Three wheeler','NA'];
   $data['Numberoffloor'] = ['SINGLE FLOOR', 'Ground + One Floor','Ground + Two Floors','Ground + Three Floors','Ground + Four Floors'];
   
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
    $this->load->view('verification/edit_residence_view', $data);

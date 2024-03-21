@@ -465,7 +465,7 @@
             <div class="info">
                 <a href="#" class="d-block"><?= $this->session->userdata('LoginSession')['username'] ?>
                 </a>
-                <?= $this->session->userdata('LoginSession')['role_id'] ?>
+                <!-- <?= $this->session->userdata('LoginSession')['role_id'] ?> -->
             </div>
         </div>
 

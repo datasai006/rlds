@@ -53,7 +53,8 @@ class Employe extends CI_Controller {
         $data['states'] = $this->Tbl_code_value_model->get_states();
        
         $data['employees'] = $this->Employee_model->get_employees();
-        $data['menus'] = $this->MenuModel->get_menus();
+        // $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
        
         $this->load->view('includes/sidebar', $data);
@@ -230,7 +231,8 @@ class Employe extends CI_Controller {
        }       else {
          $data['roles'] = $this->Role_model->get_user_types();
             $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
-                $data['menus'] = $this->MenuModel->get_menus();
+                // $data['menus'] = $this->MenuModel->get_menus();
+                 $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
        
         $this->load->view('includes/sidebar', $data);
@@ -266,7 +268,8 @@ class Employe extends CI_Controller {
     exit();
 }
         $this->Employee_model->update_employee_status($id, 'inactive');
-        $data['menus'] = $this->MenuModel->get_menus();
+        // $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         redirect('Employee/Employe/view_employee',$data);
@@ -302,7 +305,8 @@ class Employe extends CI_Controller {
         } else {
             // Load edit employee view
             $data['employee'] = $this->Employee_model->get_employee_by_id($id);
-            $data['menus'] = $this->MenuModel->get_menus();
+            // $data['menus'] = $this->MenuModel->get_menus();
+             $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
             $data['menu_items'] = $this->MenuModel->get_menu_items();
             $this->load->view('includes/sidebar', $data);
             $data['roles'] = $this->Role_model->get_user_types();

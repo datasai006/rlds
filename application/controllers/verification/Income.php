@@ -42,7 +42,7 @@ class Income extends CI_Controller
     exit();
 }
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/income');
@@ -135,7 +135,7 @@ class Income extends CI_Controller
     //     } else {
     //         // $data['residence_states'] = $this->Employee_model->get_residence_states();
             
-    //     $data['menus'] = $this->MenuModel->get_menus();
+    //      $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
     //      $data['menu_items'] = $this->MenuModel->get_menu_items();
     //     $this->load->view('includes/sidebar', $data);
     //         $this->load->view('addemployee', $data);
@@ -230,7 +230,7 @@ class Income extends CI_Controller
 //         }
 //           } else {
 //         // $data['residence_states'] = $this->Employee_model->get_residence_states();
-//         $data['menus'] = $this->MenuModel->get_menus();
+//          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
 //         $data['menu_items'] = $this->MenuModel->get_menu_items();
 //         $this->load->view('includes/sidebar', $data);
 //         $this->load->view('addemployee', $data);
@@ -313,7 +313,7 @@ if ($insert_id) {
 }
 
     } else {
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('addemployee', $data);
@@ -404,7 +404,7 @@ if ($insert_id) {
 
 //              } else {
 //         // Load view for adding income
-//         $data['menus'] = $this->MenuModel->get_menus();
+//          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
 //         $data['menu_items'] = $this->MenuModel->get_menu_items();
 //         $this->load->view('includes/sidebar', $data);
 //         $this->load->view('addemployee', $data);
@@ -443,7 +443,7 @@ if ($insert_id) {
 }
         $data['income_data'] = $this->Income_model->get_all_income_data();
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/view_income_data', $data); 
@@ -496,7 +496,7 @@ if ($insert_id) {
     //      $data['current_signature'] = $data['income_data']->signature;
     // $data['current_stamp'] = $data['income_data']->stamp;
 
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/edit_income', $data); 

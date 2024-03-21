@@ -75,7 +75,7 @@ public function add() {
     
    
     $data['entities'] = $this->MenuModel->get_entities();
-    $data['menus'] = $this->MenuModel->get_menus();
+     $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
     $data['menu_items'] = $this->MenuModel->get_menu_items();
     
  
@@ -97,7 +97,7 @@ public function add() {
             redirect('Dashboard');
         }
         
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $data['menu'] = $this->MenuModel->get_menu($id);
@@ -109,7 +109,7 @@ public function add() {
         $this->MenuModel->delete_menu($id);
         
        
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     }

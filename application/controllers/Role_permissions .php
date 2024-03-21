@@ -34,7 +34,7 @@ class Role_permissions extends CI_Controller {
    public function edit($id) {
     $data['role_permission'] = $this->tbl_role_permissions_model->get_role_permission_by_id($id);
   
-        $data['menus'] = $this->MenuModel->get_menus();
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
      $this->load->view('edit_role_permission', $data);
