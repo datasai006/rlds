@@ -236,97 +236,13 @@ class Income extends CI_Controller
 //         $this->load->view('addemployee', $data);
 //     }
 // }
-public function add_income() {
-    $loginSession = $this->session->userdata('LoginSession');
-    $role_id = $loginSession['role_id'];
-    $user_id = $loginSession['id'];
-
-    $entity_id = 9;
-    $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
-    if (!$canView) {
-        $this->load->view('denied');
-        echo '<script>
-            if (confirm("Access Denied: You do not have permission to add data. Would you like to go to the dashboard?")) {
-                window.location.href = "' . base_url('dashboard') . '";
-            } else {
-                setTimeout(function() {
-                    window.location.href = "' . base_url('dashboard') . '";
-                }, 1000); 
-            }
-        </script>';
-        exit();
-    }
-
-    if ($this->input->post()) {
-        $config['upload_path'] = './assets/uploads/';
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
-        $config['max_size'] = 1024;
-
-        $this->load->library('upload', $config);
-        $this->upload->initialize($config);
-
-        // Check if signature and stamp are uploaded
-        $signature_data = $this->upload->do_upload('signature') ? $this->upload->data() : null;
-        $stamp_data = $this->upload->do_upload('stamp') ? $this->upload->data() : null;
-
-        // Construct data array
-        $data = array(
-            'application_name' => $this->input->post('application_name'),
-            'los_no' => $this->input->post('los_no'),
-            'branch_name' => $this->input->post('branch_name'),
-            'income_type' => $this->input->post('income_type'),
-            'yearly_income' => $this->input->post('yearly_income'),
-            'assessment_year' => $this->input->post('Assessment_Year'),
-            'verifying_income_proof' => $this->input->post('verifing_income_proof'),
-            'pan_no' => $this->input->post('pan-no'),
-            'proof_submitted' => $this->input->post('proof_submitted'),
-            'acknowledgement_number' => $this->input->post('acknowledement_number'),
-            "Submission_date" => $this->input->post('Submission_date'),
-            "gross_income" => $this->input->post('gross_income'),
-            "auditor_name" => $this->input->post('auditor_name'),
-            "office_address" => $this->input->post('office_address'),
-            "status_type" => $this->input->post('status_type'),
-            "itr" => $this->input->post('itr'),
-            "executive_name" => $this->input->post('executive_name'),
-            "system_case_id" => $this->input->post('system_case_id'),
-            "applicant_name" => $this->input->post('applicant_name'),
-            "ref_number" => $this->input->post('ref_number')
-        );
-
-        // Add signature and stamp data to the data array if uploaded
-        if ($signature_data) {
-            $data['signature'] = $signature_data['file_name'];
-        }
-
-        if ($stamp_data) {
-            $data['stamp'] = $stamp_data['file_name'];
-        }
-
-   $insert_id = $this->Income_model->insert_data($data);
-
-if ($insert_id) {
-    // Return the insert ID as JSON response
-    echo json_encode(array('insert_id' => $insert_id));
-} else {
-    // Handle the error
-    echo json_encode(array('error' => 'Error in inserting data'));
-}
-
-    } else {
-         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
-        $data['menu_items'] = $this->MenuModel->get_menu_items();
-        $this->load->view('includes/sidebar', $data);
-        $this->load->view('addemployee', $data);
-    }
-}
 // public function add_income() {
-//     // Check user permissions
 //     $loginSession = $this->session->userdata('LoginSession');
 //     $role_id = $loginSession['role_id'];
 //     $user_id = $loginSession['id'];
+
 //     $entity_id = 9;
 //     $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
-
 //     if (!$canView) {
 //         $this->load->view('denied');
 //         echo '<script>
@@ -339,10 +255,9 @@ if ($insert_id) {
 //             }
 //         </script>';
 //         exit();
-//            }
+//     }
 
-//            if ($this->input->post()) {
-//         // Configure upload settings
+//     if ($this->input->post()) {
 //         $config['upload_path'] = './assets/uploads/';
 //         $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
 //         $config['max_size'] = 1024;
@@ -356,30 +271,30 @@ if ($insert_id) {
 
 //         // Construct data array
 //         $data = array(
-//              'application_name' => $this->input->post('application_name'),
-//              'los_no' => $this->input->post('los_no'),
-//              'branch_name' => $this->input->post('branch_name'),
-//              'income_type' => $this->input->post('income_type'),
-//              'yearly_income' => $this->input->post('yearly_income'),
-//              'assessment_year' => $this->input->post('Assessment_Year'),
+//             'application_name' => $this->input->post('application_name'),
+//             'los_no' => $this->input->post('los_no'),
+//             'branch_name' => $this->input->post('branch_name'),
+//             'income_type' => $this->input->post('income_type'),
+//             'yearly_income' => $this->input->post('yearly_income'),
+//             'assessment_year' => $this->input->post('Assessment_Year'),
 //             'verifying_income_proof' => $this->input->post('verifing_income_proof'),
-//              'pan_no' => $this->input->post('pan-no'),
-//              'proof_submitted' => $this->input->post('proof_submitted'),
-//              'acknowledgement_number' => $this->input->post('acknowledement_number'),
-//              "Submission_date" => $this->input->post('Submission_date'),
-//              "gross_income" => $this->input->post('gross_income'),
-//              "auditor_name" => $this->input->post('auditor_name'),
-//              "office_address" => $this->input->post('office_address'),
-//              "status_type" => $this->input->post('status_type'),
-//              "itr" => $this->input->post('itr'),
-//              "executive_name" => $this->input->post('executive_name'),
-//              "system_case_id" => $this->input->post('system_case_id'),
-//              "applicant_name" => $this->input->post('applicant_name'),
-//              "ref_number" => $this->input->post('ref_number')
-//               );
+//             'pan_no' => $this->input->post('pan-no'),
+//             'proof_submitted' => $this->input->post('proof_submitted'),
+//             'acknowledgement_number' => $this->input->post('acknowledement_number'),
+//             "Submission_date" => $this->input->post('Submission_date'),
+//             "gross_income" => $this->input->post('gross_income'),
+//             "auditor_name" => $this->input->post('auditor_name'),
+//             "office_address" => $this->input->post('office_address'),
+//             "status_type" => $this->input->post('status_type'),
+//             "itr" => $this->input->post('itr'),
+//             "executive_name" => $this->input->post('executive_name'),
+//             "system_case_id" => $this->input->post('system_case_id'),
+//             "applicant_name" => $this->input->post('applicant_name'),
+//             "ref_number" => $this->input->post('ref_number')
+//         );
 
 //         // Add signature and stamp data to the data array if uploaded
-//               if ($signature_data) {
+//         if ($signature_data) {
 //             $data['signature'] = $signature_data['file_name'];
 //         }
 
@@ -387,29 +302,116 @@ if ($insert_id) {
 //             $data['stamp'] = $stamp_data['file_name'];
 //         }
 
-//         // Insert data into database
-//         $insert_id = $this->Income_model->insert_data($data);
+//    $insert_id = $this->Income_model->insert_data($data);
 
-//                   if ($insert_id) {
-//              // Echo the insert ID back as the response
-//          echo $insert_id;
-              
-//             } else {
-//              // Database error occurred
-//                     $error = $this->db->error();
-//                 log_message('error', 'Database Error: ' . $error['message']);
-//                 echo "Error in inserting data: " . $error['message'];
-//              exit;
-//       }
+// if ($insert_id) {
+//     // Return the insert ID as JSON response
 
-//              } else {
-//         // Load view for adding income
+//  echo json_encode(array('insert_id' => $insert_id));
+//     redirect('Dashboard');
+// } else {
+//     // Handle the error
+//     echo json_encode(array('error' => 'Error in inserting data'));
+// }
+
+//     } else {
 //          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
 //         $data['menu_items'] = $this->MenuModel->get_menu_items();
 //         $this->load->view('includes/sidebar', $data);
 //         $this->load->view('addemployee', $data);
-//               }
+//     }
 // }
+public function add_income() {
+    // Check user permissions
+    $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];
+    $entity_id = 9;
+    $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+
+    if (!$canView) {
+        $this->load->view('denied');
+        echo '<script>
+            if (confirm("Access Denied: You do not have permission to add data. Would you like to go to the dashboard?")) {
+                window.location.href = "' . base_url('dashboard') . '";
+            } else {
+                setTimeout(function() {
+                    window.location.href = "' . base_url('dashboard') . '";
+                }, 1000); 
+            }
+        </script>';
+        exit();
+           }
+
+           if ($this->input->post()) {
+        // Configure upload settings
+        $config['upload_path'] = './assets/uploads/';
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
+        $config['max_size'] = 1024;
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+
+        // Check if signature and stamp are uploaded
+        $signature_data = $this->upload->do_upload('signature') ? $this->upload->data() : null;
+        $stamp_data = $this->upload->do_upload('stamp') ? $this->upload->data() : null;
+
+        // Construct data array
+        $data = array(
+             'application_name' => $this->input->post('application_name'),
+             'los_no' => $this->input->post('los_no'),
+             'branch_name' => $this->input->post('branch_name'),
+             'income_type' => $this->input->post('income_type'),
+             'yearly_income' => $this->input->post('yearly_income'),
+             'assessment_year' => $this->input->post('Assessment_Year'),
+            'verifying_income_proof' => $this->input->post('verifing_income_proof'),
+             'pan_no' => $this->input->post('pan-no'),
+             'proof_submitted' => $this->input->post('proof_submitted'),
+             'acknowledgement_number' => $this->input->post('acknowledement_number'),
+             "Submission_date" => $this->input->post('Submission_date'),
+             "gross_income" => $this->input->post('gross_income'),
+             "auditor_name" => $this->input->post('auditor_name'),
+             "office_address" => $this->input->post('office_address'),
+             "status_type" => $this->input->post('status_type'),
+             "itr" => $this->input->post('itr'),
+             "executive_name" => $this->input->post('executive_name'),
+             "system_case_id" => $this->input->post('system_case_id'),
+             "applicant_name" => $this->input->post('applicant_name'),
+             "ref_number" => $this->input->post('ref_number')
+              );
+
+        // Add signature and stamp data to the data array if uploaded
+              if ($signature_data) {
+            $data['signature'] = $signature_data['file_name'];
+        }
+
+        if ($stamp_data) {
+            $data['stamp'] = $stamp_data['file_name'];
+        }
+
+        // Insert data into database
+        $insert_id = $this->Income_model->insert_data($data);
+
+                  if ($insert_id) {
+             // Echo the insert ID back as the response
+         echo $insert_id;
+              
+            } else {
+             // Database error occurred
+                    $error = $this->db->error();
+                log_message('error', 'Database Error: ' . $error['message']);
+                echo "Error in inserting data: " . $error['message'];
+             exit;
+      }
+
+             } else {
+        // Load view for adding income
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+        $data['menu_items'] = $this->MenuModel->get_menu_items();
+        $this->load->view('includes/sidebar', $data);
+        $this->load->view('addemployee', $data);
+              }
+}
 
 
       public function view_income_data() {

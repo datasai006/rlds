@@ -43,8 +43,7 @@
 <script src="<?= base_url('assets/') ?>dist/js/pages/dashboard.js"></script>
 
 <!-- DateRangePicker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-daterangepicker/3.1.0/daterangepicker.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
 <!-- Bootstrap JS -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
@@ -117,47 +116,48 @@ var baseUrl = "<?php echo base_url(); ?>";
 
 $(document).ready(function() {
 
-    $('.nextBtn').click(function() {
-        var currentSection = $(this).closest('.section');
-        var nextSection = currentSection.next('.section');
-
-        currentSection.hide();
-        nextSection.show();
-
-        return false;
-    });
     // $('.nextBtn').click(function() {
     //     var currentSection = $(this).closest('.section');
     //     var nextSection = currentSection.next('.section');
-    //     var formData = $('#final-form').serialize();
-
-    //     $.ajax({
-    //         type: 'POST',
-    //         url: baseUrl + 'verification/income/add_income',
-    //         data: formData,
-    //         success: function(response) {
-    //             console.log('AJAX Response:', response);
-    //             var insertId = response.insert_id;
-    //             if (insertId !== undefined) {
-    //                 localStorage.setItem('insertId', insertId);
-    //                 console.log('insertId set in local storage:', insertId);
-    //                 window.location.href = baseUrl + 'verification/income/edit_income/' +
-    //                     insertId;
-    //             } else {
-    //                 console.error('insert_id is undefined in AJAX response.');
-    //             }
-    //         },
-    //         error: function(xhr, status, error) {
-    //             console.error('AJAX Error:', status, error);
-    //             alert('Error occurred while saving data: ' + error);
-    //         }
-    //     });
 
     //     currentSection.hide();
     //     nextSection.show();
 
     //     return false;
     // });
+    $('.nextBtn').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
+        var formData = $('#final-form').serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/income/add_income',
+            data: formData,
+            success: function(response) {
+                console.log('AJAX Response:', response);
+                var insert_id = response.insert_id; // Access insert_id property
+                if (insert_id !== undefined) {
+                    localStorage.setItem('insertId', insert_id);
+                    console.log('insertId set in local storage:', insert_id);
+                    window.location.href = baseUrl + 'verification/income/edit_income/' +
+                        insert_id;
+                } else {
+                    console.error('insert_id is undefined in AJAX response.');
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Error occurred while saving data: ' + error);
+            }
+        });
+
+        currentSection.hide();
+        nextSection.show();
+
+        return false;
+    });
+
 
 
 
