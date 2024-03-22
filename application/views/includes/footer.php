@@ -116,15 +116,15 @@ var baseUrl = "<?php echo base_url(); ?>";
 
 $(document).ready(function() {
 
-    // $('.nextBtn').click(function() {
-    //     var currentSection = $(this).closest('.section');
-    //     var nextSection = currentSection.next('.section');
+    $('.nextBtnu').click(function() {
+        var currentSection = $(this).closest('.section');
+        var nextSection = currentSection.next('.section');
 
-    //     currentSection.hide();
-    //     nextSection.show();
+        currentSection.hide();
+        nextSection.show();
 
-    //     return false;
-    // });
+        return false;
+    });
     $('.nextBtn').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');

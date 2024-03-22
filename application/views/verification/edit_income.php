@@ -49,7 +49,7 @@
                                         value="<?php echo $income_data->application_name; ?>" name="application-name"
                                         placeholder="Application Name">
                                 </div>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </form>
                         </div>
                         <div class="d-md-none section" id="section2" style="display: none;">
@@ -60,7 +60,7 @@
                                 </div>
 
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </form>
                         </div>
                         <div class="d-md-none section" id="section3" style="display: none;">
@@ -71,7 +71,7 @@
                                     placeholder="Hyderbad branch">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section4" style="display: none;">
 
@@ -81,7 +81,7 @@
                                     placeholder="Business Income">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section5" style="display: none;">
 
@@ -90,7 +90,7 @@
                                 <input type="text" class="form-control" name="yearly-income" placeholder="6,63,100">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section6" style="display: none;">
 
@@ -99,7 +99,7 @@
                                 <input type="text" class="form-control" name="Assessment-Year" placeholder="2023-2024">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section7" style="display: none;">
 
@@ -109,7 +109,7 @@
                                     placeholder="Income tax office">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section8" style="display: none;">
                             <div class="form-group">
@@ -117,7 +117,7 @@
                                 <input type="text" class="form-control" name="pan-no" placeholder="ABCD123456C">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section9" style="display: none;">
                             <div class="form-group">
@@ -129,7 +129,7 @@
                                 </select>
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
                         <div class="d-md-none section" id="section10" style="display: none;">
                             <div class="form-group">
@@ -138,7 +138,7 @@
                                     placeholder="214633751290823">
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtn">Next</button>
+                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                         </div>
 
                         <!-----------------------------------small devices code end  here---------------------------------------------------->
@@ -371,7 +371,7 @@
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Update</button>
+                                    <button type="submit" class="btn btn-primary  d-md-block d-none">Update</button>
                                 </div>
                             </div>
                         </Form>
