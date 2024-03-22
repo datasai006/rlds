@@ -136,15 +136,13 @@ $(document).ready(function() {
             data: formData,
             success: function(response) {
                 console.log('AJAX Response:', response);
-                var insert_id = response.insert_id; // Access insert_id property
-                if (insert_id !== undefined) {
-                    localStorage.setItem('insertId', insert_id);
-                    console.log('insertId set in local storage:', insert_id);
-                    window.location.href = baseUrl + 'verification/income/edit_income/' +
-                        insert_id;
-                } else {
-                    console.error('insert_id is undefined in AJAX response.');
-                }
+                var match = response.match(/\d+/);
+                var insert_id = parseInt(match[0]);
+                window.location.href = baseUrl + 'verification/income/edit_income/' +
+                    insert_id;
+                localStorage.setItem('insertId', insert_id);
+                console.log('insertId set in local storage:', insert_id);
+
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', status, error);
@@ -152,18 +150,12 @@ $(document).ready(function() {
             }
         });
 
+        // Hide current section and show next section after the AJAX call
         currentSection.hide();
         nextSection.show();
 
         return false;
     });
-
-
-
-
-
-
-
     $('.backBtn').click(function() {
         var currentSection = $(this).closest('.section');
         var prevSection = currentSection.prev('.section');

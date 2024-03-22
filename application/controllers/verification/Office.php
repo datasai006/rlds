@@ -245,11 +245,16 @@ public function add_office() {
         var_dump($data);
         $insert_id = $this->Office_model->insert_data($data);
 
-        if ($insert_id) {
-            redirect('Dashboard');
-        } else {
-            echo 'Error inserting data into the database';
-        }
+      if ($insert_id) {
+    // Echo the insert ID back as the response
+     echo $insert_id;
+   
+} else {
+    // Database error occurred
+    $error = $this->db->error();
+    log_message('error', 'Database Error: ' . $error['message']);
+    echo "Error in inserting data: " . $error['message'];
+}
     } else {
         $data['residence_states'] = $this->Employee_model->get_residence_states();
          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);

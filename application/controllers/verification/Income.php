@@ -391,18 +391,14 @@ public function add_income() {
 
         // Insert data into database
         $insert_id = $this->Income_model->insert_data($data);
-
-                  if ($insert_id) {
-             // Echo the insert ID back as the response
-         echo $insert_id;
-              
-            } else {
-             // Database error occurred
-                    $error = $this->db->error();
-                log_message('error', 'Database Error: ' . $error['message']);
-                echo "Error in inserting data: " . $error['message'];
-             exit;
-      }
+             
+                 if ($insert_id) {
+        // Return the insert ID as a plain text response
+        echo $insert_id;
+    } else {
+        // Return an error message if insertion fails
+        echo 'Error in inserting data';
+    }
 
              } else {
         // Load view for adding income
