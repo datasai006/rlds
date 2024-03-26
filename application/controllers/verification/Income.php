@@ -499,42 +499,327 @@ public function add_income() {
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/edit_income', $data); 
     }
+// public function update_income($IncomeTaxID) {
+//      $loginSession = $this->session->userdata('LoginSession');
+//     $role_id = $loginSession['role_id'];
+//     $user_id = $loginSession['id'];
+
+    
+//     $entity_id = 9;
+//       $canView = $this->check_permission($role_id, $user_id, $entity_id, 'approve');
+//                 echo '<script>';
+//                 echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: approve, Can approve: " . ($canView ? 'true' : 'false') . "');";
+//                 echo '</script>';
+//      if (!$canView) {
+   
+//                      $this->load->view('denied');
+  
+//                          echo '<script>
+//             if (confirm("Access Denied: You do not have permission to approve data. Would you like to go to the dashboard?")) {
+//                 window.location.href = "' . base_url('dashboard') . '";
+//             } else {
+//                 // Handle the case where the user chooses to stay on the current page
+//                 // Redirect to the dashboard after a delay
+//                 setTimeout(function() {
+//                     window.location.href = "' . base_url('dashboard') . '";
+//                 }, 1000); 
+//             }
+//           </script>';
+   
+//     exit();
+// }
+//     if ($this->input->post()) {
+//         $config['upload_path'] = './assets/uploads/';
+//         $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
+//         $config['max_size'] = 1024;
+//         $this->load->library('upload', $config);
+//         $this->upload->initialize($config);
+//         $existing_data = $this->Income_model->get_income_data_by_id($IncomeTaxID);
+//         $old_signature = $existing_data->signature;
+//         $old_stamp = $existing_data->stamp;
+//         $signature_data = array('file_name' => $old_signature);
+//         if ($this->upload->do_upload('signature')) {
+//             if (!empty($old_signature) && file_exists($config['upload_path'] . $old_signature)) {
+//                 unlink($config['upload_path'] . $old_signature);
+//             }
+
+//             $signature_data = $this->upload->data();
+//         }
+
+//         $stamp_data = array('file_name' => $old_stamp); 
+//         if ($this->upload->do_upload('stamp')) {
+//             if (!empty($old_stamp) && file_exists($config['upload_path'] . $old_stamp)) {
+//                 unlink($config['upload_path'] . $old_stamp);
+//             }
+//             $stamp_data = $this->upload->data();
+//         }
+//        $data = array(
+//                     'application_name' => $this->input->post('application_name'),
+//              'los_no' => $this->input->post('los_no'),
+//              'branch_name' => $this->input->post('branch_name'),
+//              'income_type' => $this->input->post('income_type'),
+//              'yearly_income' => $this->input->post('yearly_income'),
+//              'assessment_year' => $this->input->post('Assessment_Year'),
+//             'verifying_income_proof' => $this->input->post('verifing_income_proof'),
+//              'pan_no' => $this->input->post('pan-no'),
+//              'proof_submitted' => $this->input->post('proof_submitted'),
+//              'acknowledgement_number' => $this->input->post('acknowledement_number'),
+//              "Submission_date" => $this->input->post('Submission_date'),
+//              "gross_income" => $this->input->post('gross_income'),
+//              "auditor_name" => $this->input->post('auditor_name'),
+//              "office_address" => $this->input->post('office_address'),
+//              "status_type" => $this->input->post('status_type'),
+//              "itr" => $this->input->post('itr'),
+//              "executive_name" => $this->input->post('executive_name'),
+//              "system_case_id" => $this->input->post('system_case_id'),
+//              "applicant_name" => $this->input->post('applicant_name'),
+//              "ref_number" => $this->input->post('ref_number')
+//                 );
+
+//         $update_result = $this->Income_model->update_income_data($IncomeTaxID, $data);
+
+//         if ($update_result) {
+//             redirect('Dashboard');
+//         } else {
+//             echo 'Error updating data in the database';
+//         }
+//     }
+// }
+// public function update_income($IncomeTaxID) {
+//     $loginSession = $this->session->userdata('LoginSession');
+//     $role_id = $loginSession['role_id'];
+//     $user_id = $loginSession['id'];
+
+//     $entity_id = 9;
+//     $canView = $this->check_permission($role_id, $user_id, $entity_id, 'approve');
+
+//     if (!$canView) {
+//         $this->load->view('denied');
+//         echo '<script>
+//             if (confirm("Access Denied: You do not have permission to approve data. Would you like to go to the dashboard?")) {
+//                 window.location.href = "' . base_url('dashboard') . '";
+//             } else {
+//                 setTimeout(function() {
+//                     window.location.href = "' . base_url('dashboard') . '";
+//                 }, 1000); 
+//             }
+//           </script>';
+//         exit();
+//     }
+
+//     if ($this->input->post()) {
+//         $config['upload_path'] = './assets/uploads/';
+//         $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
+//         $config['max_size'] = 1024;
+//         $this->load->library('upload', $config);
+//         $this->upload->initialize($config);
+
+//         // Perform file uploads
+//         $existing_data = $this->Income_model->get_income_data_by_id($IncomeTaxID);
+//         $old_signature = $existing_data->signature;
+//         $old_stamp = $existing_data->stamp;
+//         $signature_data = array('file_name' => $old_signature);
+//         if ($this->upload->do_upload('signature')) {
+//             if (!empty($old_signature) && file_exists($config['upload_path'] . $old_signature)) {
+//                 unlink($config['upload_path'] . $old_signature);
+//             }
+//             $signature_data = $this->upload->data();
+//         }
+
+//         $stamp_data = array('file_name' => $old_stamp); 
+//         if ($this->upload->do_upload('stamp')) {
+//             if (!empty($old_stamp) && file_exists($config['upload_path'] . $old_stamp)) {
+//                 unlink($config['upload_path'] . $old_stamp);
+//             }
+//             $stamp_data = $this->upload->data();
+//         }
+
+//         // Prepare data for database insertion
+//         $data = array(
+        //    'application_name' => $this->input->post('application_name'),
+        //       'los_no' => $this->input->post('los_no'),
+        //       'branch_name' => $this->input->post('branch_name'),
+        //       'income_type' => $this->input->post('income_type'),
+        //       'yearly_income' => $this->input->post('yearly_income'),
+        //       'assessment_year' => $this->input->post('Assessment_Year'),
+        //      'verifying_income_proof' => $this->input->post('verifing_income_proof'),
+        //       'pan_no' => $this->input->post('pan-no'),
+        //       'proof_submitted' => $this->input->post('proof_submitted'),
+        //       'acknowledgement_number' => $this->input->post('acknowledement_number'),
+        //       "Submission_date" => $this->input->post('Submission_date'),
+        //       "gross_income" => $this->input->post('gross_income'),
+        //       "auditor_name" => $this->input->post('auditor_name'),
+        //       "office_address" => $this->input->post('office_address'),
+        //       "status_type" => $this->input->post('status_type'),
+        //       "itr" => $this->input->post('itr'),
+        //       "executive_name" => $this->input->post('executive_name'),
+        //     'signature' => isset($signature_data['file_name']) ? $signature_data['file_name'] : $old_signature,
+        //     'stamp' => isset($stamp_data['file_name']) ? $stamp_data['file_name'] : $old_stamp,
+        //       "system_case_id" => $this->input->post('system_case_id'),
+        //       "applicant_name" => $this->input->post('applicant_name'),
+        //       "ref_number" => $this->input->post('ref_number')
+//         );
+
+     
+//         $update_result = $this->Income_model->update_income_data($IncomeTaxID, $data);
+
+//         if ($update_result) {
+//             redirect('Dashboard');
+//         } else {
+//             echo 'Error updating data in the database';
+//         }
+//     } else {
+//         echo 'No POST data received';
+//     }
+// }
+// public function update_income($IncomeTaxID) {
+//     $loginSession = $this->session->userdata('LoginSession');
+//     $role_id = $loginSession['role_id'];
+//     $user_id = $loginSession['id'];
+
+//     $entity_id = 9;
+//     $canView = $this->check_permission($role_id, $user_id, $entity_id, 'approve');
+
+//     if (!$canView) {
+//         $this->load->view('denied');
+//         echo '<script>
+//             if (confirm("Access Denied: You do not have permission to approve data. Would you like to go to the dashboard?")) {
+//                 window.location.href = "' . base_url('dashboard') . '";
+//             } else {
+//                 setTimeout(function() {
+//                     window.location.href = "' . base_url('dashboard') . '";
+//                 }, 1000); 
+//             }
+//           </script>';
+//         exit();
+//     }
+
+//     if ($this->input->post()) {
+//         $config['upload_path'] = './assets/uploads/';
+//         $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
+//         $config['max_size'] = 1024;
+//         $this->load->library('upload', $config);
+//         $this->upload->initialize($config);
+
+//         // Perform file uploads
+//         $existing_data = $this->Income_model->get_income_data_by_id($IncomeTaxID);
+//         if (!$existing_data) {
+//             echo 'No existing data found for ID: ' . $IncomeTaxID;
+//             return;
+//         }
+
+//         $old_signature = $existing_data->signature ?? null;
+//         $old_stamp = $existing_data->stamp ?? null;
+//         $signature_data = array('file_name' => $old_signature);
+//         if ($this->upload->do_upload('signature')) {
+//             if (!empty($old_signature) && file_exists($config['upload_path'] . $old_signature)) {
+//                 unlink($config['upload_path'] . $old_signature);
+//             }
+//             $signature_data = $this->upload->data();
+//         }
+
+//         $stamp_data = array('file_name' => $old_stamp); 
+//         if ($this->upload->do_upload('stamp')) {
+//             if (!empty($old_stamp) && file_exists($config['upload_path'] . $old_stamp)) {
+//                 unlink($config['upload_path'] . $old_stamp);
+//             }
+//             $stamp_data = $this->upload->data();
+//         }
+
+//         // Prepare data for database insertion
+//         $data = array(
+//             'application_name' => $this->input->post('application_name'),
+//               'los_no' => $this->input->post('los_no'),
+//               'branch_name' => $this->input->post('branch_name'),
+//               'income_type' => $this->input->post('income_type'),
+//               'yearly_income' => $this->input->post('yearly_income'),
+//               'assessment_year' => $this->input->post('Assessment_Year'),
+//              'verifying_income_proof' => $this->input->post('verifing_income_proof'),
+//               'pan_no' => $this->input->post('pan-no'),
+//               'proof_submitted' => $this->input->post('proof_submitted'),
+//               'acknowledgement_number' => $this->input->post('acknowledement_number'),
+//               "Submission_date" => $this->input->post('Submission_date'),
+//               "gross_income" => $this->input->post('gross_income'),
+//               "auditor_name" => $this->input->post('auditor_name'),
+//               "office_address" => $this->input->post('office_address'),
+//               "status_type" => $this->input->post('status_type'),
+//               "itr" => $this->input->post('itr'),
+//               "executive_name" => $this->input->post('executive_name'),
+//             'signature' => isset($signature_data['file_name']) ? $signature_data['file_name'] : $old_signature,
+//             'stamp' => isset($stamp_data['file_name']) ? $stamp_data['file_name'] : $old_stamp,
+//               "system_case_id" => $this->input->post('system_case_id'),
+//               "applicant_name" => $this->input->post('applicant_name'),
+//               "ref_number" => $this->input->post('ref_number')
+//         );
+
+//         // Perform database update
+//         $update_result = $this->Income_model->update_income_data($IncomeTaxID, $data);
+
+//         if ($update_result) {
+//             redirect('Dashboard');
+//         } else {
+//             echo 'Error updating data in the database';
+//         }
+//     } else {
+//         echo 'No POST data received';
+//     }
+// }
 public function update_income($IncomeTaxID) {
-     $loginSession = $this->session->userdata('LoginSession');
+    $loginSession = $this->session->userdata('LoginSession');
     $role_id = $loginSession['role_id'];
     $user_id = $loginSession['id'];
 
-    
     $entity_id = 9;
-      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'approve');
-                echo '<script>';
-                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: approve, Can approve: " . ($canView ? 'true' : 'false') . "');";
-                echo '</script>';
-     if (!$canView) {
-   
-                     $this->load->view('denied');
-  
-                         echo '<script>
+    $canView = $this->check_permission($role_id, $user_id, $entity_id, 'approve');
+
+    if (!$canView) {
+        $this->load->view('denied');
+        echo '<script>
             if (confirm("Access Denied: You do not have permission to approve data. Would you like to go to the dashboard?")) {
                 window.location.href = "' . base_url('dashboard') . '";
             } else {
-                // Handle the case where the user chooses to stay on the current page
-                // Redirect to the dashboard after a delay
                 setTimeout(function() {
                     window.location.href = "' . base_url('dashboard') . '";
                 }, 1000); 
             }
           </script>';
-   
-    exit();
-}
+        exit();
+    }
+
     if ($this->input->post()) {
         $config['upload_path'] = './assets/uploads/';
         $config['allowed_types'] = 'gif|jpg|png|jpeg|avi|mpg|mpeg|wmv|mp4';
         $config['max_size'] = 1024;
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
+
+        // Perform file uploads
         $existing_data = $this->Income_model->get_income_data_by_id($IncomeTaxID);
+
+        // Prepare data for database update
+        $data = array(
+           'application_name' => $this->input->post('application_name'),
+              'los_no' => $this->input->post('los_no'),
+              'branch_name' => $this->input->post('branch_name'),
+              'income_type' => $this->input->post('income_type'),
+              'yearly_income' => $this->input->post('yearly_income'),
+              'assessment_year' => $this->input->post('Assessment_Year'),
+             'verifying_income_proof' => $this->input->post('verifing_income_proof'),
+              'pan_no' => $this->input->post('pan-no'),
+              'proof_submitted' => $this->input->post('proof_submitted'),
+              'acknowledgement_number' => $this->input->post('acknowledement_number'),
+              "Submission_date" => $this->input->post('Submission_date'),
+              "gross_income" => $this->input->post('gross_income'),
+              "auditor_name" => $this->input->post('auditor_name'),
+              "office_address" => $this->input->post('office_address'),
+              "status_type" => $this->input->post('status_type'),
+              "itr" => $this->input->post('itr'),
+              "executive_name" => $this->input->post('executive_name'),
+              "system_case_id" => $this->input->post('system_case_id'),
+              "applicant_name" => $this->input->post('applicant_name'),
+              "ref_number" => $this->input->post('ref_number')
+        );
+
         $old_signature = $existing_data->signature;
         $old_stamp = $existing_data->stamp;
         $signature_data = array('file_name' => $old_signature);
@@ -542,7 +827,6 @@ public function update_income($IncomeTaxID) {
             if (!empty($old_signature) && file_exists($config['upload_path'] . $old_signature)) {
                 unlink($config['upload_path'] . $old_signature);
             }
-
             $signature_data = $this->upload->data();
         }
 
@@ -553,31 +837,12 @@ public function update_income($IncomeTaxID) {
             }
             $stamp_data = $this->upload->data();
         }
-       $data = array(
-                    'application_name' => $this->input->post('application-name'),
-                    'los_no' => $this->input->post('los-no'),
-                    'branch_name' => $this->input->post('branch-name'),
-                    'income_type' => $this->input->post('income-type'),
-                    'yearly_income' => $this->input->post('yearly-income'),
-                    'assessment_year' => $this->input->post('Assessment_Year'),
-                    'verifying_income_proof' => $this->input->post('verifing-income-proof'),
-                    'pan_no' => $this->input->post('pan-no'),
-                    'proof_submitted' => $this->input->post('proof-submitted'),
-                    'acknowledgement_number' => $this->input->post('acknowledement-number'),
-                    "Submission_date" => $this->input->post('Submission-date'),
-                    "gross_income" => $this->input->post('gross-income'),
-                    "auditor_name" => $this->input->post('auditor-name'),
-                    "office_address" => $this->input->post('office_address'),
-                    "status_type" => $this->input->post('status-type'),
-                    "itr" => $this->input->post('itr'),
-                    "executive_name" => $this->input->post('executive-name'),
-                    "signature" => $signature_data['file_name'],
-                    "stamp" => $stamp_data['file_name'],
-                    "system_case_id" => $this->input->post('system-case-id'),
-                    "applicant_name" => $this->input->post('applicant-name'),
-                    "ref_number" => $this->input->post('ref-number')
-                );
 
+        // Merge new file data with existing data
+        $data['signature'] = isset($signature_data['file_name']) ? $signature_data['file_name'] : $old_signature;
+        $data['stamp'] = isset($stamp_data['file_name']) ? $stamp_data['file_name'] : $old_stamp;
+
+        // Update existing record
         $update_result = $this->Income_model->update_income_data($IncomeTaxID, $data);
 
         if ($update_result) {
@@ -585,8 +850,12 @@ public function update_income($IncomeTaxID) {
         } else {
             echo 'Error updating data in the database';
         }
+    } else {
+        echo 'No POST data received';
     }
 }
+
+
 
 public function delete_income($IncomeTaxID){
      $loginSession = $this->session->userdata('LoginSession');

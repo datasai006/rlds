@@ -22,9 +22,9 @@ public function insert_data($data) {
     }
 
     public function update_income_data($IncomeTaxID, $data) {
-        $this->db->where('IncomeTaxID', $IncomeTaxID);
-        $this->db->update('tbl_incometax', $data); 
-        return $this->db->affected_rows();
+        $this->db->where('id', $IncomeTaxID);
+         return $this->db->update('tbl_incometax', $data); 
+        
     }
      public function delete_income($IncomeTaxID)
     {

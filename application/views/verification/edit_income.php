@@ -41,106 +41,251 @@
 
                     <div class="card-body">
                         <!-----------------------------------small devices code start here---------------------------------------------------->
-                        <div class="d-md-none section quickForm" id="section1">
-                            <form>
+                        <form class="ajax-form" id="final-form">
+                            <div class="d-md-none section quickForm" id="section1">
                                 <div class="form-group">
                                     <label>Application Name</label>
                                     <input type="text" class="form-control"
-                                        value="<?php echo $income_data->application_name; ?>" name="application-name"
+                                        value="<?php echo $income_data->application_name; ?>" name="application_name"
                                         placeholder="Application Name">
                                 </div>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                            </form>
-                        </div>
-                        <div class="d-md-none section" id="section2" style="display: none;">
-                            <form action="">
-                                <div class="form-group">
-                                    <label>Los no:</label>
-                                    <input type="number" class="form-control" name="los-no" placeholder="21356978">
-                                </div>
 
+                            </div>
+                            <div class="d-md-none section" id="section2" style="display: none;">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label>Los no:</label>
+                                        <input type="number" class="form-control" name="los_no" placeholder="21356978">
+                                    </div>
+
+                                    <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                    <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section3" style="display: none;">
+
+                                <div class="form-group">
+                                    <label>Branch Name</label>
+                                    <input type="text" class="form-control" name="branch_name"
+                                        placeholder="Hyderbad branch">
+                                </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                            </form>
-                        </div>
-                        <div class="d-md-none section" id="section3" style="display: none;">
+                            </div>
+                            <div class="d-md-none section" id="section4" style="display: none;">
 
-                            <div class="form-group">
-                                <label>Branch Name</label>
-                                <input type="text" class="form-control" name="branch-name"
-                                    placeholder="Hyderbad branch">
+                                <div class="form-group">
+                                    <label>Type of income</label>
+                                    <input type="text" class="form-control" name="income_type"
+                                        placeholder="Business Income">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section4" style="display: none;">
+                            <div class="d-md-none section" id="section5" style="display: none;">
 
-                            <div class="form-group">
-                                <label>Type of income</label>
-                                <input type="text" class="form-control" name="income-type"
-                                    placeholder="Business Income">
+                                <div class="form-group">
+                                    <label>Yearly income</label>
+                                    <input type="text" class="form-control" name="yearly_income" placeholder="6,63,100">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section5" style="display: none;">
+                            <div class="d-md-none section" id="section6" style="display: none;">
 
-                            <div class="form-group">
-                                <label>Yearly income</label>
-                                <input type="text" class="form-control" name="yearly-income" placeholder="6,63,100">
+                                <div class="form-group">
+                                    <label>Assessment Year</label>
+                                    <input type="text" class="form-control" name="Assessment_Year"
+                                        placeholder="2023-2024">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section6" style="display: none;">
+                            <div class="d-md-none section" id="section7" style="display: none;">
 
-                            <div class="form-group">
-                                <label>Assessment Year</label>
-                                <input type="text" class="form-control" name="Assessment-Year" placeholder="2023-2024">
+                                <div class="form-group">
+                                    <label>Type of Verifing the income proof</label>
+                                    <input type="text" class="form-control" name="verifing_income_proof"
+                                        placeholder="Income tax office">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section7" style="display: none;">
-
-                            <div class="form-group">
-                                <label>Type of Verifing the income proof</label>
-                                <input type="text" class="form-control" name="verifing-income-proof"
-                                    placeholder="Income tax office">
+                            <div class="d-md-none section" id="section8" style="display: none;">
+                                <div class="form-group">
+                                    <label>PAN No</label>
+                                    <input type="text" class="form-control" name="pan_no" placeholder="ABCD123456C">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section8" style="display: none;">
-                            <div class="form-group">
-                                <label>PAN No</label>
-                                <input type="text" class="form-control" name="pan-no" placeholder="ABCD123456C">
+                            <div class="d-md-none section" id="section9" style="display: none;">
+                                <div class="form-group">
+                                    <label>Proof Submited</label>
+                                    <select class="form-control select2 w-100" name="proof_submitted"
+                                        style="width: 100%">
+                                        <option selected="">-------select-------</option>
+                                        <option name="Yes">YES</option>
+                                        <option name="no">NO</option>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section9" style="display: none;">
-                            <div class="form-group">
-                                <label>Proof Submited</label>
-                                <select class="form-control select2 w-100" name="proof-submitted" style="width: 100%">
-                                    <option selected="">-------select-------</option>
-                                    <option name="Yes">YES</option>
-                                    <option name="no">NO</option>
-                                </select>
+                            <div class="d-md-none section" id="section10" style="display: none;">
+                                <div class="form-group">
+                                    <label>e- Filing Acknowledement Number</label>
+                                    <input type="text" class="form-control" name="acknowledement_number"
+                                        placeholder="214633751290823">
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-                        <div class="d-md-none section" id="section10" style="display: none;">
-                            <div class="form-group">
-                                <label>e- Filing Acknowledement Number</label>
-                                <input type="text" class="form-control" name="acknowledement-number"
-                                    placeholder="214633751290823">
+                            <div class="d-md-none section" id="section11" style="display: none;">
+                                <div class="form-group">
+                                    <label>Date of Submission</label>
+                                    <input type="date" class="form-control"
+                                        value="<?php echo $income_data->Submission_date; ?>" name="Submission_date"
+                                        placeholder="214633751290823" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
-                            <button class="btn btn-primary mt-3 backBtn">Back</button>
-                            <button class="btn btn-primary mt-3 nextBtnu">Next</button>
-                        </div>
-
+                            <div class="d-md-none section" id="section12" style="display: none;">
+                                <div class="form-group">
+                                    <label>Gross income in Rupees</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->gross_income; ?>" name="gross_income"
+                                        placeholder="6,63,100" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section13" style="display: none;">
+                                <div class="form-group">
+                                    <label>Verified Auditor Name</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->auditor_name; ?>" name="auditor_name"
+                                        placeholder="RLDS PVT LTD" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section14" style="display: none;">
+                                <div class="form-group">
+                                    <label>Verified in Income Tax Office</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->office_address; ?>" name="office_address"
+                                        placeholder="KURNOOL" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section15" style="display: none;">
+                                <div class="form-group">
+                                    <label>Status Type</label>
+                                    <select class="form-control select2" name="status-type" style="width: 100%">
+                                        <option selected>--select--</option>
+                                        <?php foreach ($status_types as $value => $label): ?>
+                                        <option value="<?php echo $value; ?>"
+                                            <?php echo ($value == $income_data->status_type) ? 'selected' : ''; ?>>
+                                            <?php echo $label; ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section16" style="display: none;">
+                                <div class="form-group">
+                                    <label>ITR</label>
+                                    <select class="form-control select2" name="itr" style="width: 100%">
+                                        <option selected>--select--</option>
+                                        <?php foreach ($itr_types as $value => $label): ?>
+                                        <option value="<?php echo $value; ?>"
+                                            <?php echo ($value == $income_data->itr) ? 'selected' : ''; ?>>
+                                            <?php echo $label; ?>
+                                        </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section17" style="display: none;">
+                                <div class="form-group">
+                                    <label>FIELD EXECUTIVE NAME</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->executive_name; ?>" name="executive-name"
+                                        style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section18" style="display: none;">
+                                <div class="form-group">
+                                    <label>Signature</label>
+                                    <input type="file" class="form-control" name="signature" id="signature"
+                                        style="width: 100% ">
+                                    <input type="hidden" name="current_signature">
+                                    <!-- value="<?php echo $current_signature; ?>" -->
+                                    <!-- <span>Current Signature: <?php echo $current_signature; ?></span> -->
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section19" style="display: none;">
+                                <div class="form-group">
+                                    <label>Stamp</label>
+                                    <input type="file" class="form-control" name="stamp" id="stamp"
+                                        style="width: 100% ">
+                                    <input type="hidden" name="current_stamp">
+                                    <!-- value="<?php echo $current_stamp; ?>" -->
+                                    <!-- <span>Current Stamp: <?php echo $current_stamp; ?></span> -->
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section20" style="display: none;">
+                                <div class="form-group">
+                                    <label>System Case ID</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->system_case_id; ?>" name="system-case-id"
+                                        placeholder="279/29-09-2023" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section21" style="display: none;">
+                                <div class="form-group">
+                                    <label>Applicant Name</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->applicant_name; ?>" name="applicant-name"
+                                        placeholder="AIDNI ENGINEERS" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                            </div>
+                            <div class="d-md-none section" id="section22" style="display: none;">
+                                <div class="form-group">
+                                    <label>Ref.Number</label>
+                                    <input type="text" class="form-control"
+                                        value="<?php echo $income_data->ref_number; ?>" name="ref-number"
+                                        placeholder="97/29-09-2023" style="width: 100% ">
+                                    </input>
+                                </div>
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-success mt-3 submitBtni">submit</button>
+                            </div>
+                        </form>
                         <!-----------------------------------small devices code end  here---------------------------------------------------->
                         <Form role="form" enctype="multipart/form-data" name="myForm"
                             action="<?php echo base_url('verification/Income/update_income/'.$income_data->id )?>"
@@ -239,7 +384,7 @@
                                         <label>e- Filing Acknowledement Number</label>
                                         <input type="text" class="form-control"
                                             value="<?php echo $income_data->acknowledgement_number; ?>"
-                                            name="acknowledement-number" placeholder="214633751290823"
+                                            name="acknowledement_number" placeholder="214633751290823"
                                             style="width: 100% ">
                                         </input>
                                     </div>
@@ -248,7 +393,7 @@
                                     <div class="form-group">
                                         <label>Date of Submission</label>
                                         <input type="date" class="form-control"
-                                            value="<?php echo $income_data->Submission_date; ?>" name="Submission-date"
+                                            value="<?php echo $income_data->Submission_date; ?>" name="Submission_date"
                                             placeholder="214633751290823" style="width: 100% ">
                                         </input>
                                     </div>
@@ -257,7 +402,7 @@
                                     <div class="form-group">
                                         <label>Gross income in Rupees</label>
                                         <input type="text" class="form-control"
-                                            value="<?php echo $income_data->gross_income; ?>" name="gross-income"
+                                            value="<?php echo $income_data->gross_income; ?>" name="gross_income"
                                             placeholder="6,63,100" style="width: 100% ">
                                         </input>
                                     </div>
@@ -266,7 +411,7 @@
                                     <div class="form-group">
                                         <label>Verified Auditor Name</label>
                                         <input type="text" class="form-control"
-                                            value="<?php echo $income_data->auditor_name; ?>" name="auditor-name"
+                                            value="<?php echo $income_data->auditor_name; ?>" name="auditor_name"
                                             placeholder="RLDS PVT LTD" style="width: 100% ">
                                         </input>
                                     </div>
@@ -370,7 +515,7 @@
                                     </div>
                                 </div>
                                 <!-- /.form-group -->
-                                <div class="card-footer">
+                                <div class="card-footer  d-md-block d-none">
                                     <button type="submit" class="btn btn-primary  d-md-block d-none">Update</button>
                                 </div>
                             </div>

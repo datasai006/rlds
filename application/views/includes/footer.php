@@ -181,6 +181,24 @@ $(document).ready(function() {
         });
         return false;
     });
+    $('.submitBtni').click(function() {
+        var formData = $('#final-form').serialize();
+        var incomeTaxID = localStorage.getItem('insertId');
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Income/update_income/' + incomeTaxID,
+            data: formData,
+            success: function(response) {
+                console.log('AJAX Response:', response);
+                alert('Data saved successfully!');
+                window.location.href = baseUrl + 'dashboard';
+            },
+            error: function() {
+                alert('Error occurred while saving data.');
+            }
+        });
+        return false;
+    });
 });
 </script>
 <script>
