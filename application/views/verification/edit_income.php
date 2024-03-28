@@ -188,7 +188,7 @@
                             <div class="d-md-none section" id="section15" style="display: none;">
                                 <div class="form-group">
                                     <label>Status Type</label>
-                                    <select class="form-control select2" name="status-type" style="width: 100%">
+                                    <select class="form-control select2" name="status_type" style="width: 100%">
                                         <option selected>--select--</option>
                                         <?php foreach ($status_types as $value => $label): ?>
                                         <option value="<?php echo $value; ?>"
@@ -221,7 +221,7 @@
                                 <div class="form-group">
                                     <label>FIELD EXECUTIVE NAME</label>
                                     <input type="text" class="form-control"
-                                        value="<?php echo $income_data->executive_name; ?>" name="executive-name"
+                                        value="<?php echo $income_data->executive_name; ?>" name="executive_name"
                                         style="width: 100% ">
                                     </input>
                                 </div>
@@ -256,7 +256,7 @@
                                 <div class="form-group">
                                     <label>System Case ID</label>
                                     <input type="text" class="form-control"
-                                        value="<?php echo $income_data->system_case_id; ?>" name="system-case-id"
+                                        value="<?php echo $income_data->system_case_id; ?>" name="system_case_id"
                                         placeholder="279/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>
@@ -267,7 +267,7 @@
                                 <div class="form-group">
                                     <label>Applicant Name</label>
                                     <input type="text" class="form-control"
-                                        value="<?php echo $income_data->applicant_name; ?>" name="applicant-name"
+                                        value="<?php echo $income_data->applicant_name; ?>" name="applicant_name"
                                         placeholder="AIDNI ENGINEERS" style="width: 100% ">
                                     </input>
                                 </div>
@@ -278,7 +278,7 @@
                                 <div class="form-group">
                                     <label>Ref.Number</label>
                                     <input type="text" class="form-control"
-                                        value="<?php echo $income_data->ref_number; ?>" name="ref-number"
+                                        value="<?php echo $income_data->ref_number; ?>" name="ref_number"
                                         placeholder="97/29-09-2023" style="width: 100% ">
                                     </input>
                                 </div>

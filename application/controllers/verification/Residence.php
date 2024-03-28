@@ -11,7 +11,32 @@ class Residence extends CI_Controller {
     }
 
     public function index() {
-        
+         $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];
+ $entity_id = 11;
+      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'view');
+                echo '<script>';
+                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: view, Can view: " . ($canView ? 'true' : 'false') . "');";
+                echo '</script>';
+     if (!$canView) {
+   
+                     $this->load->view('denied');
+  
+                         echo '<script>
+            if (confirm("Access Denied: You do not have permission to view data. Would you like to go to the dashboard?")) {
+                window.location.href = "' . base_url('dashboard') . '";
+            } else {
+                // Handle the case where the user chooses to stay on the current page
+                // Redirect to the dashboard after a delay
+                setTimeout(function() {
+                    window.location.href = "' . base_url('dashboard') . '";
+                }, 1000); 
+            }
+          </script>';
+   
+    exit();
+}
          $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
@@ -203,6 +228,7 @@ public function add_residence() {
         $insert_id = $this->Residence_model->insert_data($data);
 
         if ($insert_id) {
+             echo $insert_id;
             redirect('Dashboard');
         } else {
             echo 'Error inserting data into the database';
@@ -226,6 +252,32 @@ public function add_residence() {
 
 
 public function edit_residence($id) {
+       $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];
+ $entity_id = 11;
+      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'edit');
+                echo '<script>';
+                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: view, Can view: " . ($canView ? 'true' : 'false') . "');";
+                echo '</script>';
+     if (!$canView) {
+   
+                     $this->load->view('denied');
+  
+                         echo '<script>
+            if (confirm("Access Denied: You do not have permission to view data. Would you like to go to the dashboard?")) {
+                window.location.href = "' . base_url('dashboard') . '";
+            } else {
+                // Handle the case where the user chooses to stay on the current page
+                // Redirect to the dashboard after a delay
+                setTimeout(function() {
+                    window.location.href = "' . base_url('dashboard') . '";
+                }, 1000); 
+            }
+          </script>';
+   
+    exit();
+}
     $this->load->model('Residence_model');
 
    
@@ -408,6 +460,57 @@ public function delete_residence($id)
         redirect('verification/Residence/view_residence_data');
     } else {
         echo 'Error soft deleting data in the database';
+    }
+}
+private function check_permission($role_id, $id, $entity_id, $action) {
+    $query = $this->db->get_where('tbl_role_permissions', array(
+        'role_id' => $role_id,
+        'entity_id' => $entity_id,
+        'user_id' => $id
+    ));
+    $row = $query->row_array();
+
+    if ($row) {
+        switch ($action) {
+            case 'view':
+                return $row['can_view'] == 1;
+            case 'edit':
+                return $row['can_edit'] == 1;
+            case 'delete':
+                return $row['can_delete'] == 1;
+            case 'approve':
+                return $row['can_approve'] == 1;
+            case 'add':
+                return $row['can_add'] == 1;
+            default:
+                return false;
+        }
+    } else {
+        $query = $this->db->get_where('tbl_role_permissions', array(
+            'role_id' => $role_id,
+            'entity_id' => 0,
+            'user_id' => $id,
+        ));
+        $row = $query->row_array();
+
+        if ($row) {
+            switch ($action) {
+                case 'view':
+                    return $row['can_view'] == 1;
+                case 'edit':
+                    return $row['can_edit'] == 1;
+                case 'delete':
+                    return $row['can_delete'] == 1;
+                case 'approve':
+                    return $row['can_approve'] == 1;
+                case 'add':
+                    return $row['can_add'] == 1;
+                default:
+                    return false;
+            }
+        } else {
+            return false;
+        }
     }
 }
 

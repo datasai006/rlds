@@ -12,7 +12,7 @@ public function insert_data($data) {
 }
 
      public function get_all_income_data() {
-         $this->db->where('status', 'active');
+         $this->db->where('status', 'In-review');
     $query = $this->db->get('tbl_incometax'); 
     return $query->result();
     }
@@ -21,30 +21,36 @@ public function insert_data($data) {
         return $query->row();
     }
 
-    public function update_income_data($IncomeTaxID, $data) {
-        $this->db->where('id', $IncomeTaxID);
-         return $this->db->update('tbl_incometax', $data); 
+    // public function update_income_data($IncomeTaxID, $data) {
+    //     $this->db->where('id', $IncomeTaxID);
+    //      return $this->db->update('tbl_incometax', $data); 
         
+    // }
+      public function update_income_data($incomeTaxID, $data) {
+      
+        $this->db->where('id', $incomeTaxID);
+        $this->db->update('tbl_incometax', $data);
+        return $this->db->affected_rows() > 0; 
     }
      public function delete_income($IncomeTaxID)
     {
         $data = array(
-            'status' => 'inactive',
+            'status' => 'Reject',
         );
 
-        $this->db->where('IncomeTaxID', $IncomeTaxID);
+        $this->db->where('id', $IncomeTaxID);
         return $this->db->update('tbl_incometax', $data);
     }
  public function save_data($data, $id = null) {
     $result = [];
 
     if ($id !== null) {
-        // Use the 'set' method to update the database
+        
         $this->db->where('id', $id);
         $this->db->set($data);
         $this->db->update('tbl_incometax');
 
-        // Check if the update was successful
+       
         if ($this->db->affected_rows() > 0) {
             $result['status'] = 'success';
         } else {
@@ -52,10 +58,10 @@ public function insert_data($data) {
             $result['message'] = 'Error updating data in the database.';
         }
     } else {
-        // Insert new record without 'id'
+       
         $this->db->insert('tbl_incometax', $data);
 
-        // Check if the insert was successful
+        
         if ($this->db->affected_rows() > 0) {
             $result['status'] = 'success';
         } else {

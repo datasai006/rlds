@@ -132,7 +132,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: baseUrl + 'verification/income/add_income',
+            url: baseUrl + 'verification/income/add_income1',
             data: formData,
             success: function(response) {
                 console.log('AJAX Response:', response);
@@ -149,8 +149,6 @@ $(document).ready(function() {
                 alert('Error occurred while saving data: ' + error);
             }
         });
-
-        // Hide current section and show next section after the AJAX call
         currentSection.hide();
         nextSection.show();
 
@@ -181,26 +179,55 @@ $(document).ready(function() {
         });
         return false;
     });
-    $('.submitBtni').click(function() {
-        var formData = $('#final-form').serialize();
-        var incomeTaxID = localStorage.getItem('insertId');
-        $.ajax({
-            type: 'POST',
-            url: baseUrl + 'verification/Income/update_income/' + incomeTaxID,
-            data: formData,
-            success: function(response) {
-                console.log('AJAX Response:', response);
-                alert('Data saved successfully!');
-                window.location.href = baseUrl + 'dashboard';
-            },
-            error: function() {
-                alert('Error occurred while saving data.');
-            }
+    // $('.submitBtni').click(function() {
+    //     var formData = $('#final-form').serialize();
+    //     var incomeTaxID = localStorage.getItem('insertId');
+    //     $.ajax({
+    //         type: 'POST',
+    //         url: baseUrl + 'verification/Income/update_income/' + incomeTaxID,
+    //         data: formData,
+    //         success: function(response) {
+    //             console.log('AJAX Response:', response);
+    //             alert('Data saved successfully!');
+    //             window.location.href = baseUrl + 'dashboard';
+    //         },
+    //         error: function() {
+    //             alert('Error occurred while saving data.');
+    //         }
+    //     });
+    //     return false;
+    // });
+    $(document).ready(function() {
+        $('.submitBtni').click(function(event) {
+            event.preventDefault();
+
+            var formData = new FormData($('#final-form')[
+                0]);
+            var incomeTaxID = localStorage.getItem('insertId');
+
+            $.ajax({
+                type: 'POST',
+                url: baseUrl + 'verification/Income/update_income1/' + incomeTaxID,
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    console.log('AJAX Response:', response);
+                    alert('Data saved successfully!');
+                    window.location.href = baseUrl + 'dashboard';
+                },
+                error: function(xhr, status, error) {
+                    console.error('AJAX Error:', status, error);
+                    alert('Error occurred while saving data.');
+                }
+            });
         });
-        return false;
     });
+
 });
 </script>
+
+<!-- residence code for small devices  -->
 <script>
 var baseUrl = "<?php echo base_url(); ?>";
 
@@ -209,7 +236,27 @@ $(document).ready(function() {
     $('.nextBtn1').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
+        var formData = $('#final-form').serialize();
 
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Residence/add_residence',
+            data: formData,
+            success: function(response) {
+                console.log('AJAX Response:', response);
+                var match = response.match(/\d+/);
+                var insert_id = parseInt(match[0]);
+                window.location.href = baseUrl + 'verification/Residence/edit_residence/' +
+                    insert_id;
+                localStorage.setItem('insertId', insert_id);
+                console.log('insertId set in local storage:', insert_id);
+
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Error occurred while saving data: ' + error);
+            }
+        });
         currentSection.hide();
         nextSection.show();
 
@@ -244,55 +291,12 @@ $(document).ready(function() {
 });
 </script>
 
-
-<!-- <script>
-$('.section').not(':first').hide();
-var baseUrl = "<?php echo base_url(); ?>";
-
-$(document).ready(function() {
-
-    $('.nextBtn2').click(function() {
-        var currentSection = $(this).closest('.section');
-        var nextSection = currentSection.next('.section');
-
-        currentSection.hide();
-        nextSection.show();
-
-        return false;
-    });
-
-
-    $('.backBtn2').click(function() {
-        var currentSection = $(this).closest('.section');
-        var prevSection = currentSection.prev('.section');
-        currentSection.hide();
-        prevSection.show();
-        return false;
-    });
-
-    $('.submitBtn2').click(function() {
-        var formData = $('#final_form2').serialize();
-        var_dump('formData', formData);
-
-        $.ajax({
-            type: 'POST',
-            url: baseUrl + 'verification/Office/add_office',
-            data: formData,
-            success: function(response) {
-                // alert('Data saved successfully!');
-            },
-            error: function() {
-                alert('Error occurred while saving data.');
-            }
-        });
-        return false;
-    });
-});
-</script> -->
+<!-- office code for small devices  -->
 <script>
 $(document).ready(function() {
-    $('.section').not(':first').hide();
     var baseUrl = "<?php echo base_url(); ?>";
+    $('.section').not(':first').hide();
+
 
     $('.nextBtn2').click(function() {
         var currentSection = $(this).closest('.section');
