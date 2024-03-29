@@ -53,14 +53,14 @@
 
                             </div>
                             <div class="d-md-none section" id="section2" style="display: none;">
-                                <form action="">
-                                    <div class="form-group">
-                                        <label>Los no:</label>
-                                        <input type="number" class="form-control" name="los_no" placeholder="21356978">
-                                    </div>
 
-                                    <button class="btn btn-primary mt-3 backBtn">Back</button>
-                                    <button class="btn btn-primary mt-3 nextBtnu">Next</button>
+                                <div class="form-group">
+                                    <label>Los no:</label>
+                                    <input type="number" class="form-control" name="los_no" placeholder="21356978">
+                                </div>
+
+                                <button class="btn btn-primary mt-3 backBtn">Back</button>
+                                <button class="btn btn-primary mt-3 nextBtnu">Next</button>
                             </div>
                             <div class="d-md-none section" id="section3" style="display: none;">
 
@@ -146,7 +146,7 @@
                                     <label>Date of Submission</label>
                                     <input type="date" class="form-control"
                                         value="<?php echo $income_data->Submission_date; ?>" name="Submission_date"
-                                        placeholder="214633751290823" style="width: 100% ">
+                                        placeholder="date" style="width: 100% ">
                                     </input>
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -394,7 +394,7 @@
                                         <label>Date of Submission</label>
                                         <input type="date" class="form-control"
                                             value="<?php echo $income_data->Submission_date; ?>" name="Submission_date"
-                                            placeholder="214633751290823" style="width: 100% ">
+                                            placeholder="date" style="width: 100% ">
                                         </input>
                                     </div>
                                 </div>

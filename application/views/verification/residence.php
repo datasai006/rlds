@@ -52,20 +52,21 @@
 
                                     <label for="branch_name">Branch Name:</label>
                                     <select name="branch_name" class="form-control" id="branch_name">
-                                        <option>Main Branch</option>
-                                        <option>Town Branch</option>
-                                        <option>SKU Branch</option>
-                                        <option>BKS Branch</option>
-                                        <option>Kadiri ADB Branch</option>
-                                        <option>Kadiri Bypass Branch</option>
-                                        <option>Tadipatri Main Branch</option>
-                                        <option>Tadipatri Bazar Branch</option>
-                                        <option>Gooty Main Branch</option>
-                                        <option>KIA Branch</option>
-                                        <option>Narpala Branch</option>
-                                        <option>Uravakonda Main Branch</option>
-                                        <option>Vajrakarur Branch</option>
+                                        <option value="main_branch">Main Branch</option>
+                                        <option value="town_branch">Town Branch</option>
+                                        <option value="sku_branch">SKU Branch</option>
+                                        <option value="bks_branch">BKS Branch</option>
+                                        <option value="kadiri_adb_branch">Kadiri ADB Branch</option>
+                                        <option value="kadiri_bypass_branch">Kadiri Bypass Branch</option>
+                                        <option value="tadipatri_main_branch">Tadipatri Main Branch</option>
+                                        <option value="tadipatri_bazar_branch">Tadipatri Bazar Branch</option>
+                                        <option value="gooty_main_branch">Gooty Main Branch</option>
+                                        <option value="kia_branch">KIA Branch</option>
+                                        <option value="narpala_branch">Narpala Branch</option>
+                                        <option value="uravakonda_main_branch">Uravakonda Main Branch</option>
+                                        <option value="vajrakarur_branch">Vajrakarur Branch</option>
                                     </select>
+
                                 </div>
                                 <button class="btn btn-primary mt-3 nextBtn1">Next</button>
                             </div>
@@ -171,7 +172,7 @@
                                 <div class="form-group">
                                     <label for="Receipt">Date Of The Receipt of the File:</label>
                                     <input type="text" name="Receipt" class="form-control" id="Receipt"
-                                        placeholder="00-01-1900" />
+                                        placeholder="YYYY-MM-DD" />
 
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn1">Back</button>
@@ -877,7 +878,7 @@
                                 <div class="form-group col-md-4 d-md-block d-none">
                                     <label for="Receipt">Date Of The Receipt of the File</label>
                                     <input type="date" name="Receipt" class="form-control" id="Receipt"
-                                        placeholder="00-01-1900" />
+                                        placeholder="YYYY-MM-DD" />
                                 </div>
                             </div>
                             <div class="d-md-block" style="display: none">

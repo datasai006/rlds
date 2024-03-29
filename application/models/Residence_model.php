@@ -2,7 +2,8 @@
 class Residence_model extends CI_Model {
     
     public function insert_data($data) {
-        return $this->db->insert('tbl_residence', $data);
+        $this->db->insert('tbl_residence', $data);
+        return $this->db->insert_id();
     }
       public function get_residence_data() {
          $this->db->where('status', 'In-review');
@@ -15,10 +16,10 @@ class Residence_model extends CI_Model {
           return $query->row();
     }
       public function update_residence_data($id, $data) {
+      
         $this->db->where('id', $id);
         $this->db->update('tbl_residence', $data);
-
-        return $this->db->affected_rows(); 
+        return $this->db->affected_rows() > 0; 
     }
       public function delete_residence($id)
     {
