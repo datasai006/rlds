@@ -37,78 +37,90 @@
                             </button>
                         </div>
                     </div>
-                    <form role="form" enctype="multipart/form-data" id="quickForm" name="myForm"
-                        action="<?php echo base_url( 'verification/Office/update_office/'.$office_data->id )?>"
-                        method="post" novalidate="novalidate">
-                        <div class="card-body row">
-                            <div class="form-group col-md-4">
+                    <!-- small devices code start here -->
+                    <form class="ajax-form" id="final_form2">
+                        <div class="d-md-none section quickForm">
+                            <div class="form-group ">
                                 <label for="branch_name">Branch Name</label>
                                 <input type="text" name="branch_name" class="form-control" id="branch_name"
                                     value="<?php echo $office_data->branch_name; ?>" placeholder="kurnool Branch"
                                     required />
                             </div>
-                            <div class="form-group col-md-4">
+                        </div>
+                    </form>
+                    <!-- small devices code end here -->
+                    <form role="form" enctype="multipart/form-data" id="quickForm" name="myForm"
+                        action="<?php echo base_url( 'verification/Office/update_office/'.$office_data->id )?>"
+                        method="post" novalidate="novalidate">
+                        <div class="card-body row">
+                            <div class="form-group col-md-4 d-md-block d-none">
+                                <label for="branch_name">Branch Name</label>
+                                <input type="text" name="branch_name" class="form-control" id="branch_name"
+                                    value="<?php echo $office_data->branch_name; ?>" placeholder="kurnool Branch"
+                                    required />
+                            </div>
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="los_no">Los no</label>
                                 <input type="text" name="los_no" class="form-control" id="los_no" placeholder="2489376"
                                     value="<?php echo $office_data->los_no; ?>" required />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Reference_no">Reference no</label>
                                 <input type="text" name="Reference_no" class="form-control" id="Reference_no"
                                     value="<?php echo $office_data->Reference_no; ?>" placeholder="00-01-1900" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Typeofloan">Type of Loan</label>
                                 <input type="text" name="Typeofloan" class="form-control" id="Typeofloan"
                                     value="<?php echo $office_data->Typeofloan; ?>" placeholder="0" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Mobile_no">Mobile no</label>
                                 <input type="text" name="Mobile_no" class="form-control" id="Mobile_no"
                                     value="<?php echo $office_data->Mobile_no; ?>" placeholder="787896739" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Applicantname">Name of the Application(Mr/Mrs/Ms)</label>
                                 <input type="text" name="Applicantname" class="form-control" id="Applicantname"
                                     value="<?php echo $office_data->Applicantname; ?>" placeholder="0" />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Office-Address">Office Address</label>
                                 <input type="text" name="Office-Address" class="form-control" id="Office-Address"
                                     value="<?php echo $office_data->Office_Address; ?>" placeholder="kurnool" />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Receipt_date">Date Of The Receipt of the File</label>
                                 <input type="date" name="Receipt_date" class="form-control" id="Receipt_date"
                                     value="<?php echo $office_data->Receipt_date; ?>" required />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="DateoftheReport">Date of the Report</label>
                                 <input type="date" name="DateoftheReport" class="form-control" id="DateoftheReport"
                                     value="<?php echo $office_data->DateoftheReport; ?>" placeholder="00-01-1900" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="ExactCompany">Exact Company Name</label>
                                 <input type="text" name="ExactCompany" class="form-control" id="ExactCompany"
                                     value="<?php echo $office_data->ExactCompany; ?>" placeholder="KraftBees" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Designation">Designation</label>
                                 <input type="text" name="Designation" class="form-control" id="Designation"
                                     value="<?php echo $office_data->Designation; ?>" placeholder="" required />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="EmployeeId">Employee ID</label>
                                 <input type="text" name="EmployeeId" class="form-control" id="EmployeeId"
                                     value="<?php echo $office_data->EmployeeId; ?>" placeholder="NA" required />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Personcontacted">Person contacted</label>
                                 <select name="Personcontacted" class="form-control" id="Personcontacted">
                                     <option value="">--select--</option>
@@ -122,7 +134,7 @@
                             </div>
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="WorkingSince">Working Since</label>
                                 <select name="WorkingSince" class="form-control" id="WorkingSince" required>
                                     <option>------select no of years------</option>
@@ -139,37 +151,37 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="NetSalary">Net Salary</label>
                                 <input type="text" name="NetSalary" class="form-control" id="NetSalary"
                                     value="<?php echo $office_data->NetSalary; ?>" placeholder="NA" required />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="PersonMet">Person Met</label>
                                 <input type="text" name="PersonMet" class="form-control" id="PersonMet"
                                     value="<?php echo $office_data->PersonMet; ?>" placeholder="0" required />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Designationoftheperson">Designation of the person</label>
                                 <input type="text" name="Designationoftheperson" class="form-control"
                                     value="<?php echo $office_data->Designationoftheperson; ?>"
                                     id="Designationoftheperson" placeholder="0" />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4d-md-block d-none ">
                                 <label for="NatureofBusiness">Nature of Business</label>
                                 <input type="text" name="NatureofBusiness" class="form-control"
                                     value="<?php echo $office_data->NatureofBusiness; ?>" id="NatureofBusiness"
                                     placeholder="Business Type " required />
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="LandMark">Land Mark</label>
                                 <input type="text" name="LandMark" class="form-control"
                                     value="<?php echo $office_data->LandMark; ?>" id="LandMark"
                                     placeholder="Near My location " />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Numberofemployeesseen">Number of employees seen</label>
                                 <select name="Numberofemployeesseen" class="form-control" id="Numberofemployeesseen"
                                     required>
@@ -183,7 +195,7 @@
                             </div>
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="PersonmetatOffice">Person met at Office confirm that applicant worked at
                                     given address</label>
                                 <select name="PersonmetatOffice" class="form-control" id="PersonmetatOffice">
@@ -197,7 +209,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Indicate">Indicate if residence cum office</label>
                                 <select name="Indicate" class="form-control" id="Indicate">
                                     <option value="">--select--</option>
@@ -208,7 +220,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="LocatingOffice">Locating Office</label>
                                 <select name="LocatingOffice" class="form-control" id="LocatingOffice">
                                     <option value="">--select--</option>
@@ -222,7 +234,7 @@
                             </div>
 
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Boardsighted">Name Board sighted</label>
                                 <select name="Boardsighted" class="form-control" id="Boardsighted">
                                     <option value="">--select--</option>
@@ -235,7 +247,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="BusinessActivity">Business Activity seen</label>
                                 <select name="BusinessActivity" class="form-control" id="BusinessActivity">
                                     <option value="">--select--</option>
@@ -248,7 +260,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Equipmentsighted">Equipment sighted</label>
                                 <select name="Equipmentsighted" class="form-control" id="Equipmentsighted">
                                     <option value="">--select--</option>
@@ -261,12 +273,12 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Visitingcard">Visiting card obtained as proff of visit</label>
                                 <input type="text" name="Visitingcard" value="<?php echo $office_data->Visitingcard; ?>"
                                     class="form-control" id="Visitingcard" placeholder="No" />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Office-is-in">Office is in</label>
                                 <select name="Office-is-in" class="form-control" id="Office-is-in">
                                     <option value="">-------select-------</option>
@@ -291,13 +303,13 @@
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="FieldExecutiveComments">Field Executive Comments</label>
                                 <input type="textarea" name="FieldExecutiveComments" class="form-control"
                                     id="FieldExecutiveComments"
                                     value="<?php echo $office_data->FieldExecutiveComments; ?>" placeholder="" />
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="fieldexecutive">FIELD EXECUTIVE NAME</label>
                                 <select name="fieldexecutive" class="form-control" id="fieldexecutive">
                                     <option value="">--select--</option>
@@ -345,7 +357,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
                                     <label>System Case ID</label>
                                     <input type="text" class="form-control" name="system-case-id"
@@ -354,7 +366,7 @@
                                     </input>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
                                     <label>Applicant Name</label>
                                     <input type="text" class="form-control" name="applicant_name"
@@ -363,7 +375,7 @@
                                     </input>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
                                     <label>Ref.Number</label>
                                     <input type="text" class="form-control" name="ref_number"
