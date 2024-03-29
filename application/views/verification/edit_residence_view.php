@@ -164,8 +164,8 @@
                                     <h5>EVALUATION SHEET</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Application">Name of the Application(Mr/Mrs/Ms)</label>
-                                    <input type="text" name="Application" class="form-control" id="Application"
+                                    <label for="applicant_name">Name of the Application(Mr/Mrs/Ms)</label>
+                                    <input type="text" name="applicant_name" class="form-control" id="applicant_name"
                                         placeholder="0" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -234,8 +234,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="entrance motorable">Is the entrance motorable:</label>
-                                    <select name="entrance motorable" class="form-control" id="entrance motorable">
+                                    <label for="entrance_motorable">Is the entrance motorable:</label>
+                                    <select name="entrance_motorable" class="form-control" id="entrance_motorable">
                                         <option>YES</option>
                                         <option>NO</option>
                                     </select>
@@ -248,8 +248,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Area Sq-Ft">Area Sq-Ft:</label>
-                                    <input type="text" name="Area Sq-Ft:" class="form-control" id="Area Sq-Ft:"
+                                    <label for="Area_Sq_Ft">Area Sq-Ft:</label>
+                                    <input type="text" name="Area_Sq_Ft" class="form-control" id="Area_Sq_Ft"
                                         placeholder="1200 sq.ft." />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -260,8 +260,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Adhar Card No">Adhar Card No</label>
-                                    <input type="text" name="Adhar Card No" class="form-control" id="Adhar Card No"
+                                    <label for="aadhar_card">Adhar Card No</label>
+                                    <input type="text" name="aadhar_card" class="form-control" id="aadhar_card"
                                         placeholder=" " />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -272,8 +272,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Pan Card No">Pan Card No:</label>
-                                    <input type="text" name="Pan Card No" class="form-control" id="Pan Card No:"
+                                    <label for="pan_card">Pan Card No:</label>
+                                    <input type="text" name="pan_card" class="form-control" id="pan_card"
                                         placeholder=" " />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -284,8 +284,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Visible Items">Visible Items:</label>
-                                    <input type="text" name="Visible Items" class="form-control" id="Visible Items"
+                                    <label for="Visible_Items">Visible Items:</label>
+                                    <input type="text" name="Visible_Items" class="form-control" id="Visible_Items"
                                         placeholder="T.V, Fridge,Sofa." />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -296,8 +296,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Land Mark">Land Mark:</label>
-                                    <input type="text" name="Land Mark" class="form-control" id="Land Mark"
+                                    <label for="Land_Mark">Land Mark:</label>
+                                    <input type="text" name="Land_Mark" class="form-control" id="Land_Mark"
                                         placeholder=" " />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -308,8 +308,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Land Line No">Land Line No:</label>
-                                    <input type="text" name="Land Line No" class="form-control" id="Land Line No"
+                                    <label for="Land_Line_No">Land Line No:</label>
+                                    <input type="text" name="Land_Line_No" class="form-control" id="Land_Line_No"
                                         placeholder="NA" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -320,8 +320,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Mobile No 1">Mobile No 1:</label>
-                                    <input type="text" name="Mobile No 1" class="form-control" id="Mobile No 1"
+                                    <label for="mobile_no">Mobile No 1:</label>
+                                    <input type="text" name="mobile_no" class="form-control" id="mobile_no"
                                         placeholder="7702826006" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -332,8 +332,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Mobile No 2">Mobile No 2:</label>
-                                    <input name="Mobile No 2" class="form-control" id="Mobile No 2" placeholder="NA" />
+                                    <label for="mobile_no2">Mobile No 2:</label>
+                                    <input name="mobile_no2" class="form-control" id="mobile_no2" placeholder="NA" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -343,9 +343,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Within Municipal Limit">Within Municipal Limit</label>
-                                    <select name="Within Municipal Limit" class="form-control"
-                                        id="Within Municipal Limit">
+                                    <label for="Within_Municipal_Limit">Within Municipal Limit</label>
+                                    <select name="Within_Municipal_Limit" class="form-control"
+                                        id="Within_Municipal_Limit">
                                         <option value="YES">YES</option>
                                         <option value="NO">NO</option>
                                     </select>
@@ -358,8 +358,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Address Confirmed ">Address Confirmed:</label>
-                                    <select name="Address Confirmed" class="form-control" id="Address Confirmed">
+                                    <label for="Address_Confirmed">Address Confirmed:</label>
+                                    <select name="Address_Confirmed" class="form-control" id="Address_Confirmed">
                                         <option value="Yes">YES</option>
                                         <option value="No">NO</option>
                                     </select>
@@ -394,8 +394,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Interior Furniture">Interior Furniture</label>
-                                    <select name="Interior Furniture" class="form-control" id="Interior Furniture">
+                                    <label for="Interior_Furniture">Interior Furniture</label>
+                                    <select name="Interior_Furniture" class="form-control" id="Interior_Furniture">
                                         <option value="Semi-Furnished">Semi-Furnished</option>
                                         <option value="Fully Furnished">Fully Furnished</option>
                                     </select>
@@ -408,8 +408,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Type of Roof">Type of Roof</label>
-                                    <select name="Type of Roof" class="form-control" id="Type of Roof">
+                                    <label for="typeofroof">Type of Roof</label>
+                                    <select name="typeofroof" class="form-control" id="typeofroof">
                                         <option value="R.C.C Roof">R.C.C Roof</option>
                                         <option value="Aspestos">Aspestos</option>
                                         <option value="Tiles">Tiles</option>
@@ -424,8 +424,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Number of floors">Number of floors</label>
-                                    <select name="Number of floors" class="form-control" id="Number of floors">
+                                    <label for="Numberoffloors">Number of floors</label>
+                                    <select name="Numberoffloors" class="form-control" id="Numberoffloors">
                                         <option value="SINGLE FLOOR">SINGLE FLOOR</option>
                                         <option value="Ground + One Floor">
                                             Ground + One Floor
@@ -449,9 +449,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Vechiels found at Residence">Vechiels found at Residence:</label>
-                                    <select name="Vechiels found at Residence" class="form-control"
-                                        id="Vechiels found at Residence">
+                                    <label for="VechielsfoundatResidence">Vechiels found at Residence:</label>
+                                    <select name="VechielsfoundatResidence" class="form-control"
+                                        id="VechielsfoundatResidence">
                                         <option value="Two Wheeler">Two Wheeler</option>
                                         <option value="Four Wheeler">Four Wheeler</option>
                                         <option value="Three wheeler">Three wheeler</option>
@@ -466,8 +466,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Name plate sighted">Name plate sighted</label>
-                                    <select name="Name plate sighted" class="form-control" id="Name plate sighted">
+                                    <label for="Nameplatesighted">Name plate sighted</label>
+                                    <select name="Nameplatesighted" class="form-control" id="Nameplatesighted">
                                         <option value="YES">YES</option>
                                         <option value="NO">NO</option>
                                     </select>
@@ -480,9 +480,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Neighbours Verification">Neighbours Verification</label>
-                                    <select name="Neighbours Verification" class="form-control"
-                                        id="Neighbours Verification">
+                                    <label for="NeighboursVerification">Neighbours Verification</label>
+                                    <select name="NeighboursVerification" class="form-control"
+                                        id="NeighboursVerification">
                                         <option value="YES">YES</option>
                                         <option value="NO">NO</option>
                                     </select>
@@ -495,8 +495,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Political Link">Political Link</label>
-                                    <input name="Political Link" class="form-control" id="Political Link"
+                                    <label for="PoliticalLink">Political Link</label>
+                                    <input name="PoliticalLink" class="form-control" id="PoliticalLink"
                                         placeholder="NO" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
@@ -507,8 +507,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Type of Residence">Type of Residence</label>
-                                    <select name="Type of Residence" class="form-control" id="Type of Residence">
+                                    <label for="TypeofResidence">Type of Residence</label>
+                                    <select name="TypeofResidence" class="form-control" id="TypeofResidence">
                                         <option value="Independent">Independent</option>
                                         <option value="Apartment">Apartment</option>
                                         <option value="Row House">Row House</option>
@@ -523,9 +523,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Neighbours Verification">Neighbours Verification</label>
-                                    <select name="Neighbours Verification" class="form-control"
-                                        id="Neighbours Verification">
+                                    <label for="NeighboursVerification1">Neighbours Verification</label>
+                                    <select name="NeighboursVerification1" class="form-control"
+                                        id="NeighboursVerification1">
                                         <option value="POSITIVE">POSITIVE</option>
                                         <option value="NEGATIVE">NEGATIVE</option>
                                     </select>
@@ -538,9 +538,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Field Executive Comments">Field Executive Comments:</label>
-                                    <input type="text" name="Field Executive Comments" class="form-control"
-                                        id="Field Executive Comments" />
+                                    <label for="FieldExecutiveComments">Field Executive Comments:</label>
+                                    <input type="text" name="FieldExecutiveComments" class="form-control"
+                                        id="FieldExecutiveComments" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -550,8 +550,8 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Verifier's Name">Verifier's Name:</label>
-                                    <select name="Verifier's Name" class="form-control" id="Verifier's Name:">
+                                    <label for="Verifier_Name">Verifier's Name:</label>
+                                    <select name="Verifier_Name" class="form-control" id="Verifier_Name">
                                         <option value="A.Md.Imran- 7780661680">
                                             A.Md.Imran- 7780661680
                                         </option>
@@ -568,9 +568,9 @@
                                     <h5>OBSERVATIONS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Authoried Signatury">Authoried Signatury:</label>
-                                    <input type="text" name="Authoried Signatury" class="form-control"
-                                        id="Authoried Signatury" placeholder="L Raghuveer Reddy" />
+                                    <label for="AuthoriedSignatury">Authoried Signatury</label>
+                                    <input type="text" name="AuthoriedSignatury" class="form-control"
+                                        id="AuthoriedSignatury" placeholder="L Raghuveer Reddy" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -580,9 +580,9 @@
                                     <h5>PERSONAL DETAILS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Residence Details">Residence Details:</label>
-                                    <input type="text" name="Residence Details" class="form-control"
-                                        id="Residence Details" placeholder=" " />
+                                    <label for="ResidenceDetails">Residence Details</label>
+                                    <input type="text" name="ResidenceDetails" class="form-control"
+                                        id="ResidenceDetails" placeholder=" " />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -592,8 +592,8 @@
                                     <h5>PERSONAL DETAILS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Ownership Residence">Ownership Residence:</label>
-                                    <select name="Ownership Residence" class="form-control" id="Ownership Residence:">
+                                    <label for="OwnershipResidence">Ownership Residence:</label>
+                                    <select name="OwnershipResidence" class="form-control" id="OwnershipResidence">
                                         <option value="Own">Own</option>
                                         <option value="Rented">Rented</option>
                                         <option value="Quaters">Quaters</option>
@@ -607,9 +607,8 @@
                                     <h5>PERSONAL DETAILS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Number of years stay">Number of years stay :</label>
-                                    <select name="Number of years stay " class="form-control"
-                                        id="Number of years stay ">
+                                    <label for="Numberofyearsstay">Number of years stay :</label>
+                                    <select name="Numberofyearsstay" class="form-control" id="Numberofyearsstay">
                                         <option value="6 Months">6 Months</option>
                                         <option value="1 Year">1 Year</option>
                                         <option value="2 Years">2 Years</option>
@@ -646,8 +645,8 @@
                                     <h5>PERSONAL DETAILS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Total Family Members">Total Family Members:</label>
-                                    <select name="Total Family Members" class="form-control" id="Total Family Members">
+                                    <label for="TotalFamilyMembers">Total Family Members:</label>
+                                    <select name="TotalFamilyMembers" class="form-control" id="TotalFamilyMembers">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -670,9 +669,9 @@
                                     <h5>PERSONAL DETAILS</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Entry into residence permitted">Entry into residence permitted:</label>
-                                    <input type="text" name="Entry into residence permitted" class="form-control"
-                                        id="Entry into residence permitted" placeholder="YES" />
+                                    <label for="residence_permitted">Entry into residence permitted:</label>
+                                    <input type="text" name="residence_permitted" class="form-control"
+                                        id="residence_permitted" placeholder="YES" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
                                 <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -682,9 +681,9 @@
                                     <h5>NEIGHBOURHOOD CHECK</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="Neighbors Verification">Neighbors Verification:</label>
-                                    <select name="Neighbors Verification" class="form-control"
-                                        id="Neighbors Verification">
+                                    <label for="NeighborsVerification2">Neighbors Verification:</label>
+                                    <select name="NeighborsVerification2" class="form-control"
+                                        id="NeighborsVerification2">
                                         <option value="POSITIVE">POSITIVE</option>
                                         <option value="NEGATIVE">NEGATIVE</option>
                                     </select>
@@ -697,8 +696,8 @@
                                     <h5>NEIGHBOURHOOD CHECK</h5>
                                 </div>
                                 <div class="form-group">
-                                    <label for="COMMENTS">COMMENTS:</label>
-                                    <input type="text" name="COMMENTS" class="form-control" id="COMMENTS"
+                                    <label for="comments">COMMENTS:</label>
+                                    <input type="text" name="comments" class="form-control" id="comments"
                                         placeholder="" />
                                 </div>
                                 <button class="btn btn-primary mt-3 backBtn">Back</button>
