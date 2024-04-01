@@ -383,12 +383,42 @@ $(document).ready(function() {
 $(document).ready(function() {
     var baseUrl = "<?php echo base_url(); ?>";
     $('.section').not(':first').hide();
+    var formData = new FormData($('#final_form2')[
+        0]);
 
+    // $('.nextBtn2').click(function() {
+    //     var currentSection = $(this).closest('.section');
+    //     var nextSection = currentSection.next('.section');
 
+    //     currentSection.hide();
+    //     nextSection.show();
+
+    //     return false;
+    // });
     $('.nextBtn2').click(function() {
         var currentSection = $(this).closest('.section');
         var nextSection = currentSection.next('.section');
+        var formData = $('#final_form2').serialize();
 
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Office/add_office1',
+            data: formData,
+            success: function(response) {
+                console.log('AJAX Response:', response);
+                var match = response.match(/\d+/);
+                var insert_id = parseInt(match[0]);
+                localStorage.setItem('insertId', insert_id);
+                console.log('insertId set in local storage:', insert_id);
+                window.location.href = baseUrl + 'verification/Office/edit_office/' +
+                    insert_id;
+
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Error occurred while saving data: ' + error);
+            }
+        });
         currentSection.hide();
         nextSection.show();
 
@@ -410,6 +440,31 @@ $(document).ready(function() {
         $.ajax({
             type: 'POST',
             url: baseUrl + 'verification/Office/add_office',
+            data: formData,
+            success: function(response) {
+
+                alert('Data saved successfully!');
+
+
+                window.location.href = baseUrl + 'dashboard';
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error: ', status, error);
+                alert(
+                    'Error occurred while saving data. Please check console for details.'
+                );
+            }
+        });
+        return false;
+    });
+    $('.submitBtni2').click(function() {
+        var id = localStorage.getItem('insertId');
+        var formData = $('#final_form2').serialize();
+
+        $.ajax({
+            type: 'POST',
+            url: baseUrl + 'verification/Office/update_office/' + id,
+            // url: baseUrl + 'verification/Office/update_office1',
             data: formData,
             success: function(response) {
 
