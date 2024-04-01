@@ -96,9 +96,9 @@
                         </div>
                         <div class="d-md-none section ">
                             <div class="form-group ">
-                                <label for="Office-Address">Office Address</label>
-                                <input type="text" name="Office-Address" class="form-control" id="Office-Address"
-                                    value="<?php echo $office_data->Office_Address; ?>" placeholder="kurnool" />
+                                <label for="Office_Address">Office Address</label>
+                                <input type="text" name="Office_Address" class="form-control" id="Office_Address"
+                                    value="<?php echo $office_data->Office_Address; ?>" placeholder="city" />
                             </div>
                             <button class="btn btn-primary mt-3 backBtn">Back</button>
                             <button class="btn btn-primary mt-3 nextBtnu">Next</button>
@@ -522,9 +522,9 @@
                                     value="<?php echo $office_data->Applicantname; ?>" placeholder="0" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
-                                <label for="Office-Address">Office Address</label>
-                                <input type="text" name="Office-Address" class="form-control" id="Office-Address"
-                                    value="<?php echo $office_data->Office_Address; ?>" placeholder="kurnool" />
+                                <label for="Office_Address">Office Address</label>
+                                <input type="text" name="Office_Address" class="form-control" id="Office_Address"
+                                    value="<?php echo $office_data->Office_Address; ?>" placeholder="city" />
                             </div>
                             <div class="form-group col-md-4 d-md-block d-none">
                                 <label for="Receipt_date">Date Of The Receipt of the File</label>
@@ -801,7 +801,7 @@
                             <div class="col-md-4 d-md-block d-none">
                                 <div class="form-group">
                                     <label>System Case ID</label>
-                                    <input type="text" class="form-control" name="system-case-id"
+                                    <input type="text" class="form-control" name="system_case_id"
                                         placeholder="279/29-09-2023" value="<?php echo $office_data->system_case_id; ?>"
                                         style="width: 100% ">
                                     </input>

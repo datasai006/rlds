@@ -6,7 +6,7 @@ class Office_model extends CI_Model {
           return $this->db->insert_id();
     }
     public function get_all_office_data() {
-         $this->db->where('status', 'active');
+         $this->db->where('status', 'In-review');
     $query = $this->db->get('tbl_office');
     return $query->result();
 }
@@ -19,13 +19,11 @@ class Office_model extends CI_Model {
         $this->db->where('id', $id);
         $this->db->update('tbl_office', $data);
          return $this->db->affected_rows() > 0; 
-
-        return $this->db->affected_rows() > 0;
     }
      public function delete_office($id)
     {
         $data = array(
-            'status' => 'inactive',
+            'status' => 'Reject',
         );
 
         $this->db->where('id', $id);
