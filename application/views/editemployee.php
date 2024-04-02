@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="<?= base_url('Dashboard') ?>">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Employee</a></li>
                             <li class="breadcrumb-item active">New</li>
                         </ol>
@@ -33,7 +33,7 @@
                             <!-- /.card-header -->
                             <!-- form start -->
                             <form role="form" enctype="multipart/form-data" id="quickForm" name="myForm"
-                                action="<?php echo base_url('Employee/Employe/edit_employee/' . $employee->id); ?>"
+                                action="<?php echo base_url('Employee/Employe/update_employee/' . $employee->id); ?>"
                                 method="post">
                                 <!-- <div class="card-body row">
                                     <div class="form-group col-md-4">
@@ -510,7 +510,7 @@
                                 </div>
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </form>
                         </div>

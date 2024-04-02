@@ -19,9 +19,11 @@ public function get_employees() {
         return $this->db->insert_id();
     }
 
-    public function update_employee($id, $data) {
+     public function update_employee_data($id, $data) {
+       
         $this->db->where('id', $id);
         $this->db->update('tbl_employees', $data);
+        return $this->db->affected_rows() > 0;
     }
 
   public function update_employee_status($id, $status) {

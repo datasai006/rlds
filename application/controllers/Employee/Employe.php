@@ -275,20 +275,17 @@ class Employe extends CI_Controller {
         redirect('Employee/Employe/view_employee',$data);
     }
 
-    public function edit_employee($id) {
-                   $loginSession = $this->session->userdata('LoginSession');
-                   $role_id = $loginSession['role_id'];
-                   $user_id = $loginSession['id'];    
-                  $entity_id = 3;
-         $canedit = $this->check_permission($role_id, $user_id, $entity_id, 'edit');
-                echo '<script>';
-                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: add, Can edit: " . ($canedit ? 'true' : 'false') . "');";
-                echo '</script>';
-                     if (!$canedit) {
-   
-                     $this->load->view('denied');
-  
-                         echo '<script>
+public function edit_employee($id) {
+    $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];    
+    $entity_id = 3;
+
+    $canedit = $this->check_permission($role_id, $user_id, $entity_id, 'edit');
+    
+    if (!$canedit) {
+        $this->load->view('denied');
+        echo '<script>
             if (confirm("Access Denied: You do not have permission to edit this data. Would you like to go to the dashboard?")) {
                 window.location.href = "' . base_url('dashboard') . '";
             } else {
@@ -296,137 +293,134 @@ class Employe extends CI_Controller {
                     window.location.href = "' . base_url('dashboard') . '";
                 }, 1000); 
             }
-          </script>';
-   
-    exit();
+        </script>';
+        exit();
+    }  
+    
+    // Fetch employee data from the database
+    $employee_data = $this->Employee_model->get_employee_by_id($id);
+
+    // Check if employee data exists
+    if ($employee_data) {
+        // Load necessary data for the view
+        $data['employee'] = $employee_data;
+        $data['roles'] = $this->Role_model->get_user_types();
+        $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
+        $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+        $data['menu_items'] = $this->MenuModel->get_menu_items();
+        
+        // Load sidebar and editemployee view with employee data
+        $this->load->view('includes/sidebar', $data);
+        $this->load->view('editemployee', $data);
+    } else {
+        echo "Employee not found";
+    }
 }
-        if ($this->input->post()) {
-            // Your code for editing employee here
-        } else {
-            // Load edit employee view
-            $data['employee'] = $this->Employee_model->get_employee_by_id($id);
-            // $data['menus'] = $this->MenuModel->get_menus();
-             $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
-            $data['menu_items'] = $this->MenuModel->get_menu_items();
-            $this->load->view('includes/sidebar', $data);
-            $data['roles'] = $this->Role_model->get_user_types();
-            $data['code_values'] = $this->Tbl_code_value_model->get_all_code_values();
-            if ($data['employee']) {
-                $this->load->view('editemployee', $data);
+
+public function update_employee($id) {
+    $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];
+
+    $entity_id = 3;
+
+    $canadd = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+
+    if (!$canadd) {
+        $this->load->view('denied');
+        echo '<script>
+            if (confirm("Access Denied: You do not have permission to view this page. Would you like to go to the dashboard?")) {
+                window.location.href = "' . base_url('dashboard') . '";
             } else {
-                echo "Employee not found"; 
+                setTimeout(function() {
+                    window.location.href = "' . base_url('dashboard') . '";
+                }, 1000); 
             }
-        }
+        </script>';
+        exit();
     }
 
-// private function check_permission($role_id, $id, $entity_id, $action) {
-   
-//     $query = $this->db->get_where('tbl_role_permissions', array(
-//         'role_id' => $role_id,
-//         'entity_id' => $entity_id,
-//         'user_id' => $id 
-//     ));
-//     $row = $query->row_array();
+    if ($this->input->post()) {
+        $data = array(
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'email' => $this->input->post('email'),
+            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+            'gendar' => $this->input->post('gendar'),
+            'country' => $this->input->post('country'),
+            'state' => $this->input->post('state'),
+            'mobile_no' => $this->input->post('mobile_no'),
+            'doj' => $this->input->post('doj'),
+            'qualification' => $this->input->post('qualification'),
+            'role_id' => $this->input->post('role_id'),
+        );
 
-//     if ($row) {
-        
-   
-//         switch ($action) {
-//             case 'view':
-//                 return $row['can_view'] == 1;
-//             case 'edit':
-//                 return $row['can_edit'] == 1;
-//             case 'delete':
-//                 return $row['can_delete'] == 1;
-//             case 'approve':
-//                 return $row['can_approve'] == 1;
-//             default:
-//                 return false; 
-//         }
-//     } else {
-      
-//         $query = $this->db->get_where('tbl_role_permissions', array(
-//             'role_id' => $role_id,
-//             'entity_id' => 0,
-//             'user_id' => $id,
-//         ));
-//         $row = $query->row_array();
+        $update_result = $this->Employee_model->update_employee_data($id, $data);
 
-//         if ($row) {
-         
-           
-//             switch ($action) {
-//                 case 'view':
-//                     return $row['can_view'] == 1;
-//                 case 'edit':
-//                     return $row['can_edit'] == 1;
-//                 case 'delete':
-//                     return $row['can_delete'] == 1;
-//                 case 'approve':
-//                     return $row['can_approve'] == 1;
-//                 default:
-//                     return false;
-//             }
-//         } else {
-         
-//             return false; 
-//         }
-//     }
-// }
-
-private function check_permission($role_id, $id, $entity_id, $action) {
-    $query = $this->db->get_where('tbl_role_permissions', array(
-        'role_id' => $role_id,
-        'entity_id' => $entity_id,
-        'user_id' => $id
-    ));
-    $row = $query->row_array();
-
-    if ($row) {
-        switch ($action) {
-            case 'view':
-                return $row['can_view'] == 1;
-            case 'edit':
-                return $row['can_edit'] == 1;
-            case 'delete':
-                return $row['can_delete'] == 1;
-            case 'approve':
-                return $row['can_approve'] == 1;
-            case 'add':
-                return $row['can_add'] == 1;
-            default:
-                return false;
+        if ($update_result) {
+     redirect('Employee/Employe/view_employee');
+        } else {
+            echo 'Error updating employee data';
         }
     } else {
-        $query = $this->db->get_where('tbl_role_permissions', array(
-            'role_id' => $role_id,
-            'entity_id' => 0,
-            'user_id' => $id,
-        ));
-        $row = $query->row_array();
-
-        if ($row) {
-            switch ($action) {
-                case 'view':
-                    return $row['can_view'] == 1;
-                case 'edit':
-                    return $row['can_edit'] == 1;
-                case 'delete':
-                    return $row['can_delete'] == 1;
-                case 'approve':
-                    return $row['can_approve'] == 1;
-                case 'add':
-                    return $row['can_add'] == 1;
-                default:
-                    return false;
-            }
-        } else {
-            return false;
-        }
+        // Redirect to the edit page if no data is submitted
+        // redirect('edit_employee/');
     }
 }
 
+ private function check_permission($role_id, $id, $entity_id, $action) {
+ $query = $this->db->get_where('tbl_role_permissions', array(
+ 'role_id' => $role_id,
+ 'entity_id' => $entity_id,
+ 'user_id' => $id
+ ));
+ $row = $query->row_array();
+
+ if ($row) {
+ switch ($action) {
+ case 'view':
+ return $row['can_view'] == 1;
+ case 'edit':
+ return $row['can_edit'] == 1;
+ case 'delete':
+ return $row['can_delete'] == 1;
+ case 'approve':
+ return $row['can_approve'] == 1;
+ case 'add':
+ return $row['can_add'] == 1;
+ default:
+ return false;
+ }
+ } else {
+ $query = $this->db->get_where('tbl_role_permissions', array(
+ 'role_id' => $role_id,
+ 'entity_id' => 0,
+ 'user_id' => $id,
+ ));
+ $row = $query->row_array();
+
+ if ($row) {
+ switch ($action) {
+ case 'view':
+ return $row['can_view'] == 1;
+ case 'edit':
+ return $row['can_edit'] == 1;
+ case 'delete':
+ return $row['can_delete'] == 1;
+ case 'approve':
+ return $row['can_approve'] == 1;
+ case 'add':
+ return $row['can_add'] == 1;
+ default:
+ return false;
+ }
+ } else {
+ return false;
+ }
+ }
+ }
 
 
-}
-?>
+
+ }
+ ?>

@@ -10,7 +10,9 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item active">DQI</li>
+                            <li class="breadcrumb-item active">
+                                <a href="<?= base_url('Dashboard') ?>">Home </a>
+                            </li>
                             <i class="bi bi-chevron-right"></i>
                             <li class="breadcrumb-item active">
                                 Add and view Code type

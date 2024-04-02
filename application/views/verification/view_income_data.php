@@ -11,7 +11,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home / HRMS / Income verification</a>
+                                <a href="<?= base_url('Dashboard') ?>">Home / HRMS / Income verification</a>
                             </li>
                             <li class="breadcrumb-item active">View</li>
                         </ol>

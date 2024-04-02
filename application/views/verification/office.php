@@ -11,7 +11,7 @@
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item">
-                                <a href="#">Home / Employee </a>
+                                <a href="<?= base_url('Dashboard') ?>">Home / Employee </a>
                             </li>
                             <li class="breadcrumb-item">New</li>
                         </ol>
