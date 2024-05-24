@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2024 at 12:50 PM
+-- Generation Time: May 24, 2024 at 02:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -136,12 +136,13 @@ CREATE TABLE `tbl_employees` (
 --
 
 INSERT INTO `tbl_employees` (`id`, `first_name`, `last_name`, `email`, `password`, `gendar`, `country`, `state`, `mobile_no`, `doj`, `qualification`, `role_id`, `created_at`, `updated_at`, `created_by`, `updated_by`, `status`) VALUES
-(1, 'rachuru', 'venkateswarlu', 'datasai006@gmail.com', '123456', 'male', '1', '3', '09550262808', '2023-08-01', 'Btech ', 1, '2024-02-15 05:10:38', '2024-03-05 12:00:53', NULL, NULL, 'active'),
+(1, 'rachuru', 'venkateswarlu', 'datasai006@gmail.com', '$2y$10$sDzSE1y7XGu5D1ihR.edIe84LNpT2tMyaW2kuf0.lnUaO3KQbmlmG', 'male', '1', '3', '09550262808', '2023-07-16', 'Btech ', 1, '2024-02-15 05:10:38', '2024-04-02 07:22:47', NULL, NULL, 'active'),
 (8, 'madhu y', 'reddy', 'madhu@gmail.com', '$2y$10$XhuaFRINj2uXQVlkQQU/2OT3zNhaNN9CyWTbp85.Gp46JACoYM.fy', 'male', '1', '4', '9177386765', '2024-02-01', 'Btech ', 1, '2024-02-18 15:08:42', '2024-02-20 05:26:17', NULL, NULL, 'active'),
-(10, 'rachuru', 'vasu', 'vasu@gmail.com', '$2y$10$Vma2TdJvjqnEOPa51XG3EuFHAqR5qeoH7lgelRYGp5s4qhwa6f076', 'female', '1', '3', '09550262808', '2024-02-13', 'Btech ', 1, '2024-02-18 16:03:53', '2024-02-18 16:03:53', NULL, NULL, 'active'),
+(10, 'rachuru', 'saibaba', 'sai@gmail.com', '$2y$10$o1MBjllkNxkwfRas0PGKvOrvJhx8gOKIlg0v9jpefxJ7.Xuzavesm', 'male', '1', '3', '09550262808', '2024-02-13', 'Btech ', 1, '2024-02-18 16:03:53', '2024-04-02 07:25:35', NULL, NULL, 'active'),
 (11, 'rami reddy', 'm', 'reddy@gmail.com', '$2y$10$FsBMV3.In6ghJtNIG1tFhuuY7o4EBAOABBnBR6O2u/JWgAWR0.PQa', 'male', '1', '3', '09550262808', '2024-03-03', 'Btech ', 1, '2024-03-06 15:57:00', '2024-03-06 15:57:00', NULL, NULL, 'active'),
-(12, 'bhavitha', 'reddy', 'demo8@gmail.com', '$2y$10$rVOKzdMz3klnzKcGbyp/W.BKMqnX7oh6e/2kUBGrZd5W/nr/9BQxq', 'female', '1', '3', '09550262808', '2024-03-05', 'Btech ', 2, '2024-03-14 08:17:14', '2024-03-14 08:17:14', NULL, NULL, 'active'),
-(13, 'rachuru', 'venkateswarlu', 'datasai006@gmail.com', '$2y$10$Q6jjvkv5lBXxtED72VIl9.HIDrLCc5h3qGujCIUNZqrIAQ3x4oj0G', 'male', '1', '3', '09550262808', '2024-03-17', 'Btech ', 1, '2024-03-18 10:57:47', '2024-03-18 10:57:47', NULL, NULL, 'active');
+(12, 'bhavitha', 'reddy', 'demo8@gmail.com', '$2y$10$kqRJNaijCyGePsP7Ot4yjeCIlIqGSSX4KKSkYrVeab5epYhPzsERK', 'female', '1', '3', '09550262808', '2024-03-05', 'Btech ', 3, '2024-03-14 08:17:14', '2024-04-02 07:23:44', NULL, NULL, 'active'),
+(13, 'rachuru', 'venkateswarlu', 'datasai006@gmail.com', '$2y$10$Q6jjvkv5lBXxtED72VIl9.HIDrLCc5h3qGujCIUNZqrIAQ3x4oj0G', 'male', '1', '3', '09550262808', '2024-03-17', 'Btech ', 1, '2024-03-18 10:57:47', '2024-03-18 10:57:47', NULL, NULL, 'active'),
+(14, 'shoba', 'rani', 'shoba@gmail.com', '$2y$10$u5gVCxnMpDYaSPteqj6bsujPVhgy9lA3TqqRpzVKTQDQ0jg8SyqTW', 'female', '1', '3', '09550262808', '2024-05-13', 'pg', 3, '2024-05-24 10:58:24', '2024-05-24 10:58:24', NULL, NULL, 'active');
 
 -- --------------------------------------------------------
 
@@ -215,7 +216,8 @@ CREATE TABLE `tbl_incometax` (
 --
 
 INSERT INTO `tbl_incometax` (`id`, `application_name`, `los_no`, `branch_name`, `income_type`, `yearly_income`, `assessment_year`, `verifying_income_proof`, `pan_no`, `proof_submitted`, `acknowledgement_number`, `Submission_date`, `gross_income`, `auditor_name`, `office_address`, `status_type`, `itr`, `executive_name`, `signature`, `stamp`, `system_case_id`, `applicant_name`, `ref_number`, `status`) VALUES
-(1, 'Venky', '12543', 'kurnool branch', 'business income', '2621011', NULL, NULL, NULL, 'YES', NULL, '2024-03-11', '51252132', 'rlds', 'hyderbad', 'companies and firms', 'ITR-2A', 'venky', NULL, NULL, '279/15468', 'rachuru venkateswarlu', '97/145284', 'In-review');
+(1, 'Venky', '', '', '', '', NULL, NULL, NULL, '--select--', NULL, '0000-00-00', '', '', '', '--select--', '--select--', '', NULL, NULL, '', '', '', 'Reject'),
+(2, 'ppp', '12543', 'kurnool branch', 'business income', '2621011', '2023-2024', 'kurnool', 'bwupv7761c', 'YES', '12356825412', '2024-03-07', '51252132', 'rlds', 'hyderbad', 'companies and firms', 'ITR-2', 'venky', 'vvv87.jpg', 'vvv88.jpg', '279/15468', 'rachuru venkateswarlu', '97/145284', 'In-review');
 
 -- --------------------------------------------------------
 
@@ -288,7 +290,7 @@ CREATE TABLE `tbl_office` (
   `Typeofloan` varchar(100) DEFAULT NULL,
   `Mobile_no` varchar(15) DEFAULT NULL,
   `Applicantname` varchar(255) DEFAULT NULL,
-  `Office_Address` text DEFAULT NULL,
+  `Office_Address` varchar(255) DEFAULT NULL,
   `Receipt_date` date DEFAULT NULL,
   `DateoftheReport` date DEFAULT NULL,
   `ExactCompany` varchar(255) DEFAULT NULL,
@@ -327,7 +329,7 @@ CREATE TABLE `tbl_office` (
 --
 
 INSERT INTO `tbl_office` (`id`, `branch_name`, `los_no`, `Reference_no`, `Typeofloan`, `Mobile_no`, `Applicantname`, `Office_Address`, `Receipt_date`, `DateoftheReport`, `ExactCompany`, `Designation`, `EmployeeId`, `Personcontacted`, `WorkingSince`, `NetSalary`, `PersonMet`, `Designationoftheperson`, `NatureofBusiness`, `LandMark`, `Numberofemployeesseen`, `PersonmetatOffice`, `Indicate`, `LocatingOffice`, `Boardsighted`, `BusinessActivity`, `Equipmentsighted`, `Visitingcard`, `Office_is_in`, `FieldExecutiveComments`, `fieldexecutive`, `signature`, `stamp`, `system_case_id`, `applicant_name`, `ref_number`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'kurnool branch', '', '', '', '', '', '', '0000-00-00', '0000-00-00', '', '', '', 'Yes', '------select no of years------', '', '', '', '', '', 'Many', '--select--', '--select--', '--select--', '--select--', '--select--', '--select--', '', '', '', '--select--', NULL, NULL, '', '', '', 'In-review', '2024-03-13 05:47:42', '2024-03-13 05:47:42');
+(1, 'hyderbad branch', '12543', '00-01-254', 'persnol loan', '09550262808', 'rachuru venkateswarlu', 'goa', '2024-03-31', '2024-04-01', 'kraftbees', 'developer', 'kraftbees001', 'Yes', '2', '800000', '2', '2', 'it', 'ramalayam', 'Few', 'Yes', 'No', 'Yes', 'Yes', 'Yes', 'Yes', 'yes', '2nd Floor', 'good', 'MANJULA VENKATESH- 7893342498', 'vvv89.jpg', 'vvv90.jpg', NULL, 'rachuru venkateswarlu', '97/145284', 'In-review', '2024-04-01 05:34:59', '2024-04-01 06:04:14');
 
 -- --------------------------------------------------------
 
@@ -387,6 +389,14 @@ CREATE TABLE `tbl_residence` (
   `status` varchar(255) NOT NULL DEFAULT 'In-review'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `tbl_residence`
+--
+
+INSERT INTO `tbl_residence` (`id`, `branch_name`, `los_no`, `reference_no`, `typeofloan`, `Receipt_date`, `applicant_name`, `Address`, `Receipt`, `Locality`, `Accessibility`, `entrance_motorable`, `Area_Sq_Ft`, `aadhar_card`, `pan_card`, `Visible_Items`, `Land_Mark`, `Land_Line_No`, `mobile_no`, `mobile_no2`, `Within_Municipal_Limit`, `Address_Confirmed`, `Relationship`, `Interior_Furniture`, `typeofroof`, `Numberoffloors`, `VechielsfoundatResidence`, `Nameplatesighted`, `NeighboursVerification`, `PoliticalLink`, `TypeofResidence`, `NeighboursVerification1`, `FieldExecutiveComments`, `Verifier_Name`, `AuthoriedSignatury`, `ResidenceDetails`, `OwnershipResidence`, `Numberofyearsstay`, `TotalFamilyMembers`, `residence_permitted`, `NeighborsVerification2`, `comments`, `positive_image`, `signature`, `stamp`, `system_case_id`, `applicant_name1`, `ref_number`, `status`) VALUES
+(1, 'Town Branch', '12543', '121612', '--select--', '0000-00-00', '', '', '0000-00-00', 'CHAWL AREA', '--select--', 'YES', '', '', '', '', '', '', '', '', 'YES', '', 'Applicant', 'Semi-Furnished', '--select--', '--select--', '--select--', '', '', '', '--select--', '--select--', '', 'select', '', '', 'Own', '--select--', '--select--', '', '--select--', '', '', '', '', '', '', '', 'In-review'),
+(2, 'Main Branch', '12543', NULL, NULL, NULL, NULL, '', '0000-00-00', 'CHAWL AREA', '', 'YES', NULL, NULL, NULL, '', '', '', NULL, NULL, 'YES', 'Yes', 'Applicant', 'Semi-Furnished', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', NULL, NULL, NULL, 'In-review');
+
 -- --------------------------------------------------------
 
 --
@@ -412,15 +422,15 @@ INSERT INTO `tbl_roles` (`id`, `role`, `description`, `created_at`, `updated_at`
 (1, 'Admin', NULL, '2024-02-14 06:55:25', '2024-02-14 06:56:06', NULL, NULL, 'active'),
 (2, 'manager', NULL, '2024-03-04 11:18:15', '2024-03-04 11:18:15', NULL, NULL, 'active'),
 (3, 'employee', NULL, '2024-03-18 11:02:23', '2024-03-18 11:02:23', NULL, NULL, 'active'),
-(10, 'HOD', NULL, '2024-03-19 10:04:17', '2024-03-19 10:04:17', NULL, NULL, 'active'),
-(11, 'ceo', NULL, '2024-03-19 10:07:01', '2024-03-19 10:07:01', NULL, NULL, 'active'),
-(12, 'HOD', NULL, '2024-03-19 10:07:48', '2024-03-19 10:07:48', NULL, NULL, 'active'),
-(13, 'HOD', NULL, '2024-03-19 10:08:26', '2024-03-19 10:08:26', NULL, NULL, 'active'),
-(14, 'accountent', NULL, '2024-03-19 10:10:08', '2024-03-19 10:10:08', NULL, NULL, 'active'),
-(15, 'accountent', NULL, '2024-03-19 10:10:54', '2024-03-19 10:10:54', NULL, NULL, 'active'),
-(16, 'accountent', NULL, '2024-03-19 10:11:13', '2024-03-19 10:11:13', NULL, NULL, 'active'),
-(17, 'accountent', NULL, '2024-03-19 10:13:05', '2024-03-19 10:13:05', NULL, NULL, 'active'),
-(18, 'ceo', NULL, '2024-03-19 10:16:46', '2024-03-19 10:16:46', NULL, NULL, 'active');
+(10, 'HOD', NULL, '2024-03-19 10:04:17', '2024-03-21 04:26:49', NULL, NULL, 'inactive'),
+(11, 'ceo', NULL, '2024-03-19 10:07:01', '2024-03-21 04:26:48', NULL, NULL, 'inactive'),
+(12, 'HOD', NULL, '2024-03-19 10:07:48', '2024-03-21 04:26:46', NULL, NULL, 'inactive'),
+(13, 'HOD', NULL, '2024-03-19 10:08:26', '2024-03-21 04:26:44', NULL, NULL, 'inactive'),
+(14, 'accountent', NULL, '2024-03-19 10:10:08', '2024-03-21 04:26:41', NULL, NULL, 'inactive'),
+(15, 'accountent', NULL, '2024-03-19 10:10:54', '2024-03-21 04:26:38', NULL, NULL, 'inactive'),
+(16, 'accountent', NULL, '2024-03-19 10:11:13', '2024-03-21 04:26:36', NULL, NULL, 'inactive'),
+(17, 'accountent', NULL, '2024-03-19 10:13:05', '2024-03-21 04:26:33', NULL, NULL, 'inactive'),
+(18, 'ceo', NULL, '2024-03-19 10:16:46', '2024-03-21 04:26:30', NULL, NULL, 'inactive');
 
 -- --------------------------------------------------------
 
@@ -430,6 +440,7 @@ INSERT INTO `tbl_roles` (`id`, `role`, `description`, `created_at`, `updated_at`
 
 CREATE TABLE `tbl_role_menu_permissions` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `status` varchar(255) NOT NULL DEFAULT 'active'
@@ -439,10 +450,52 @@ CREATE TABLE `tbl_role_menu_permissions` (
 -- Dumping data for table `tbl_role_menu_permissions`
 --
 
-INSERT INTO `tbl_role_menu_permissions` (`id`, `role_id`, `menu_id`, `status`) VALUES
-(1, 1, 1, 'active'),
-(2, 1, 2, 'active'),
-(3, 1, 3, 'active');
+INSERT INTO `tbl_role_menu_permissions` (`id`, `user_id`, `role_id`, `menu_id`, `status`) VALUES
+(1, 2, 1, 1, 'active'),
+(2, 2, 1, 2, 'active'),
+(3, 2, 1, 3, 'active'),
+(4, 2, 1, 4, 'active'),
+(5, 2, 1, 5, 'active'),
+(6, 2, 1, 6, 'active'),
+(7, 2, 1, 7, 'active'),
+(8, 2, 1, 8, 'active'),
+(9, 2, 1, 9, 'active'),
+(10, 2, 1, 10, 'active'),
+(11, 2, 1, 11, 'active'),
+(12, 2, 1, 12, 'active'),
+(13, 0, 1, 13, 'active'),
+(14, 0, 1, 14, 'active'),
+(15, 0, 1, 15, 'active'),
+(16, 0, 1, 16, 'active'),
+(17, 0, 1, 17, 'active'),
+(18, 0, 1, 18, 'active'),
+(19, 0, 1, 19, 'active'),
+(20, 0, 1, 20, 'active'),
+(21, 0, 1, 21, 'active'),
+(22, 0, 1, 22, 'active'),
+(23, 0, 1, 23, 'active'),
+(24, 0, 1, 24, 'active'),
+(25, 0, 1, 25, 'active'),
+(26, 0, 1, 26, 'active'),
+(27, 0, 1, 27, 'active'),
+(28, 0, 1, 28, 'active'),
+(29, 0, 1, 29, 'active'),
+(30, 0, 3, 3, 'active'),
+(31, 0, 3, 4, 'active'),
+(32, 0, 3, 5, 'active'),
+(33, 0, 3, 7, 'active'),
+(34, 0, 3, 8, 'active'),
+(35, 0, 3, 9, 'active'),
+(36, 0, 3, 10, 'active'),
+(37, 0, 3, 11, 'active'),
+(38, 0, 3, 12, 'active'),
+(39, 0, 3, 13, 'active'),
+(40, 0, 3, 15, 'active'),
+(41, 0, 3, 16, 'active'),
+(42, 0, 3, 17, 'active'),
+(43, 0, 3, 18, 'active'),
+(44, 0, 2, 3, 'active'),
+(45, 0, 2, 4, 'active');
 
 -- --------------------------------------------------------
 
@@ -483,17 +536,17 @@ INSERT INTO `tbl_role_permissions` (`id`, `role_id`, `user_id`, `entity_id`, `ca
 (9, 1, 2, 9, 1, 1, 1, 1, 1, '2024-03-04 07:22:54', '2024-03-06 07:49:16', NULL, NULL, 'active'),
 (10, 1, 2, 10, 1, 1, 1, 1, 1, '2024-03-04 07:22:54', '2024-03-06 08:13:08', NULL, NULL, 'active'),
 (11, 1, 2, 11, 1, 1, 1, 1, 1, '2024-03-04 07:22:54', '2024-03-05 09:13:59', NULL, NULL, 'active'),
-(12, 2, 4, 1, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(13, 2, 4, 2, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(14, 2, 4, 3, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(15, 2, 4, 4, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(16, 2, 4, 5, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(17, 2, 4, 6, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(18, 2, 4, 7, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(19, 2, 4, 8, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(20, 2, 4, 9, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(21, 2, 4, 10, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
-(22, 2, 4, 11, 1, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-03-05 05:15:51', NULL, NULL, 'active'),
+(12, 2, 4, 1, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(13, 2, 4, 2, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(14, 2, 4, 3, 1, 1, 1, 1, 1, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(15, 2, 4, 4, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(16, 2, 4, 5, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(17, 2, 4, 6, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(18, 2, 4, 7, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(19, 2, 4, 8, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(20, 2, 4, 9, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(21, 2, 4, 10, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
+(22, 2, 4, 11, 0, 0, 0, 0, 0, '2024-03-05 05:12:49', '2024-05-24 06:30:47', NULL, NULL, 'active'),
 (23, 3, 1, 1, 1, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
 (24, 3, 1, 2, 0, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
 (25, 3, 1, 3, 0, 0, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
@@ -504,7 +557,39 @@ INSERT INTO `tbl_role_permissions` (`id`, `role_id`, `user_id`, `entity_id`, `ca
 (30, 3, 1, 8, 0, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
 (31, 3, 1, 9, 0, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
 (32, 3, 1, 10, 0, 0, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
-(33, 3, 1, 11, 1, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active');
+(33, 3, 1, 11, 1, 1, 0, 0, 0, '2024-03-18 06:32:56', '2024-03-18 06:32:56', NULL, NULL, 'active'),
+(34, 3, 4, 1, 1, 1, 1, 1, 1, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(35, 3, 4, 2, 1, 1, 1, 1, 1, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(36, 3, 4, 3, 1, 1, 1, 1, 1, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(37, 3, 4, 4, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(38, 3, 4, 5, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(39, 3, 4, 6, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(40, 3, 4, 7, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(41, 3, 4, 8, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(42, 3, 4, 9, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(43, 3, 4, 10, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(44, 3, 4, 11, 0, 0, 0, 0, 0, '2024-05-24 03:46:09', '2024-05-24 06:04:48', NULL, NULL, 'active'),
+(45, 3, 7, 1, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(46, 3, 7, 2, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(47, 3, 7, 3, 1, 1, 1, 1, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(48, 3, 7, 4, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(49, 3, 7, 5, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(50, 3, 7, 6, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(51, 3, 7, 7, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(52, 3, 7, 8, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(53, 3, 7, 9, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(54, 3, 7, 10, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active'),
+(55, 3, 7, 11, 0, 0, 0, 0, 0, '2024-05-24 07:32:21', '2024-05-24 07:32:21', NULL, NULL, 'active');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_states`
+--
+
+CREATE TABLE `tbl_states` (
+  `id` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -523,7 +608,7 @@ CREATE TABLE `tbl_users` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_by` bigint(20) DEFAULT NULL,
   `updated_by` bigint(20) DEFAULT NULL,
-  `status` varchar(50) DEFAULT 'pending'
+  `status` varchar(50) DEFAULT 'active'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -535,7 +620,8 @@ INSERT INTO `tbl_users` (`id`, `username`, `email`, `password`, `employee_id`, `
 (2, 'reddy', 'madhu@gmail.com', '$2y$10$D.5QKp4Rxmuh2gU2t3AVQuBSX1mDGmrzAKXNjc27QbFAwRXiJDBWe', 8, 1, '2024-02-18 15:08:42', '2024-02-29 14:47:26', NULL, NULL, 'active'),
 (4, 'vasu', 'vasu@gmail.com', '$2y$10$0i.phA0C1dkU10d4FEvtFeqetCPNNQgo5vdOnFAy9FVD6wLRrjHky', 10, 1, '2024-02-18 16:03:53', '2024-02-29 14:47:33', NULL, NULL, 'active'),
 (5, 'reddy', 'demo8@gmail.com', '$2y$10$5OWwZ4CenROm0FxrOmO9j.21aL24BuiD3VvJsrZjwzC3HXgDgXoAe', 12, 2, '2024-03-14 08:17:14', '2024-03-14 08:17:14', NULL, NULL, 'pending'),
-(6, 'venkateswarlu', 'datasai006@gmail.com', '$2y$10$PPs0Kw8XdFUbJm6CXoT6JONyNUGx65lTGm4uKvodRh8pRA0DICpxG', 13, 1, '2024-03-18 10:57:47', '2024-03-18 10:57:47', NULL, NULL, 'pending');
+(6, 'venkateswarlu', 'datasai006@gmail.com', '$2y$10$PPs0Kw8XdFUbJm6CXoT6JONyNUGx65lTGm4uKvodRh8pRA0DICpxG', 13, 1, '2024-03-18 10:57:47', '2024-03-18 10:57:47', NULL, NULL, 'pending'),
+(7, 'rani', 'shoba@gmail.com', '$2y$10$746mlkd.4P0m8th47ftAXO/124R0ET1d4Y9XDk0oZ3J/JGDjrX.nO', 14, 3, '2024-05-24 10:58:24', '2024-05-24 11:01:35', NULL, NULL, 'active');
 
 -- --------------------------------------------------------
 
@@ -635,6 +721,12 @@ ALTER TABLE `tbl_role_permissions`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `tbl_states`
+--
+ALTER TABLE `tbl_states`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
@@ -676,7 +768,7 @@ ALTER TABLE `tbl_code_value`
 -- AUTO_INCREMENT for table `tbl_employees`
 --
 ALTER TABLE `tbl_employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_entities`
@@ -688,7 +780,7 @@ ALTER TABLE `tbl_entities`
 -- AUTO_INCREMENT for table `tbl_incometax`
 --
 ALTER TABLE `tbl_incometax`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_menu`
@@ -706,7 +798,7 @@ ALTER TABLE `tbl_office`
 -- AUTO_INCREMENT for table `tbl_residence`
 --
 ALTER TABLE `tbl_residence`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_roles`
@@ -718,19 +810,25 @@ ALTER TABLE `tbl_roles`
 -- AUTO_INCREMENT for table `tbl_role_menu_permissions`
 --
 ALTER TABLE `tbl_role_menu_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `tbl_role_permissions`
 --
 ALTER TABLE `tbl_role_permissions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT for table `tbl_states`
+--
+ALTER TABLE `tbl_states`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_users_regions`
