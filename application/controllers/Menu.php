@@ -23,12 +23,12 @@ class Menu extends CI_Controller {
 //     }
 public function index() {
     $userData = $this->session->userdata('LoginSession');
-    if ($userData && isset($userData['role_id']) && isset($userData['user_id'])) {
-        $role_id = $userData['role_id'];
+    if ($userData && isset($userData['user_id'])) {
+        $user_id = $userData['id'];
        
 
         
-        $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+        $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id, $user_id);
 
        
         $data['role_id'] = $role_id;
