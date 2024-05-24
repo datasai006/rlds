@@ -19,18 +19,17 @@ $this->load->model('User_model');
 
 public function index() {
     $loginSession = $this->session->userdata('LoginSession');
-    if ($loginSession && isset($loginSession['role_id'])) {
-        $role_id = $loginSession['role_id'];
-        $data['role_id'] = $role_id;
+if ($loginSession && isset($loginSession['role_id'])) {
+    $role_id = $loginSession['role_id'];
+    $data['role_id'] = $role_id;  
+    $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id); // Pass both role_id and user_id to the model function
+    $data['menu_items'] = $this->MenuModel->get_menu_items();    
+    $this->load->view('includes/sidebar', $data);
+    $this->load->view('dashboard');
+} else {
+    redirect('login/index');
+}
 
-        $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
-        $data['menu_items'] = $this->MenuModel->get_menu_items();
-        
-        $this->load->view('includes/sidebar', $data);
-        $this->load->view('dashboard');
-    } else {
-        redirect('login/index');
-    }
 }
 
 

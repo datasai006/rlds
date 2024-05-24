@@ -450,7 +450,7 @@
         </nav>
     </div>
 </aside> -->
-<!-- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="index3.html" class="brand-link">
         <img src="<?= base_url('assets/') ?>dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: 0.8" />
@@ -465,7 +465,7 @@
             <div class="info">
                 <a href="#" class="d-block"><?= $this->session->userdata('LoginSession')['username'] ?>
                 </a>
-                <?= $this->session->userdata('LoginSession')['role_id'] ?>
+                <!-- <?= $this->session->userdata('LoginSession')['role_id'] ?> -->
             </div>
         </div>
 
@@ -523,84 +523,6 @@
                     </ul>
                     <?php endif; ?>
                 </li>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
-    </div>
-</aside> -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Sidebar Header -->
-    <div class="sidebar">
-        <!-- User Panel -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <!-- User Image -->
-            <div class="image">
-                <img src="<?= base_url('assets/') ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2"
-                    alt="User Image" />
-            </div>
-            <!-- User Info -->
-            <div class="info">
-                <a href="#" class="d-block"><?= $this->session->userdata('LoginSession')['username'] ?></a>
-            </div>
-        </div>
-
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <?php foreach ($menus as $item): ?>
-                <?php if (is_array($item) && isset($item['parent_id']) && $item['parent_id'] == 0): ?>
-                <?php if ($this->MenuModel->has_permission($item['menu_id'], $this->session->userdata('LoginSession')['role_id'])): ?>
-                <li class="nav-item has-treeview">
-                    <a href="<?= base_url($item['menu_link']) ?>" class="nav-link">
-                        <i class="nav-icon <?= $item['menu_icon'] ?>"></i>
-                        <p>
-                            <?= $item['name'] ?>
-                            <?php if ($this->MenuModel->has_grandchildren($item['id'])): ?>
-                            <i class="fas fa-angle-left right"></i>
-                            <?php endif; ?>
-                        </p>
-                    </a>
-                    <?php $children = $this->MenuModel->get_children($item['id']); ?>
-                    <?php if (!empty($children)): ?>
-                    <ul class="nav  flex-column  nav-pills nav-sidebar nav-treeview" aria-labelledby="dropdownMenu"
-                        data-widget="treeview" role="menu" data-accordion="false">
-                        <?php foreach ($children as $child): ?>
-                        <?php if (is_array($child) && $this->MenuModel->has_permission($child['menu_id'], $this->session->userdata('LoginSession')['role_id'])): ?>
-                        <li class="nav-item has-treeview">
-                            <a href="<?= base_url($child['menu_link']) ?>" class="nav-link">
-                                <i class="nav-icon <?= $child['menu_icon'] ?>"></i>
-                                <p>
-                                    <?= $child['name'] ?>
-                                    <?php if ($this->MenuModel->has_grandchildren($child['id'])): ?>
-                                    <i class="fas fa-angle-left right"></i>
-                                    <?php endif; ?>
-                                </p>
-                            </a>
-                            <?php $grandchildren = $this->MenuModel->get_children($child['id']); ?>
-                            <?php if (!empty($grandchildren)): ?>
-                            <ul class="nav  flex-column  nav-pills nav-sidebar nav-treeview"
-                                aria-labelledby="dropdownMenu" data-widget="treeview" role="menu"
-                                data-accordion="false">
-                                <?php foreach ($grandchildren as $grandchild): ?>
-                                <?php if (is_array($grandchild) && $this->MenuModel->has_permission($grandchild['menu_id'], $this->session->userdata('LoginSession')['role_id'])): ?>
-                                <li class="nav-item has-treeview">
-                                    <a href="<?= base_url($grandchild['menu_link']) ?>" class="nav-link">
-                                        <i class="nav-icon <?= $grandchild['menu_icon'] ?>"></i>
-                                        <p><?= $grandchild['name'] ?></p>
-                                    </a>
-                                </li>
-                                <?php endif; ?>
-                                <?php endforeach; ?>
-                            </ul>
-                            <?php endif; ?>
-                        </li>
-                        <?php endif; ?>
-                        <?php endforeach; ?>
-                    </ul>
-                    <?php endif; ?>
-                </li>
-                <?php endif; ?>
                 <?php endif; ?>
                 <?php endforeach; ?>
             </ul>

@@ -23,19 +23,24 @@ class Menu extends CI_Controller {
 //     }
 public function index() {
     $userData = $this->session->userdata('LoginSession');
-    if ($userData && isset($userData['role_id'])) {
+    if ($userData && isset($userData['role_id']) && isset($userData['user_id'])) {
         $role_id = $userData['role_id'];
+       
 
-        // Get menus based on the provided role_id
+        
         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
 
-        // Load views
+       
+        $data['role_id'] = $role_id;
+       
+       
         $this->load->view('includes/sidebar', $data);
         $this->load->view('menu/view_menu', $data);
     } else {
         redirect('login/index');
     }
 }
+
 
 public function add() {
      $data['menuslevel'] = $this->MenuModel->get_menus_with_level();

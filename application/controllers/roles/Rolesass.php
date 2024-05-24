@@ -59,7 +59,7 @@ class Rolesass extends CI_Controller {
          $data['tables']= $this->RolePermission_model->get_tables();
          $menu_levels = array(2, 3);
         $data['menuscheck'] = $this->MenuModel->get_menuslevel($menu_levels);
-         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id,$user_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
 		 $this->load->view('roles/rolesass',$data);
@@ -455,6 +455,7 @@ public function submit_data() {
                     $data = array(
                         'role_id' => $role_id,
                         'menu_id' => $menu_id,
+                        'user_id' => $user_id,
                     );
                     $this->MenuModel->insert_menupermission($data);
                 }

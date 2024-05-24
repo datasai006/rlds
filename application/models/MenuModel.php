@@ -13,11 +13,12 @@ public function add_menu($data) {
   
     return $this->db->insert_id();
 }
-public function has_permission($menu_id, $role_id) {
+public function has_permission($menu_id, $role_id,$user_id) {
     $this->db->select('*');
     $this->db->from('tbl_role_menu_permissions');
     $this->db->where('menu_id', $menu_id);
     $this->db->where('role_id', $role_id);
+     $this->db->where('user_id', $user_id);
     $query = $this->db->get();
     return $query->num_rows() > 0;
 }
@@ -31,14 +32,14 @@ public function has_permission($menu_id, $role_id) {
     public function get_menus() {
         return $this->db->get('tbl_menu')->result_array();
     }
-     public function get_menus_by_role_id($role_id) {
-       
-        $this->db->select('m.*');
-        $this->db->from('tbl_menu as m');
-        $this->db->join('tbl_role_menu_permissions as rmp', 'm.menu_id = rmp.menu_id');
-        $this->db->where('rmp.role_id', $role_id);
-        return $this->db->get()->result_array();
-    }
+    public function get_menus_by_role_id($role_id) {
+    $this->db->select('m.*');
+    $this->db->from('tbl_menu as m');
+    $this->db->join('tbl_role_menu_permissions as rmp', 'm.menu_id = rmp.menu_id');
+    $this->db->where('rmp.role_id', $role_id);
+    return $this->db->get()->result_array();
+}
+
     public function get_menuslevel($menu_levels) {
     $this->db->where_in('menu_level', $menu_levels);
     return $this->db->get('tbl_menu')->result_array();

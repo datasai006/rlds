@@ -160,7 +160,7 @@ public function add_role()
     $data['user_types'] = $this->Role_model->get_user_types();
     $data['role_data'] = $this->Role_model->get_role_by_id($id);
     
-         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id,$user_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
     $this->load->view('roles/edit_rolesmanage', $data);
