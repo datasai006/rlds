@@ -21,7 +21,8 @@ public function index() {
     $loginSession = $this->session->userdata('LoginSession');
     if ($loginSession && isset($loginSession['role_id'])) {
         $role_id = $loginSession['role_id'];
-        
+        $data['role_id'] = $role_id;
+
         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
         $data['menu_items'] = $this->MenuModel->get_menu_items();
         

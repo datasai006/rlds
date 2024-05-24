@@ -13,7 +13,14 @@ public function add_menu($data) {
   
     return $this->db->insert_id();
 }
-
+public function has_permission($menu_id, $role_id) {
+    $this->db->select('*');
+    $this->db->from('tbl_role_menu_permissions');
+    $this->db->where('menu_id', $menu_id);
+    $this->db->where('role_id', $role_id);
+    $query = $this->db->get();
+    return $query->num_rows() > 0;
+}
 
   public function has_grandchildren($menu_id) {
      
@@ -127,25 +134,25 @@ public function add_menu($data) {
         ");
         return $query->result_array();
     }
-  public function check_permission($role_id, $menu_id) {
-        // Check if menu_id is provided
-        if (empty($menu_id)) {
-            return false; // Return false if menu_id is empty
-        }
+//   public function check_permission($role_id, $menu_id) {
+//         // Check if menu_id is provided
+//         if (empty($menu_id)) {
+//             return false; // Return false if menu_id is empty
+//         }
 
-        // Add your permission checking logic here
-        // Example: Fetch permissions from database based on user's role and menu ID
-        $query = $this->db->query("SELECT * FROM tbl_role_permissions WHERE role_id = $role_id AND menu_id = $menu_id");
-        $result = $query->row();
+//         // Add your permission checking logic here
+//         // Example: Fetch permissions from database based on user's role and menu ID
+//         $query = $this->db->query("SELECT * FROM tbl_role_permissions WHERE role_id = $role_id AND menu_id = $menu_id");
+//         $result = $query->row();
         
-        // Check if permission exists
-        if ($result) {
-            // Return true if user has permission, otherwise false
-            return true;
-        } else {
-            return false;
-        }
-    }
+//         // Check if permission exists
+//         if ($result) {
+//             // Return true if user has permission, otherwise false
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
       public function get_entities() {
         return $this->db->get(' tbl_entities')->result_array();
     }
@@ -193,6 +200,21 @@ public function update_menu_id($menu_id, $new_menu_id) {
         $query = $this->db->get('tbl_menu', 1); // Assuming your table name is 'menus'
         return $query->row_array(); // Assuming each menu is represented as an associative array
     }
+public function check_permission($role_id, $menu_id) {
+    $this->db->where('role_id', $role_id);
+    $this->db->where('menu_id', $menu_id);
+    $query = $this->db->get('tbl_role_menu_permissions');
+
+    if ($query->num_rows() > 0) {
+        return $query->row_array();
+    } else {
+        return false;
+    }
+}
+
+public function insert_menupermission($data) {
+    $this->db->insert('tbl_role_menu_permissions', $data);
+}
 
 
 }

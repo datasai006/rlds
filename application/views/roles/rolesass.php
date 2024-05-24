@@ -120,7 +120,7 @@
                                             <?php endforeach; ?>
                                         </select>
                                     </div>
-                                    <!-- <div class="form-group col-md-12 border">
+                                    <div class="form-group col-md-12 border">
                                         <label for="menu_id">Select Menu(s):</label><br>
                                         <?php foreach ($menuscheck as $menu): ?>
                                         <div class="form-check">
@@ -132,9 +132,10 @@
                                             </label>
                                         </div>
                                         <?php endforeach; ?>
-                                    </div> -->
+                                    </div>
 
-                                    <input type="hidden" name="menu_id" id="menu_id" value="" />
+
+                                    <!-- <input type="hidden" name="menu_id" id="menu_id" value="" /> -->
                             </div>
                         </div>
                     </div>

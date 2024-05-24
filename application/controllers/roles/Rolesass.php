@@ -326,21 +326,110 @@ public function get_tables(){
 //     }
 // }
 ///////////////////////////////////////////////1/3/2024 working 
-public function submit_data() {
-     $loginSession = $this->session->userdata('LoginSession');
-    $role_id = $loginSession['role_id'];
-    $user_id = $loginSession['id'];    
-    $entity_id = 5;
+// public function submit_data() {
+//      $loginSession = $this->session->userdata('LoginSession');
+//     $role_id = $loginSession['role_id'];
+//     $user_id = $loginSession['id'];    
+//     $entity_id = 5;
     
-      $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
-                echo '<script>';
-                echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: add, Can add: " . ($canView ? 'true' : 'false') . "');";
-                echo '</script>';
-     if (!$canView) {
+//       $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+//                 echo '<script>';
+//                 echo "console.log('Role ID: $role_id, user_id: $user_id, Entity ID: $entity_id, Action: add, Can add: " . ($canView ? 'true' : 'false') . "');";
+//                 echo '</script>';
+//      if (!$canView) {
    
                     
   
-                         echo '<script>
+//                          echo '<script>
+//             if (confirm("Access Denied: You do not have permission to add this page. Would you like to go to the dashboard?")) {
+//                 window.location.href = "' . base_url('dashboard') . '";
+//             } else {
+//                 setTimeout(function() {
+//                     window.location.href = "' . base_url('dashboard') . '";
+//                 }, 1000); 
+//             }
+//           </script>';
+   
+//     exit();
+// }
+   
+//     if ($this->input->post()) {
+      
+//         $user_id = $this->input->post('user_id');
+//         $role_id = $this->input->post('role_id');
+
+//          $menu_permissions = $this->input->post('menu_id');
+
+//         foreach ($menu_permissions as $menu_id) {
+//             // Check if the role_id and menu_id combination already exists
+//             $existing_permission = $this->MenuModel->check_permission($role_id, $menu_id);
+
+//             // If the combination doesn't exist, insert the permission
+//             if (!$existing_permission) {
+//                 $data = array(
+//                     'role_id' => $role_id,
+//                     'menu_id' => $menu_id,
+                    
+//                 );
+
+               
+//                 $this->MenuModel->insert_menupermission($data);
+//             }
+//         }
+
+//         foreach ($this->get_tables() as $table) {
+//             $table_id = $table['id'];
+//              $can_add = $this->input->post('can_add_' . $table_id) ? 1 : 0;
+//             $can_view = $this->input->post('can_view_' . $table_id) ? 1 : 0;
+//             $can_edit = $this->input->post('can_edit_' . $table_id) ? 1 : 0;
+//             $can_delete = $this->input->post('can_delete_' . $table_id) ? 1 : 0;
+//             $can_approve = $this->input->post('can_approve_' . $table_id) ? 1 : 0;
+
+          
+//             $existing_permission = $this->RolePermission_model->get_permission($user_id, $role_id, $table_id);
+
+            
+//             $data = array(
+//                 'role_id' => $role_id,
+//                 'user_id' => $user_id,
+//                 'entity_id' => $table_id,
+//                  'can_add' => $can_add,
+//                 'can_view' => $can_view,
+//                 'can_edit' => $can_edit,
+//                 'can_delete' => $can_delete,
+//                 'can_approve' => $can_approve,
+//                 'updated_at' => date('Y-m-d H:i:s')
+//             );
+
+           
+//             if ($existing_permission) {
+                
+//                 $this->RolePermission_model->update_permission($existing_permission['id'], $user_id, $role_id, $data);
+//             } else {
+               
+//                 $data['created_at'] = date('Y-m-d H:i:s');
+//                 $this->RolePermission_model->insert_permission($data);
+//             }
+//         }
+
+        
+//         redirect('roles/Rolesass/index');
+//     } else {
+        
+//         redirect('roles/Rolesass/index');
+//     }
+// }
+
+
+public function submit_data() {
+    $loginSession = $this->session->userdata('LoginSession');
+    $role_id = $loginSession['role_id'];
+    $user_id = $loginSession['id'];
+    $entity_id = 5;
+
+    $canView = $this->check_permission($role_id, $user_id, $entity_id, 'add');
+    if (!$canView) {
+        echo '<script>
             if (confirm("Access Denied: You do not have permission to add this page. Would you like to go to the dashboard?")) {
                 window.location.href = "' . base_url('dashboard') . '";
             } else {
@@ -348,34 +437,49 @@ public function submit_data() {
                     window.location.href = "' . base_url('dashboard') . '";
                 }, 1000); 
             }
-          </script>';
-   
-    exit();
-}
-   
+        </script>';
+        exit();
+    }
+
     if ($this->input->post()) {
-      
         $user_id = $this->input->post('user_id');
         $role_id = $this->input->post('role_id');
+        $menu_permissions = $this->input->post('menu_id'); // Ensure this is an array
 
-       
+        // Ensure $menu_permissions is an array before using foreach
+        if (is_array($menu_permissions)) {
+            foreach ($menu_permissions as $menu_id) {
+                $existing_permission = $this->MenuModel->check_permission($role_id, $menu_id);
+
+                if (!$existing_permission) {
+                    $data = array(
+                        'role_id' => $role_id,
+                        'menu_id' => $menu_id,
+                    );
+                    $this->MenuModel->insert_menupermission($data);
+                }
+            }
+        } else {
+            // Handle the case where menu_id is not an array
+            echo 'Error: menu_id should be an array';
+            return;
+        }
+
         foreach ($this->get_tables() as $table) {
             $table_id = $table['id'];
-             $can_add = $this->input->post('can_add_' . $table_id) ? 1 : 0;
+            $can_add = $this->input->post('can_add_' . $table_id) ? 1 : 0;
             $can_view = $this->input->post('can_view_' . $table_id) ? 1 : 0;
             $can_edit = $this->input->post('can_edit_' . $table_id) ? 1 : 0;
             $can_delete = $this->input->post('can_delete_' . $table_id) ? 1 : 0;
             $can_approve = $this->input->post('can_approve_' . $table_id) ? 1 : 0;
 
-          
             $existing_permission = $this->RolePermission_model->get_permission($user_id, $role_id, $table_id);
 
-            
             $data = array(
                 'role_id' => $role_id,
                 'user_id' => $user_id,
                 'entity_id' => $table_id,
-                 'can_add' => $can_add,
+                'can_add' => $can_add,
                 'can_view' => $can_view,
                 'can_edit' => $can_edit,
                 'can_delete' => $can_delete,
@@ -383,24 +487,21 @@ public function submit_data() {
                 'updated_at' => date('Y-m-d H:i:s')
             );
 
-           
             if ($existing_permission) {
-                
                 $this->RolePermission_model->update_permission($existing_permission['id'], $user_id, $role_id, $data);
             } else {
-               
                 $data['created_at'] = date('Y-m-d H:i:s');
                 $this->RolePermission_model->insert_permission($data);
             }
         }
 
-        
         redirect('roles/Rolesass/index');
     } else {
-        
         redirect('roles/Rolesass/index');
     }
 }
+
+
 /////////////////////////////////////////////1/3/2024
 // public function submit_data() {
 //       echo "Submit Data method accessed";
