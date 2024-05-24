@@ -24,7 +24,7 @@
                     <div class="col-sm-4">
                         <div class="card">
                             <div class="card-body">
-                                <form method="post" action="<?php echo base_url('rolesass/submit_data'); ?>">
+                                <form method="post" action="<?php echo base_url('roles/rolesass/submit_data'); ?>">
                                     <div class="form-group col-md-12">
                                         <label for="entity_id ">User Id<span class="text-danger">*</span></label>
                                         <select id="entity_id " name="entity_id " required class="form-control">
