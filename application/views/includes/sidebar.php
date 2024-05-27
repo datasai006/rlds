@@ -451,33 +451,69 @@
     </div>
 </aside> -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Sidebar Header -->
     <div class="sidebar">
-        <!-- User Panel -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <!-- User Image -->
             <div class="image">
                 <img src="<?= base_url('assets/') ?>dist/img/user2-160x160.jpg" class="img-circle elevation-2"
                     alt="User Image" />
             </div>
-            <!-- User Info -->
             <div class="info">
                 <a href="#" class="d-block"><?= $this->session->userdata('LoginSession')['username'] ?></a>
             </div>
         </div>
-
-        <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <?php foreach ($menus as $item): ?>
-                <li class="nav-item">
-                    <?php if ($this->MenuModel->has_permission($item['menu_id'], $this->session->userdata('LoginSession')['id'])): ?>
+                <?php if (is_array($item) && isset($item['parent_id']) && $item['parent_id'] == 0): ?>
+                <?php if ($this->MenuModel->has_permission($item['menu_id'], $this->session->userdata('LoginSession')['id'])): ?>
+                <li class="nav-item has-treeview">
                     <a href="<?= base_url($item['menu_link']) ?>" class="nav-link">
                         <i class="nav-icon <?= $item['menu_icon'] ?>"></i>
-                        <p><?= $item['name'] ?></p>
+                        <p>
+                            <?= $item['name'] ?>
+                            <?php if ($this->MenuModel->has_grandchildren($item['menu_id'])): ?>
+                            <i class="fas fa-angle-left right"></i>
+                            <?php endif; ?>
+                        </p>
                     </a>
+                    <?php $children = $this->MenuModel->get_children($item['menu_id']); ?>
+                    <?php if (!empty($children)): ?>
+                    <ul class="nav nav-treeview">
+                        <?php foreach ($children as $child): ?>
+                        <?php if ($this->MenuModel->has_permission($child['menu_id'], $this->session->userdata('LoginSession')['id'])): ?>
+                        <li class="nav-item has-treeview">
+                            <a href="<?= base_url($child['menu_link']) ?>" class="nav-link">
+                                <i class="nav-icon <?= $child['menu_icon'] ?>"></i>
+                                <p>
+                                    <?= $child['name'] ?>
+                                    <?php if ($this->MenuModel->has_grandchildren($child['menu_id'])): ?>
+                                    <i class="fas fa-angle-left right"></i>
+                                    <?php endif; ?>
+                                </p>
+                            </a>
+                            <?php $grandchildren = $this->MenuModel->get_children($child['menu_id']); ?>
+                            <?php if (!empty($grandchildren)): ?>
+                            <ul class="nav nav-treeview">
+                                <?php foreach ($grandchildren as $grandchild): ?>
+                                <?php if ($this->MenuModel->has_permission($grandchild['menu_id'], $this->session->userdata('LoginSession')['id'])): ?>
+                                <li class="nav-item">
+                                    <a href="<?= base_url($grandchild['menu_link']) ?>" class="nav-link">
+                                        <i class="nav-icon <?= $grandchild['menu_icon'] ?>"></i>
+                                        <p><?= $grandchild['name'] ?></p>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                            <?php endif; ?>
+                        </li>
+                        <?php endif; ?>
+                        <?php endforeach; ?>
+                    </ul>
                     <?php endif; ?>
                 </li>
+                <?php endif; ?>
+                <?php endif; ?>
                 <?php endforeach; ?>
             </ul>
         </nav>
