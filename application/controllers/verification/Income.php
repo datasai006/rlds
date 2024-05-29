@@ -42,7 +42,7 @@ class Income extends CI_Controller
     exit();
 }
         
-         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id);
+         $data['menus'] = $this->MenuModel->get_menus_by_role_id($role_id, $user_id);
          $data['menu_items'] = $this->MenuModel->get_menu_items();
         $this->load->view('includes/sidebar', $data);
         $this->load->view('verification/income');
